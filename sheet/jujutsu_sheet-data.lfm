@@ -9,33 +9,68 @@
 				optimize="true" compilerOrder="0" />&#xD; </rectangle>
 	</scrollBox>
 
+	<!-- VALORES BASE -->
+
 	<layout left="349.11588" top="433.09241" height="50.030956" width="50.030956">
 		<!-- Atributo -->
-		<edit align="client" horzTextAlign="center" field="carisma" />
+		<edit align="client" horzTextAlign="center" field="base_carisma" />
 	</layout>
 
 	<layout left="349.51984" top="309.76385" height="50.030956" width="50.030956">
 		<!-- Atributo -->
-		<edit align="client" horzTextAlign="center" field="sabedoria" />
+		<edit align="client" horzTextAlign="center" field="base_sabedoria" />
 	</layout>
 
 	<layout left="349.49857" top="186.43529" height="50.030956" width="50.030956">
 		<!-- Atributo -->
-		<edit align="client" horzTextAlign="center" field="inteligencia" />
+		<edit align="client" horzTextAlign="center" field="base_inteligencia" />
 	</layout>
 
 	<layout left="44.440548" top="433.09241" height="50.030956" width="50.030956">
 		<!-- Atributo -->
-		<edit align="client" horzTextAlign="center" field="constituicao" />
+		<edit align="client" horzTextAlign="center" field="base_constituicao" />
 	</layout>
 
 	<layout left="44.440548" top="309.76385" height="50.030956" width="50.030956">
 		<!-- Atributo -->
-		<edit align="client" horzTextAlign="center" field="destreza" />
+		<edit align="client" horzTextAlign="center" field="base_destreza" />
 	</layout>
 
 	<layout left="44.440548" top="186.43529" height="50.030956" width="50.030956">
 		<!-- Atributo -->
-		<edit align="client" horzTextAlign="center" field="forca" />
+		<edit align="client" horzTextAlign="center" field="base_forca" />
 	</layout>
+
+	<!--====================================================================================================================-->
+	<!--====================================================================================================================-->
+
+	<!-- MODIFICADORES DE VALORES BASE -->
+
+	<layout left="502.08533" top="433.09241" height="50.030956" width="50.030956">
+		<edit align="client" horzTextAlign="center" field="modificadorBase_carisma" />
+	</layout>
+
+	<layout left="502.08115" top="309.76385" height="50.030956" width="50.030956">
+		<edit align="client" horzTextAlign="center" field="modificadorBase_sabedoria" />
+	</layout>
+
+	<layout left="502.08115" top="186.4353" height="50.030956" width="50.030956">
+		<edit align="client" horzTextAlign="center" field="modificadorBase_inteligencia" />
+	</layout>
+
+	<layout left="196.96545" top="433.09241" height="50.030956" width="50.030956">
+		<edit align="client" horzTextAlign="center" field="modificadorBase_constituicao" />
+	</layout>
+
+	<layout left="196.96127" top="309.76385" height="50.030956" width="50.030956">
+		<edit align="client" horzTextAlign="center" field="modificadorBase_destreza" />
+	</layout>
+
+	<layout left="196.96127" top="186.43529" height="50.030956" width="50.030956">
+		<edit align="client" horzTextAlign="center" field="modificadorBase_forca" />
+	</layout>
+
+	<!--====================================================================================================================-->
+	<!--====================================================================================================================-->
+
 </form>
