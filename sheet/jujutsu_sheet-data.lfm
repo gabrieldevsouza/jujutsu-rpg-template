@@ -47,29 +47,89 @@
 	<!-- MODIFICADORES DE VALORES BASE -->
 
 	<layout left="502.08533" top="433.09241" height="50.030956" width="50.030956">
-		<edit align="client" horzTextAlign="center" field="modificadorBase_carisma" />
+		<label align="client" horzTextAlign="center" field="modificadorBase_carisma" />
 	</layout>
+	<dataLink field="base_carisma">
+		<event name="onChange"><![CDATA[
+			local valorcarisma = tonumber(sheet.base_carisma)
+			if valorcarisma >= 10 then
+				sheet.modificadorBase_carisma = math.floor(((valorcarisma)-10) / 2);
+			else
+				sheet.modificadorBase_carisma = math.ceil(((valorcarisma) - 10) / 2);
+			end;
+        ]]></event>
+	</dataLink>
 
 	<layout left="502.08115" top="309.76385" height="50.030956" width="50.030956">
-		<edit align="client" horzTextAlign="center" field="modificadorBase_sabedoria" />
+		<label align="client" horzTextAlign="center" field="modificadorBase_sabedoria" />
 	</layout>
+	<dataLink field="base_sabedoria">
+		<event name="onChange"><![CDATA[
+			local valorsabedoria = tonumber(sheet.base_sabedoria)
+			if valorsabedoria >= 10 then
+				sheet.modificadorBase_sabedoria = math.floor(((valorsabedoria)-10) / 2);
+			else
+				sheet.modificadorBase_sabedoria = math.ceil(((valorsabedoria) - 10) / 2);
+			end;
+        ]]></event>
+	</dataLink>
 
 	<layout left="502.08115" top="186.4353" height="50.030956" width="50.030956">
-		<edit align="client" horzTextAlign="center" field="modificadorBase_inteligencia" />
+		<label align="client" horzTextAlign="center" field="modificadorBase_inteligencia" />
 	</layout>
+	<dataLink field="base_inteligencia">
+		<event name="onChange"><![CDATA[
+			local valorinteligencia = tonumber(sheet.base_inteligencia)
+			if valorinteligencia >= 10 then
+				sheet.modificadorBase_inteligencia = math.floor(((valorinteligencia)-10) / 2);
+			else
+				sheet.modificadorBase_inteligencia = math.ceil(((valorinteligencia) - 10) / 2);
+			end;
+        ]]></event>
+	</dataLink>
 
 	<layout left="196.96545" top="433.09241" height="50.030956" width="50.030956">
-		<edit align="client" horzTextAlign="center" field="modificadorBase_constituicao" />
+		<label align="client" horzTextAlign="center" field="modificadorBase_constituicao" />
 	</layout>
-
+	<dataLink field="base_constituicao">
+		<event name="onChange"><![CDATA[
+			local valorconstituicao = tonumber(sheet.base_constituicao)
+			if valorconstituicao >= 10 then
+				sheet.modificadorBase_constituicao = math.floor(((valorconstituicao)-10) / 2);
+			else
+				sheet.modificadorBase_constituicao = math.ceil(((valorconstituicao) - 10) / 2);
+			end;
+        ]]></event>
+	</dataLink>
+	
 	<layout left="196.96127" top="309.76385" height="50.030956" width="50.030956">
-		<edit align="client" horzTextAlign="center" field="modificadorBase_destreza" />
+		<label align="client" horzTextAlign="center" field="modificadorBase_destreza" />
 	</layout>
-
+	<dataLink field="base_destreza">
+		<event name="onChange"><![CDATA[
+			local valordestreza = tonumber(sheet.base_destreza)
+			if valordestreza >= 10 then
+				sheet.modificadorBase_destreza = math.floor(((valordestreza)-10) / 2);
+			else
+				sheet.modificadorBase_destreza = math.ceil(((valordestreza) - 10) / 2);
+			end;
+        ]]></event>
+	</dataLink>
+	
 	<layout left="196.96127" top="186.43529" height="50.030956" width="50.030956">
-		<edit align="client" horzTextAlign="center" field="modificadorBase_forca" />
+		<label align="client" horzTextAlign="center" field="modificadorBase_forca" />
 	</layout>
-
+	<dataLink field="base_forca">
+		<event name="onChange"><![CDATA[
+			local valorforca = tonumber(sheet.base_forca)
+			if valorforca >= 10 then
+				sheet.modificadorBase_forca = math.floor(((valorforca)-10) / 2);
+			else
+				sheet.modificadorBase_forca = math.ceil(((valorforca) - 10) / 2);
+			end;
+        ]]></event>
+	</dataLink>
+	
 	<!--====================================================================================================================-->
 	<!--====================================================================================================================-->
 
