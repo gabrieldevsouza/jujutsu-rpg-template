@@ -11,37 +11,31 @@
 
 	<layout left="349.11588" top="433.09241" height="50.030956" width="50.030956">
 		<!-- Atributo -->
-		<label align="top" text="Carisma: " autoSize="true" horzTextAlign="center" />
 		<edit align="client" horzTextAlign="center" field="carisma" />
 	</layout>
 
 	<layout left="349.51984" top="309.76385" height="50.030956" width="50.030956">
 		<!-- Atributo -->
-		<label align="top" text="Sabedoria: " autoSize="true" horzTextAlign="center" />
 		<edit align="client" horzTextAlign="center" field="sabedoria" />
 	</layout>
 
 	<layout left="349.49857" top="186.43529" height="50.030956" width="50.030956">
 		<!-- Atributo -->
-		<label align="top" text="Inteligência: " autoSize="true" horzTextAlign="center" />
 		<edit align="client" horzTextAlign="center" field="inteligencia" />
 	</layout>
 
 	<layout left="44.440548" top="433.09241" height="50.030956" width="50.030956">
 		<!-- Atributo -->
-		<label align="top" text="Constituição: " autoSize="true" horzTextAlign="center" />
 		<edit align="client" horzTextAlign="center" field="constituicao" />
 	</layout>
 
 	<layout left="44.440548" top="309.76385" height="50.030956" width="50.030956">
 		<!-- Atributo -->
-		<label align="top" text="Destreza: " autoSize="true" horzTextAlign="center" />
 		<edit align="client" horzTextAlign="center" field="destreza" />
 	</layout>
 
 	<layout left="44.440548" top="186.43529" height="50.030956" width="50.030956">
 		<!-- Atributo -->
-		<label align="top" text="Força: " autoSize="true" horzTextAlign="center" />
 		<edit align="client" horzTextAlign="center" field="forca" />
 	</layout>
 </form>
