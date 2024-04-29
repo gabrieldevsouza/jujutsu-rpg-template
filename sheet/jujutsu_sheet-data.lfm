@@ -13,32 +13,32 @@
 
 	<layout left="349.11588" top="433.09241" height="50.030956" width="50.030956">
 		<!-- Atributo -->
-		<edit align="client" horzTextAlign="center" field="base_carisma" />
+		<edit align="client" horzTextAlign="center" field="base_carisma" fontSize="20" transparent="true" fontFamily="Chiller"/>/>
 	</layout>
 
 	<layout left="349.51984" top="309.76385" height="50.030956" width="50.030956">
 		<!-- Atributo -->
-		<edit align="client" horzTextAlign="center" field="base_sabedoria" />
+		<edit align="client" horzTextAlign="center" field="base_sabedoria" fontSize="20" transparent="true" fontFamily="Chiller"/>/>
 	</layout>
 
 	<layout left="349.49857" top="186.43529" height="50.030956" width="50.030956">
 		<!-- Atributo -->
-		<edit align="client" horzTextAlign="center" field="base_inteligencia" />
+		<edit align="client" horzTextAlign="center" field="base_inteligencia" fontSize="20" transparent="true" fontFamily="Chiller"/>/>
 	</layout>
 
 	<layout left="44.440548" top="433.09241" height="50.030956" width="50.030956">
 		<!-- Atributo -->
-		<edit align="client" horzTextAlign="center" field="base_constituicao" />
+		<edit align="client" horzTextAlign="center" field="base_constituicao" fontSize="20" transparent="true" fontFamily="Chiller"/>/>
 	</layout>
 
 	<layout left="44.440548" top="309.76385" height="50.030956" width="50.030956">
 		<!-- Atributo -->
-		<edit align="client" horzTextAlign="center" field="base_destreza" />
+		<edit align="client" horzTextAlign="center" field="base_destreza" fontSize="20" transparent="true" fontFamily="Chiller"/>
 	</layout>
 
 	<layout left="44.440548" top="186.43529" height="50.030956" width="50.030956">
 		<!-- Atributo -->
-		<edit align="client" horzTextAlign="center" field="base_forca" />
+		<edit align="client" horzTextAlign="center" field="base_forca" fontSize="20" fontStyle="bold" transparent="true" fontFamily="Chiller"/>
 	</layout>
 
 	<!--====================================================================================================================-->
@@ -47,57 +47,93 @@
 	<!-- MODIFICADORES DE VALORES BASE -->
 
 	<layout left="502.08533" top="433.09241" height="50.030956" width="50.030956">
-		<label align="client" horzTextAlign="center" field="modificadorBase_carisma" />
+		<label align="client" horzTextAlign="center" field="modificadorBase_carisma" fontSize="45" fontStyle="bold" fontColor="white" fontFamily="Chiller"/>
 	</layout>
 	<dataLink field="base_carisma">
-		<event name="onChange">
-			sheet.modificadorBase_carisma = math.floor(((sheet.base_carisma) - 10) / 2);
-		</event>
+		<event name="onChange"><![CDATA[
+            local valorcarisma = tonumber(sheet.base_carisma)
+			local modcarisma = math.floor(((valorcarisma)-10) / 2);
+            if valorcarisma >= 10 then
+                sheet.modificadorBase_carisma = "+".. modcarisma
+            else
+                sheet.modificadorBase_carisma = modcarisma
+            end;
+        ]]></event>
 	</dataLink>
 
 	<layout left="502.08115" top="309.76385" height="50.030956" width="50.030956">
-		<label align="client" horzTextAlign="center" field="modificadorBase_sabedoria" />
+		<label align="client" horzTextAlign="center" field="modificadorBase_sabedoria" fontSize="45" fontStyle="bold" fontColor="white" fontFamily="Chiller"/>
 	</layout>
 	<dataLink field="base_sabedoria">
-		<event name="onChange">
-			sheet.modificadorBase_sabedoria = math.floor(((sheet.base_sabedoria) - 10) / 2);
-        </event>
+		<event name="onChange"><![CDATA[
+            local valorsabedoria = tonumber(sheet.base_sabedoria)
+			local modsabedoria = math.floor(((valorsabedoria)-10) / 2);
+            if valorsabedoria >= 10 then
+                sheet.modificadorBase_sabedoria = "+".. modsabedoria
+            else
+                sheet.modificadorBase_sabedoria = modsabedoria
+            end;
+        ]]></event>
 	</dataLink>
 
 	<layout left="502.08115" top="186.4353" height="50.030956" width="50.030956">
-		<label align="client" horzTextAlign="center" field="modificadorBase_inteligencia" />
+		<label align="client" horzTextAlign="center" field="modificadorBase_inteligencia" fontSize="45" fontStyle="bold" fontColor="white" fontFamily="Chiller"/>
 	</layout>
 	<dataLink field="base_inteligencia">
-		<event name="onChange">
-			sheet.modificadorBase_inteligencia = math.floor(((sheet.base_inteligencia) - 10) / 2);
-        </event>
+		<event name="onChange"><![CDATA[
+            local valorinteligencia = tonumber(sheet.base_inteligencia)
+			local modinteligencia = math.floor(((valorinteligencia)-10) / 2);
+            if valorinteligencia >= 10 then
+                sheet.modificadorBase_inteligencia = "+".. modinteligencia
+            else
+                sheet.modificadorBase_inteligencia = modinteligencia
+            end;
+        ]]></event>
 	</dataLink>
 
 	<layout left="196.96545" top="433.09241" height="50.030956" width="50.030956">
-		<label align="client" horzTextAlign="center" field="modificadorBase_constituicao" />
+		<label align="client" horzTextAlign="center" field="modificadorBase_constituicao" fontSize="45" fontStyle="bold" fontColor="white" fontFamily="Chiller"/>
 	</layout>
 	<dataLink field="base_constituicao">
-		<event name="onChange">
-			sheet.modificadorBase_constituicao = math.floor(((sheet.base_constituicao) - 10) / 2);
-		</event>
+		<event name="onChange"><![CDATA[
+            local valorconstituicao = tonumber(sheet.base_constituicao)
+			local modconstituicao = math.floor(((valorconstituicao)-10) / 2);
+            if valorconstituicao >= 10 then
+                sheet.modificadorBase_constituicao = "+".. modconstituicao
+            else
+                sheet.modificadorBase_constituicao = modconstituicao
+            end;
+        ]]></event>
 	</dataLink>
 	
 	<layout left="196.96127" top="309.76385" height="50.030956" width="50.030956">
-		<label align="client" horzTextAlign="center" field="modificadorBase_destreza" />
+		<label align="client" horzTextAlign="center" field="modificadorBase_destreza" fontSize="45" fontStyle="bold" fontColor="white" fontFamily="Chiller"/>
 	</layout>
 	<dataLink field="base_destreza">
-		<event name="onChange">
-			sheet.modificadorBase_destreza = math.floor(((sheet.base_destreza) - 10) / 2);
-		</event>
+		<event name="onChange"><![CDATA[
+            local valordestreza = tonumber(sheet.base_destreza)
+			local moddestreza = math.floor(((valordestreza)-10) / 2);
+            if valordestreza >= 10 then
+                sheet.modificadorBase_destreza = "+".. moddestreza
+            else
+                sheet.modificadorBase_destreza = moddestreza
+            end;
+        ]]></event>
 	</dataLink>
 	
 	<layout left="196.96127" top="186.43529" height="50.030956" width="50.030956">
-		<label align="client" horzTextAlign="center" field="modificadorBase_forca" />
+		<label align="client" horzTextAlign="center" field="modificadorBase_forca" fontSize="45" fontStyle="bold" fontColor="white" fontFamily="Chiller"/>
 	</layout>
 	<dataLink field="base_forca">
-		<event name="onChange">
-			sheet.modificadorBase_forca = math.floor(((sheet.base_forca) - 10) / 2);
-		</event>
+		<event name="onChange"><![CDATA[
+            local valorforca = tonumber(sheet.base_forca)
+			local modforca = math.floor(((valorforca)-10) / 2);
+            if valorforca >= 10 then
+                sheet.modificadorBase_forca = "+".. modforca
+            else
+                sheet.modificadorBase_forca = modforca
+            end;
+        ]]></event>
 	</dataLink>
 	
 	<!--====================================================================================================================-->
@@ -106,51 +142,51 @@
 	<!-- PONTOS -->
 
 	<layout left="41.38762" top="583.36925" height="67.19495" width="65.000">
-		<edit align="client" horzTextAlign="center" field="pontosDeVida_atual" />
+		<edit align="client" horzTextAlign="center" field="pontosDeVida_atual" fontSize="35" fontFamily="Chiller" transparent="true"/>
 	</layout>
 	
 	<layout left="125.375" top="583.36925" height="67.19495" width="65.000">
-		<edit align="client" horzTextAlign="center" field="pontosDeVida_maximo" />
+		<edit align="client" horzTextAlign="center" field="pontosDeVida_maximo" fontSize="35" fontFamily="Chiller" transparent="true"/>
 	</layout>
 	
 	<layout left="209.36236" top="583.22645" height="67.19495" width="65.000">
-		<edit align="client" horzTextAlign="center" field="pontosDeVida_temporario" />
+		<edit align="client" horzTextAlign="center" field="pontosDeVida_temporario" fontSize="35" fontFamily="Chiller" transparent="true"/>
 	</layout>
 	
 	<layout left="314.61234" top="583.2981" height="67.19491" width="65.000">
-		<edit align="client" horzTextAlign="center" field="pontosDeEnergia_atual" />
+		<edit align="client" horzTextAlign="center" field="pontosDeEnergia_atual" fontSize="35" fontFamily="Chiller" transparent="true"/>
 	</layout>
 	
 	<layout left="398.59971" top="583.2981" height="67.19491" width="65.000">
-		<edit align="client" horzTextAlign="center" field="pontosDeEnergia_maximo" />
+		<edit align="client" horzTextAlign="center" field="pontosDeEnergia_maximo" fontSize="35" fontFamily="Chiller" transparent="true"/>
 	</layout>
 	
 	<layout left="482.58708" top="583.15526" height="67.19496" width="65.000">
-		<edit align="client" horzTextAlign="center" field="pontosDeEnergia_temporario" />
+		<edit align="client" horzTextAlign="center" field="pontosDeEnergia_temporario" fontSize="35" fontFamily="Chiller" transparent="true"/>
 	</layout>
 	
 	<layout left="41.38762" top="749.14845" height="67.19491" width="65.000">
-		<edit align="client" horzTextAlign="center" field="pontosDeIntegridade_atual" />
+		<edit align="client" horzTextAlign="center" field="pontosDeIntegridade_atual" fontSize="35" fontFamily="Chiller" transparent="true"/>
 	</layout>
 	
 	<layout left="125.375" top="749.14845" height="67.19491" width="65.000">
-		<edit align="client" horzTextAlign="center" field="pontosDeIntegridade_maximo" />
+		<edit align="client" horzTextAlign="center" field="pontosDeIntegridade_maximo" fontSize="35" fontFamily="Chiller" transparent="true"/>
 	</layout>
 	
 	<layout left="209.36236" top="749.00565" height="67.19495" width="65.000">
-		<edit align="client" horzTextAlign="center" field="pontosDeIntegridade_temporario" />
+		<edit align="client" horzTextAlign="center" field="pontosDeIntegridade_temporario" fontSize="35" fontFamily="Chiller" transparent="true"/>
 	</layout>
 	
 	<layout left="314.61234" top="749.29146" height="67.19496" width="65.000">
-		<edit align="client" horzTextAlign="center" field="pontosDerivados_atencao" />
+		<edit align="client" horzTextAlign="center" field="pontosDerivados_atencao" fontSize="35" fontFamily="Chiller" transparent="true"/>
 	</layout>
 	
 	<layout left="398.59971" top="749.29146" height="67.19496" width="65.000">
-		<edit align="client" horzTextAlign="center" field="pontosDerivados_iniciativa" />
+		<edit align="client" horzTextAlign="center" field="pontosDerivados_iniciativa" fontSize="35" fontFamily="Chiller" transparent="true"/>
 	</layout>
 	
 	<layout left="482.58708" top="749.14866" height="67.19496" width="65.000">
-		<edit align="client" horzTextAlign="center" field="pontosDerivados_movimento" />
+		<edit align="client" horzTextAlign="center" field="pontosDerivados_movimento" fontSize="35" fontFamily="Chiller" transparent="true"/>
 	</layout>
 	
 
