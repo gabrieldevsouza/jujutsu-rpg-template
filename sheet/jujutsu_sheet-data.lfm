@@ -8,3 +8,10 @@
         </rectangle>
     </scrollBox>
 </form>
+
+
+<layout left="349.51984" top="309.76385" height="50" width="50">    
+    <!-- Atributo -->      
+    <label align="top" text="Forca: " autoSize="true" horzTextAlign="center"/>
+    <edit align="client" horzTextAlign="center" field="forca"/>          
+</layout>
