@@ -3,8 +3,8 @@
     <style>#frmFicha1_svg path {color: black; strokeColor: black; mode: stretch;} &#xD;
 #frmFicha1_svg label {fontColor: black; textTrimming: none; wordWrap: false; autoSize: true;}</style>
     <scrollBox align="client">
-        <rectangle width="1431" height="1012" color="white">&#xD;
-            <image left="0" top="0" width="1431" height="1012" src="images/character_sheet-bg.png" style="stretch" optimize="true" compilerOrder="0"/>&#xD;
+        <rectangle width="1263" height="893" color="white">&#xD;
+            <image left="0" top="0" width="1263" height="893" src="images/character_sheet-bg.png" style="stretch" optimize="true" compilerOrder="0"/>&#xD;
         </rectangle>
     </scrollBox>
 </form>
