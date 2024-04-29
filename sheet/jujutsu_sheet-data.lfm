@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<form name="frmFicha1_svg" align="client" theme="light" margins="{top=1}">
+<form name="frmFicha1_svg" align="client" theme="dark" margins="{top=1}">
 	<style>#frmFicha1_svg path {color: black; strokeColor: black; mode: stretch;} &#xD;
 		#frmFicha1_svg label {fontColor: black; textTrimming: none; wordWrap: false; autoSize:
 		true;}</style>
@@ -72,5 +72,56 @@
 
 	<!--====================================================================================================================-->
 	<!--====================================================================================================================-->
+
+	<!-- PONTOS -->
+
+	<layout left="41.38762" top="583.36925" height="67.19495" width="65.000">
+		<edit align="client" horzTextAlign="center" field="pontosDeVida_atual" />
+	</layout>
+	
+	<layout left="125.375" top="583.36925" height="67.19495" width="65.000">
+		<edit align="client" horzTextAlign="center" field="pontosDeVida_maximo" />
+	</layout>
+	
+	<layout left="209.36236" top="583.22645" height="67.19495" width="65.000">
+		<edit align="client" horzTextAlign="center" field="pontosDeVida_temporario" />
+	</layout>
+	
+	<layout left="314.61234" top="583.2981" height="67.19491" width="65.000">
+		<edit align="client" horzTextAlign="center" field="pontosDeEnergia_atual" />
+	</layout>
+	
+	<layout left="398.59971" top="583.2981" height="67.19491" width="65.000">
+		<edit align="client" horzTextAlign="center" field="pontosDeEnergia_maximo" />
+	</layout>
+	
+	<layout left="482.58708" top="583.15526" height="67.19496" width="65.000">
+		<edit align="client" horzTextAlign="center" field="pontosDeEnergia_temporario" />
+	</layout>
+	
+	<layout left="41.38762" top="749.14845" height="67.19491" width="65.000">
+		<edit align="client" horzTextAlign="center" field="pontosDeIntegridade_atual" />
+	</layout>
+	
+	<layout left="125.375" top="749.14845" height="67.19491" width="65.000">
+		<edit align="client" horzTextAlign="center" field="pontosDeIntegridade_maximo" />
+	</layout>
+	
+	<layout left="209.36236" top="749.00565" height="67.19495" width="65.000">
+		<edit align="client" horzTextAlign="center" field="pontosDeIntegridade_temporario" />
+	</layout>
+	
+	<layout left="314.61234" top="749.29146" height="67.19496" width="65.000">
+		<edit align="client" horzTextAlign="center" field="pontosDerivados_atencao" />
+	</layout>
+	
+	<layout left="398.59971" top="749.29146" height="67.19496" width="65.000">
+		<edit align="client" horzTextAlign="center" field="pontosDerivados_iniciativa" />
+	</layout>
+	
+	<layout left="482.58708" top="749.14866" height="67.19496" width="65.000">
+		<edit align="client" horzTextAlign="center" field="pontosDerivados_movimento" />
+	</layout>
+	
 
 </form>
