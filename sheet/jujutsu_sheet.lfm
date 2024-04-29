@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form
-	name="frmFicha"
+	name="FichaJujutsu"
 	formType="sheetTemplate"
 	dataType="asiufgbibsigbiabgiubfoubndoubodfb"
-	title="Ficha de Personagem"
+	title="Ficha de Personagem Jujutsu"
 	align="client"
 	theme="dark"
 >
-	<import file="1.lfm"/>
+	<import file="jujutsu_sheet-data.lfm"/>
 </form>

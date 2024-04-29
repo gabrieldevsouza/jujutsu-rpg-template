@@ -4,7 +4,7 @@
 #frmFicha1_svg label {fontColor: black; textTrimming: none; wordWrap: false; autoSize: true;}</style>
     <scrollBox align="client">
         <rectangle width="1431" height="1012" color="white">&#xD;
-            <image left="0" top="0" width="1431" height="1012" src="images/1.png" style="stretch" optimize="true" compilerOrder="0"/>&#xD;
+            <image left="0" top="0" width="1431" height="1012" src="images/character_sheet-bg.png" style="stretch" optimize="true" compilerOrder="0"/>&#xD;
         </rectangle>
     </scrollBox>
 </form>
