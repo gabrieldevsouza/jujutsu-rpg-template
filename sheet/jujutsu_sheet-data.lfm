@@ -7,13 +7,11 @@
             <image left="0" top="0" width="1263" height="893" src="images/character_sheet-bg.png" style="stretch" optimize="true" compilerOrder="0"/>&#xD;
         </rectangle>
     </scrollBox>
-
 	<layout left="349.51984" top="309.76385" height="50" width="50">    
 		<!-- Atributo -->      
 		<label align="top" text="Forca: " autoSize="true" horzTextAlign="center"/>
 		<edit align="client" horzTextAlign="center" field="forca"/>          
 	</layout>
-
 </form>
 
 
