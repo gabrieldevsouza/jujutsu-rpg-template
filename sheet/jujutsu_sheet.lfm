@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form
 	name="FichaJujutsu"
-	formType="sheetTemplate"
-	dataType="asiufgbibsigbiabgiubfoubndoubodfb"
+	formType="CharacterSheetFormType"
+	dataType="CharacterSheetDataType"t
 	title="Ficha de Personagem Jujutsu"
 	align="client"
 	theme="dark"
