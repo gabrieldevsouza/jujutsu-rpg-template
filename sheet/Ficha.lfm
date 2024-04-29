@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form
+	name="frmFicha"
+	formType="sheetTemplate"
+	dataType="asiufgbibsigbiabgiubfoubndoubodfb"
+	title="Ficha de Personagem"
+	align="client"
+	theme="dark"
+>
+	<import file="1.lfm"/>
+</form>
