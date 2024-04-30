@@ -12,32 +12,32 @@
 	<!-- VALORES BASE -->
 
 	<layout left="349.11588" top="433.09241" height="50.030956" width="50.030956">
-		<!-- Atributo -->
+
 		<edit align="client" horzTextAlign="center" field="base_carisma" fontSize="20" transparent="true" fontFamily="Chiller"/>
 	</layout>
 
 	<layout left="349.51984" top="309.76385" height="50.030956" width="50.030956">
-		<!-- Atributo -->
+
 		<edit align="client" horzTextAlign="center" field="base_sabedoria" fontSize="20" transparent="true" fontFamily="Chiller"/>
 	</layout>
 
 	<layout left="349.49857" top="186.43529" height="50.030956" width="50.030956">
-		<!-- Atributo -->
+
 		<edit align="client" horzTextAlign="center" field="base_inteligencia" fontSize="20" transparent="true" fontFamily="Chiller"/>
 	</layout>
 
 	<layout left="44.440548" top="433.09241" height="50.030956" width="50.030956">
-		<!-- Atributo -->
+
 		<edit align="client" horzTextAlign="center" field="base_constituicao" fontSize="20" transparent="true" fontFamily="Chiller"/>
 	</layout>
 
 	<layout left="44.440548" top="309.76385" height="50.030956" width="50.030956">
-		<!-- Atributo -->
+
 		<edit align="client" horzTextAlign="center" field="base_destreza" fontSize="20" transparent="true" fontFamily="Chiller"/>
 	</layout>
 
 	<layout left="44.440548" top="186.43529" height="50.030956" width="50.030956">
-		<!-- Atributo -->
+
 		<edit align="client" horzTextAlign="center" field="base_forca" fontSize="20" transparent="true" fontFamily="Chiller"/>
 	</layout>
 
