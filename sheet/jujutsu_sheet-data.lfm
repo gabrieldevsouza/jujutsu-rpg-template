@@ -11,33 +11,27 @@
 
 	<!-- VALORES BASE -->
 
-	<layout left="349.11588" top="433.09241" height="50.030956" width="50.030956">
-
+	<layout left="337.49808" top="427.88306" height="60.473999" width="74.075996">
 		<edit align="client" horzTextAlign="center" field="base_carisma" fontSize="20" transparent="true" fontFamily="Chiller"/>
 	</layout>
 
-	<layout left="349.51984" top="309.76385" height="50.030956" width="50.030956">
-
+	<layout left="337.49805" top="304.54706" height="60.473999" width="74.075996">
 		<edit align="client" horzTextAlign="center" field="base_sabedoria" fontSize="20" transparent="true" fontFamily="Chiller"/>
 	</layout>
 
-	<layout left="349.49857" top="186.43529" height="50.030956" width="50.030956">
-
+	<layout left="337.49805" top="181.21194" height="60.473999" width="74.075996">
 		<edit align="client" horzTextAlign="center" field="base_inteligencia" fontSize="20" transparent="true" fontFamily="Chiller"/>
 	</layout>
 
-	<layout left="44.440548" top="433.09241" height="50.030956" width="50.030956">
-
+	<layout left="32.379368" top="427.88306" height="60.473999" width="74.075996">
 		<edit align="client" horzTextAlign="center" field="base_constituicao" fontSize="20" transparent="true" fontFamily="Chiller"/>
 	</layout>
 
-	<layout left="44.440548" top="309.76385" height="50.030956" width="50.030956">
-
+	<layout left="32.379368" top="304.54706" height="60.473999" width="74.075996">
 		<edit align="client" horzTextAlign="center" field="base_destreza" fontSize="20" transparent="true" fontFamily="Chiller"/>
 	</layout>
 
-	<layout left="44.440548" top="186.43529" height="50.030956" width="50.030956">
-
+	<layout left="32.379353" top="181.21152" height="60.473999" width="74.076027">
 		<edit align="client" horzTextAlign="center" field="base_forca" fontSize="20" transparent="true" fontFamily="Chiller"/>
 	</layout>
 
@@ -46,8 +40,8 @@
 
 	<!-- MODIFICADORES DE VALORES BASE -->
 
-	<layout left="502.08533" top="433.09241" height="50.030956" width="50.030956">
-		<label align="client" horzTextAlign="center" field="modificadorBase_carisma" fontSize="45" fontStyle="bold" fontColor="white" fontFamily="Chiller"/>
+	<layout left="481.86078" top="426.90628" height="60.47377" width="90.469223">
+    	<label align="client" horzTextAlign="center" field="modificadorBase_carisma" fontSize="45" fontStyle="bold" fontColor="white" fontFamily="Chiller"/>
 	</layout>
 	<dataLink field="base_carisma">
 		<event name="onChange"><![CDATA[
@@ -61,8 +55,8 @@
         ]]></event>
 	</dataLink>
 
-	<layout left="502.08115" top="309.76385" height="50.030956" width="50.030956">
-		<label align="client" horzTextAlign="center" field="modificadorBase_sabedoria" fontSize="45" fontStyle="bold" fontColor="white" fontFamily="Chiller"/>
+	<layout left="481.86078" top="303.57074" height="60.47377" width="90.469223">
+    	<label align="client" horzTextAlign="center" field="modificadorBase_sabedoria" fontSize="45" fontStyle="bold" fontColor="white" fontFamily="Chiller"/>
 	</layout>
 	<dataLink field="base_sabedoria">
 		<event name="onChange"><![CDATA[
@@ -76,8 +70,8 @@
         ]]></event>
 	</dataLink>
 
-	<layout left="502.08115" top="186.4353" height="50.030956" width="50.030956">
-		<label align="client" horzTextAlign="center" field="modificadorBase_inteligencia" fontSize="45" fontStyle="bold" fontColor="white" fontFamily="Chiller"/>
+	<layout left="481.86078" top="180.23517" height="60.47377" width="90.469223">
+    	<label align="client" horzTextAlign="center" field="modificadorBase_inteligencia" fontSize="45" fontStyle="bold" fontColor="white" fontFamily="Chiller"/>
 	</layout>
 	<dataLink field="base_inteligencia">
 		<event name="onChange"><![CDATA[
@@ -91,8 +85,8 @@
         ]]></event>
 	</dataLink>
 
-	<layout left="196.96545" top="433.09241" height="50.030956" width="50.030956">
-		<label align="client" horzTextAlign="center" field="modificadorBase_constituicao" fontSize="45" fontStyle="bold" fontColor="white" fontFamily="Chiller"/>
+	<layout left="176.74213" top="426.90628" height="60.47377" width="90.469223">
+    	<label align="client" horzTextAlign="center" field="modificadorBase_constituicao" fontSize="45" fontStyle="bold" fontColor="white" fontFamily="Chiller"/>
 	</layout>
 	<dataLink field="base_constituicao">
 		<event name="onChange"><![CDATA[
@@ -106,8 +100,8 @@
         ]]></event>
 	</dataLink>
 	
-	<layout left="196.96127" top="309.76385" height="50.030956" width="50.030956">
-		<label align="client" horzTextAlign="center" field="modificadorBase_destreza" fontSize="45" fontStyle="bold" fontColor="white" fontFamily="Chiller"/>
+	<layout left="176.74213" top="303.57074" height="60.47377" width="90.469223">
+    	<label align="client" horzTextAlign="center" field="modificadorBase_destreza" fontSize="45" fontStyle="bold" fontColor="white" fontFamily="Chiller"/>
 	</layout>
 	<dataLink field="base_destreza">
 		<event name="onChange"><![CDATA[
@@ -121,8 +115,8 @@
         ]]></event>
 	</dataLink>
 	
-	<layout left="196.96127" top="186.43529" height="50.030956" width="50.030956">
-		<label align="client" horzTextAlign="center" field="modificadorBase_forca" fontSize="45" fontStyle="bold" fontColor="white" fontFamily="Chiller"/>
+	<layout left="176.74213" top="180.23518" height="60.47377" width="90.469223">
+    	<label align="client" horzTextAlign="center" field="modificadorBase_forca" fontSize="45" fontStyle="bold" fontColor="white" fontFamily="Chiller"/>
 	</layout>
 	<dataLink field="base_forca">
 		<event name="onChange"><![CDATA[
@@ -142,7 +136,7 @@
 	<!-- PONTOS -->
 
 	<layout left="41.38762" top="583.36925" height="67.19495" width="65.000">
-		<edit align="client" horzTextAlign="center" field="pontosDeVida_atual" fontSize="35" fontFamily="Chiller" transparent="true"/>
+		<edit align="client" horzTextAlign="center" field="pontosDeVida_atual" fontSize="35" fontFamily="Chiller" transparent="true" />
 	</layout>
 	
 	<layout left="125.375" top="583.36925" height="67.19495" width="65.000">
@@ -189,5 +183,76 @@
 		<edit align="client" horzTextAlign="center" field="pontosDerivados_movimento" fontSize="35" fontFamily="Chiller" transparent="true"/>
 	</layout>
 	
+
+	<!--====================================================================================================================-->
+	<!--====================================================================================================================-->
+
+	<!-- Clase de Armadura -->
+
+	<layout left="639.21924" top="718.74384" height="95.187698" width="69.611977">
+    	<edit align="client" horzTextAlign="center" field="valor_total" fontSize="50" fontFamily="Chiller" transparent="true" fontStyle="bold"/>
+	</layout>
+	<dataLink field="base_forca">
+		<event name="onChange">
+			sheet.valor_total = math.floor(sheet.valor_outros + sheet.valor_destreza + sheet.valor_escudo + sheet.valor_armadura + sheet.valor_natural)
+		</event>
+	</dataLink>
+
+
+	<layout left="874.97015" top="822.43811" height="28.067169" width="51.017101">
+		<edit align="client" horzTextAlign="center" field="valor_outros" fontSize="20" fontFamily="Chiller" transparent="true"/>
+	</layout>
+
+	<layout left="874.97015" top="794.37146" height="28.067169" width="51.017101">
+		<edit align="client" horzTextAlign="center" field="valor_destreza" fontSize="20" fontFamily="Chiller" transparent="true"/>
+	</layout>
+
+	<layout left="874.97015" top="766.30481" height="28.067169" width="51.017101">
+		<edit align="client" horzTextAlign="center" field="valor_escudo" fontSize="20" fontFamily="Chiller" transparent="true"/>
+	</layout>
+
+	<layout left="874.97015" top="738.23816" height="28.067169" width="51.017101">
+		<edit align="client" horzTextAlign="center" field="valor_armadura" fontSize="20" fontFamily="Chiller" transparent="true"/>
+	</layout>
+
+	<layout left="874.97015" top="710.1712" height="28.067169" width="51.017101">
+		<edit align="client" horzTextAlign="center" field="valor_natural" fontSize="20" fontFamily="Chiller" transparent="true"/>
+	</layout>
+
+
+	<!--====================================================================================================================-->
+	<!--====================================================================================================================-->
+
+	<!-- Teste de Morte -->
+
+	<layout left="1171.3097" top="790.42145" height="50" width="50">
+    	<edit align="client" horzTextAlign="center" field="fracasso_3"  />
+	</layout>
+
+	<layout left="1101.3076" top="790.42194" height="50" width="50">
+		<edit align="client" horzTextAlign="center" field="fracasso_2"  />
+	</layout>
+
+	<layout left="1031.3054" top="790.42194" height="50" width="50">
+		<edit align="client" horzTextAlign="center" field="fracasso_1"  />
+	</layout>
+
+	<layout left="1171.105" top="720.25476" height="50" width="50">
+		<edit align="client" horzTextAlign="center" field="sucesso_3"/>
+	</layout>
+
+	<layout left="1101.1029" top="720.25525" height="50" width="50">
+		<edit align="client" horzTextAlign="center" field="sucesso_2"/>
+	</layout>
+
+	<layout left="1031.1007" top="720.25525" height="50" width="50">
+		<edit align="client" horzTextAlign="center" field="sucesso_1"/>
+	</layout>
+
+	<!-- Teste de Morte Botão -->
+
+	<layout left="1007.771" top="679.09332" height="23.995781" width="152.1774" opacity="0">
+		<button align="client" horzTextAlign="center"/>
+	</layout>
 
 </form>
