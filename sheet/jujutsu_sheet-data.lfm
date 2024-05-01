@@ -22,16 +22,16 @@
 		<!-- Nivel/Maestria/Experiencia -->
 
 		<layout left="676.05194" top="26.523771" height="18.25411" width="54.185398">
-			<edit align="client" horzTextAlign="center" field="nivel" fontSize="15" transparent="true" fontFamily="Chiller"/>
+			<edit align="client" horzTextAlign="center" field="valor_nivel" fontSize="15" transparent="true" fontFamily="Chiller"/>
 		</layout>
 
 		<layout left="704.43713" top="52.647507" height="18.25411" width="54.185398">
-			<edit align="client" horzTextAlign="center" field="maestria" fontSize="15" transparent="true" fontFamily="Chiller"/>
+			<edit align="client" horzTextAlign="center" field="maestria_nivel" fontSize="15" transparent="true" fontFamily="Chiller"/>
 		</layout>
-		<dataLink field="nivel">
+		<dataLink field="valor_nivel">
 			<event name="onChange"><![CDATA[
-				local valornivel = tonumber(sheet.nivel) or 0
-				sheet.maestria = 1 + math.ceil(valornivel/4);
+				local valornivel = tonumber(sheet.valor_nivel)
+				sheet.maestria_nivel = 1 + math.ceil(valornivel/4);
 			]]></event>
 		</dataLink>	
 
@@ -213,7 +213,6 @@
 		<layout left="41.38762" top="583.36925" height="67.19495" width="65.000">
 			<edit align="client" horzTextAlign="center" field="pontosDevida_atual" fontSize="35" fontFamily="Chiller" transparent="true" name="pontosDevida_atual" />
 		</layout>
-
 		<dataLink field="pontosDevida_atual">
 			<event name="onChange"><![CDATA[
 				local corvida = tonumber(sheet.pontosDevida_atual) or 0
@@ -272,6 +271,11 @@
 			<edit align="client" horzTextAlign="center" field="pontosDerivados_movimento" fontSize="35" fontFamily="Chiller" transparent="true"/>
 		</layout>
 		
+		<!-- PONTOS BOTÃO INICIATIVA -->
+
+		<layout left="389.53131" top="828.53217" height="21.269554" width="83.139832" opacity="0" cursor="handPoint">
+    		<button align="client" horzTextAlign="center" name="teste_iniciativa" />
+		</layout>
 
 		<!--====================================================================================================================-->
 		<!--====================================================================================================================-->
@@ -581,286 +585,829 @@
 		<!-- Pericias maestria -->
 
 		<layout left="852.46118" top="209.18765" height="17.9142" width="16.694559">
-			<checkBox align="client" horzTextAlign="center" field="maestria_atletismo" />
+			<rectangle align="client" color="#00000000" xradius="7" yradius="7" cornerType="bevel" name="maestria_atletismo"/>
+			<checkBox align="client" horzTextAlign="center" field="maestria_atletismo" opacity="0" />
 		</layout>
+		<dataLink field="maestria_atletismo">
+			<event name="onChange"><![CDATA[
+				if sheet.maestria_atletismo == true then
+					self.maestria_atletismo.color="#00FF00"
+				else
+					self.maestria_atletismo.color="#00000000"
+				end
+			]]></event>
+		</dataLink>
 
 		<layout left="852.46118" top="241.08159" height="17.9142" width="16.694559">
-			<checkBox align="client" horzTextAlign="center" field="maestria_luta" />
+			<rectangle align="client" color="#00000000" xradius="7" yradius="7" cornerType="bevel" name="maestria_luta"/>
+			<checkBox align="client" horzTextAlign="center" field="maestria_luta" opacity="0" />
 		</layout>
+		<dataLink field="maestria_luta">
+			<event name="onChange"><![CDATA[
+				if sheet.maestria_luta == true then
+					self.maestria_luta.color = "#00FF00"
+				else
+					self.maestria_luta.color = "#00000000"
+				end
+			]]></event>
+		</dataLink>
 
 		<layout left="852.3985" top="272.97552" height="17.9142" width="16.694559">
-			<checkBox align="client" horzTextAlign="center" field="maestria_acrobacia" />
+			<rectangle align="client" color="#00000000" xradius="7" yradius="7" cornerType="bevel" name="maestria_acrobacia"/>
+			<checkBox align="client" horzTextAlign="center" field="maestria_acrobacia" opacity="0" />
 		</layout>
+		<dataLink field="maestria_acrobacia">
+			<event name="onChange"><![CDATA[
+				if sheet.maestria_acrobacia == true then
+					self.maestria_acrobacia.color = "#00FF00"
+				else
+					self.maestria_acrobacia.color = "#00000000"
+				end
+			]]></event>
+		</dataLink>
 
 		<layout left="852.3985" top="304.86948" height="17.9142" width="16.694559">
-			<checkBox align="client" horzTextAlign="center" field="maestria_furtividade" />
+			<rectangle align="client" color="#00000000" xradius="7" yradius="7" cornerType="bevel" name="maestria_furtividade"/>
+			<checkBox align="client" horzTextAlign="center" field="maestria_furtividade" opacity="0" />
 		</layout>
+		<dataLink field="maestria_furtividade">
+			<event name="onChange"><![CDATA[
+				if sheet.maestria_furtividade == true then
+					self.maestria_furtividade.color = "#00FF00"
+				else
+					self.maestria_furtividade.color = "#00000000"
+				end
+			]]></event>
+		</dataLink>
 
 		<layout left="852.46118" top="336.7634" height="17.9142" width="16.694559">
-			<checkBox align="client" horzTextAlign="center" field="maestria_pontaria" />
+			<rectangle align="client" color="#00000000" xradius="7" yradius="7" cornerType="bevel" name="maestria_pontaria"/>
+			<checkBox align="client" horzTextAlign="center" field="maestria_pontaria" opacity="0" />
 		</layout>
+		<dataLink field="maestria_pontaria">
+			<event name="onChange"><![CDATA[
+				if sheet.maestria_pontaria == true then
+					self.maestria_pontaria.color = "#00FF00"
+				else
+					self.maestria_pontaria.color = "#00000000"
+				end
+			]]></event>
+		</dataLink>
 
 		<layout left="852.46118" top="368.65735" height="17.9142" width="16.694559">
-			<checkBox align="client" horzTextAlign="center" field="maestria_prestidigitacao" />
+			<rectangle align="client" color="#00000000" xradius="7" yradius="7" cornerType="bevel" name="maestria_prestidigitacao"/>
+			<checkBox align="client" horzTextAlign="center" field="maestria_prestidigitacao" opacity="0" />
 		</layout>
+		<dataLink field="maestria_prestidigitacao">
+			<event name="onChange"><![CDATA[
+				if sheet.maestria_prestidigitacao == true then
+					self.maestria_prestidigitacao.color = "#00FF00"
+				else
+					self.maestria_prestidigitacao.color = "#00000000"
+				end
+			]]></event>
+		</dataLink>
 
 		<layout left="852.3985" top="400.55127" height="17.9142" width="16.694559">
-			<checkBox align="client" horzTextAlign="center" field="maestria_reflexo" />
+			<rectangle align="client" color="#00000000" xradius="7" yradius="7" cornerType="bevel" name="maestria_reflexo"/>
+			<checkBox align="client" horzTextAlign="center" field="maestria_reflexo" opacity="0" />
 		</layout>
+		<dataLink field="maestria_reflexo">
+			<event name="onChange"><![CDATA[
+				if sheet.maestria_reflexo == true then
+					self.maestria_reflexo.color = "#00FF00"
+				else
+					self.maestria_reflexo.color = "#00000000"
+				end
+			]]></event>
+		</dataLink>
 
 		<layout left="852.3985" top="432.44522" height="17.9142" width="16.694559">
-			<checkBox align="client" horzTextAlign="center" field="maestria_fortitude" />
+			<rectangle align="client" color="#00000000" xradius="7" yradius="7" cornerType="bevel" name="maestria_fortitude"/>
+			<checkBox align="client" horzTextAlign="center" field="maestria_fortitude" opacity="0" />
 		</layout>
+		<dataLink field="maestria_fortitude">
+			<event name="onChange"><![CDATA[
+				if sheet.maestria_fortitude == true then
+					self.maestria_fortitude.color = "#00FF00"
+				else
+					self.maestria_fortitude.color = "#00000000"
+				end
+			]]></event>
+		</dataLink>
 
 		<layout left="852.3985" top="464.33911" height="17.9142" width="16.694559">
-			<checkBox align="client" horzTextAlign="center" field="maestria_integridade" />
+			<rectangle align="client" color="#00000000" xradius="7" yradius="7" cornerType="bevel" name="maestria_integridade"/>
+			<checkBox align="client" horzTextAlign="center" field="maestria_integridade" opacity="0" />
 		</layout>
+		<dataLink field="maestria_integridade">
+			<event name="onChange"><![CDATA[
+				if sheet.maestria_integridade == true then
+					self.maestria_integridade.color = "#00FF00"
+				else
+					self.maestria_integridade.color = "#00000000"
+				end
+			]]></event>
+		</dataLink>
 
 		<layout left="852.3985" top="496.23306" height="17.9142" width="16.694559">
-			<checkBox align="client" horzTextAlign="center" field="maestria_intuicao" />
+			<rectangle align="client" color="#00000000" xradius="7" yradius="7" cornerType="bevel" name="maestria_intuicao"/>
+			<checkBox align="client" horzTextAlign="center" field="maestria_intuicao" opacity="0" />
 		</layout>
+		<dataLink field="maestria_intuicao">
+			<event name="onChange"><![CDATA[
+				if sheet.maestria_intuicao == true then
+					self.maestria_intuicao.color = "#00FF00"
+				else
+					self.maestria_intuicao.color = "#00000000"
+				end
+			]]></event>
+		</dataLink>
 
 		<layout left="852.33582" top="528.12695" height="17.9142" width="16.694559">
-			<checkBox align="client" horzTextAlign="center" field="maestria_medicina" />
+			<rectangle align="client" color="#00000000" xradius="7" yradius="7" cornerType="bevel" name="maestria_medicina"/>
+			<checkBox align="client" horzTextAlign="center" field="maestria_medicina" opacity="0" />
 		</layout>
+		<dataLink field="maestria_medicina">
+			<event name="onChange"><![CDATA[
+				if sheet.maestria_medicina == true then
+					self.maestria_medicina.color = "#00FF00"
+				else
+					self.maestria_medicina.color = "#00000000"
+				end
+			]]></event>
+		</dataLink>
 
 		<layout left="852.33582" top="560.02094" height="17.9142" width="16.694559">
-			<checkBox align="client" horzTextAlign="center" field="maestria_persepcao" />
+			<rectangle align="client" color="#00000000" xradius="7" yradius="7" cornerType="bevel" name="maestria_persepcao"/>
+			<checkBox align="client" horzTextAlign="center" field="maestria_persepcao" opacity="0" />
 		</layout>
+		<dataLink field="maestria_persepcao">
+			<event name="onChange"><![CDATA[
+				if sheet.maestria_persepcao == true then
+					self.maestria_persepcao.color = "#00FF00"
+				else
+					self.maestria_persepcao.color = "#00000000"
+				end
+			]]></event>
+		</dataLink>
 
 		<layout left="852.3985" top="591.91486" height="17.9142" width="16.694559">
-			<checkBox align="client" horzTextAlign="center" field="maestria_ocultismo" />
+			<rectangle align="client" color="#00000000" xradius="7" yradius="7" cornerType="bevel" name="maestria_ocultismo"/>
+			<checkBox align="client" horzTextAlign="center" field="maestria_ocultismo" opacity="0" />
 		</layout>
+		<dataLink field="maestria_ocultismo">
+			<event name="onChange"><![CDATA[
+				if sheet.maestria_ocultismo == true then
+					self.maestria_ocultismo.color = "#00FF00"
+				else
+					self.maestria_ocultismo.color = "#00000000"
+				end
+			]]></event>
+		</dataLink>
 
 		<layout left="1168.1486" top="209.18767" height="17.9142" width="16.694559">
-			<checkBox align="client" horzTextAlign="center" field="maestria_astucia" />
+			<rectangle align="client" color="#00000000" xradius="7" yradius="7" cornerType="bevel" name="maestria_astucia"/>
+			<checkBox align="client" horzTextAlign="center" field="maestria_astucia" opacity="0" />
 		</layout>
+		<dataLink field="maestria_astucia">
+			<event name="onChange"><![CDATA[
+				if sheet.maestria_astucia == true then
+					self.maestria_astucia.color = "#00FF00"
+				else
+					self.maestria_astucia.color = "#00000000"
+				end
+			]]></event>
+		</dataLink>
 
 		<layout left="1168.1486" top="241.0816" height="17.9142" width="16.694559">
-			<checkBox align="client" horzTextAlign="center" field="maestria_feiticaria" />
+			<rectangle align="client" color="#00000000" xradius="7" yradius="7" cornerType="bevel" name="maestria_feiticaria"/>
+			<checkBox align="client" horzTextAlign="center" field="maestria_feiticaria" opacity="0" />
 		</layout>
+		<dataLink field="maestria_feiticaria">
+			<event name="onChange"><![CDATA[
+				if sheet.maestria_feiticaria == true then
+					self.maestria_feiticaria.color = "#00FF00"
+				else
+					self.maestria_feiticaria.color = "#00000000"
+				end
+			]]></event>
+		</dataLink>
 
 		<layout left="1168.0858" top="272.97552" height="17.9142" width="16.694559">
-			<checkBox align="client" horzTextAlign="center" field="maestria_investigacao" />
+			<rectangle align="client" color="#00000000" xradius="7" yradius="7" cornerType="bevel" name="maestria_investigacao"/>
+			<checkBox align="client" horzTextAlign="center" field="maestria_investigacao" opacity="0" />
 		</layout>
+		<dataLink field="maestria_investigacao">
+			<event name="onChange"><![CDATA[
+				if sheet.maestria_investigacao == true then
+					self.maestria_investigacao.color = "#00FF00"
+				else
+					self.maestria_investigacao.color = "#00000000"
+				end
+			]]></event>
+		</dataLink>
 
 		<layout left="1168.0858" top="304.86948" height="17.9142" width="16.694559">
-			<checkBox align="client" horzTextAlign="center" field="maestria_historia" />
+			<rectangle align="client" color="#00000000" xradius="7" yradius="7" cornerType="bevel" name="maestria_historia"/>
+			<checkBox align="client" horzTextAlign="center" field="maestria_historia" opacity="0" />
 		</layout>
+		<dataLink field="maestria_historia">
+				<event name="onChange"><![CDATA[
+				if sheet.maestria_historia == true then
+					self.maestria_historia.color = "#00FF00"
+				else
+					self.maestria_historia.color = "#00000000"
+				end
+			]]></event>
+		</dataLink>
 
 		<layout left="1168.1486" top="336.7634" height="17.9142" width="16.694559">
-			<checkBox align="client" horzTextAlign="center" field="maestriaOficio_1" />
+			<rectangle align="client" color="#00000000" xradius="7" yradius="7" cornerType="bevel" name="maestriaOficio_1"/>
+			<checkBox align="client" horzTextAlign="center" field="maestriaOficio_1" opacity="0" />
 		</layout>
+		<dataLink field="maestriaOficio_1">
+				<event name="onChange"><![CDATA[
+				if sheet.maestriaOficio_1 == true then
+					self.maestriaOficio_1.color = "#00FF00"
+				else
+					self.maestriaOficio_1.color = "#00000000"
+				end
+			]]></event>
+		</dataLink>
 
 		<layout left="1168.1486" top="368.65735" height="17.9142" width="16.694559">
-			<checkBox align="client" horzTextAlign="center" field="maestriaOficio_2" />
+			<rectangle align="client" color="#00000000" xradius="7" yradius="7" cornerType="bevel" name="maestriaOficio_2"/>
+			<checkBox align="client" horzTextAlign="center" field="maestriaOficio_2" opacity="0" />
 		</layout>
+		<dataLink field="maestriaOficio_2">
+				<event name="onChange"><![CDATA[
+				if sheet.maestriaOficio_2 == true then
+					self.maestriaOficio_2.color = "#00FF00"
+				else
+					self.maestriaOficio_2.color = "#00000000"
+				end
+			]]></event>
+		</dataLink>
 
 		<layout left="1168.0858" top="400.55127" height="17.9142" width="16.694559">
-			<checkBox align="client" horzTextAlign="center" field="maestriaOficio_3" />
+			<rectangle align="client" color="#00000000" xradius="7" yradius="7" cornerType="bevel" name="maestriaOficio_3"/>
+			<checkBox align="client" horzTextAlign="center" field="maestriaOficio_3" opacity="0" />
 		</layout>
+		<dataLink field="maestriaOficio_3">
+				<event name="onChange"><![CDATA[
+				if sheet.maestriaOficio_3 == true then
+					self.maestriaOficio_3.color = "#00FF00"
+				else
+					self.maestriaOficio_3.color = "#00000000"
+				end
+			]]></event>
+		</dataLink>
 
 		<layout left="1168.0858" top="432.44522" height="17.9142" width="16.694559">
-			<checkBox align="client" horzTextAlign="center" field="maestria_religiao" />
+			<rectangle align="client" color="#00000000" xradius="7" yradius="7" cornerType="bevel" name="maestria_religiao"/>
+			<checkBox align="client" horzTextAlign="center" field="maestria_religiao" opacity="0" />
 		</layout>
+		<dataLink field="maestria_religiao">
+				<event name="onChange"><![CDATA[
+				if sheet.maestria_religiao == true then
+					self.maestria_religiao.color = "#00FF00"
+				else
+					self.maestria_religiao.color = "#00000000"
+				end
+			]]></event>
+		</dataLink>
 
 		<layout left="1168.0858" top="464.33911" height="17.9142" width="16.694559">
-			<checkBox align="client" horzTextAlign="center" field="maestria_persuasao" />
+			<rectangle align="client" color="#00000000" xradius="7" yradius="7" cornerType="bevel" name="maestria_persuasao"/>
+			<checkBox align="client" horzTextAlign="center" field="maestria_persuasao" opacity="0" />
 		</layout>
+		<dataLink field="maestria_persuasao">
+				<event name="onChange"><![CDATA[
+				if sheet.maestria_persuasao == true then
+					self.maestria_persuasao.color = "#00FF00"
+				else
+					self.maestria_persuasao.color = "#00000000"
+				end
+			]]></event>
+		</dataLink>
 
 		<layout left="1168.0858" top="496.23306" height="17.9142" width="16.694559">
-			<checkBox align="client" horzTextAlign="center" field="maestria_enganacao" />
+			<rectangle align="client" color="#00000000" xradius="7" yradius="7" cornerType="bevel" name="maestria_enganacao"/>
+			<checkBox align="client" horzTextAlign="center" field="maestria_enganacao" opacity="0" />
 		</layout>
+		<dataLink field="mmaestria_enganacao">
+				<event name="onChange"><![CDATA[
+				if sheet.maestria_enganacao == true then
+					self.maestria_enganacao.color = "#00FF00"
+				else
+					self.maestria_enganacao.color = "#00000000"
+				end
+			]]></event>
+		</dataLink>
 
 		<layout left="1168.0232" top="528.12695" height="17.9142" width="16.694559">
-			<checkBox align="client" horzTextAlign="center" field="maestria_invimidaco" />
+			<rectangle align="client" color="#00000000" xradius="7" yradius="7" cornerType="bevel" name="maestria_invimidacao"/>
+			<checkBox align="client" horzTextAlign="center" field="maestria_invimidacao" opacity="0" />
 		</layout>
+		<dataLink field="maestria_invimidacao">
+				<event name="onChange"><![CDATA[
+				if sheet.maestria_invimidacao == true then
+					self.maestria_invimidacao.color = "#00FF00"
+				else
+					self.maestria_invimidacao.color = "#00000000"
+				end
+			]]></event>
+		</dataLink>
 
 		<layout left="1168.0232" top="560.02094" height="17.9142" width="16.694559">
-			<checkBox align="client" horzTextAlign="center" field="maestria_performance" />
+			<rectangle align="client" color="#00000000" xradius="7" yradius="7" cornerType="bevel" name="maestria_performance"/>
+			<checkBox align="client" horzTextAlign="center" field="maestria_performance" opacity="0" />
 		</layout>
+		<dataLink field="maestria_performance">
+				<event name="onChange"><![CDATA[
+				if sheet.maestria_performance == true then
+					self.maestria_performance.color = "#00FF00"
+				else
+					self.maestria_performance.color = "#00000000"
+				end
+			]]></event>
+		</dataLink>
 
 		<layout left="1168.0858" top="591.91486" height="17.9142" width="16.694559">
-			<checkBox align="client" horzTextAlign="center" field="maestria_vontade" />
+			<rectangle align="client" color="#00000000" xradius="7" yradius="7" cornerType="bevel" name="maestria_vontade"/>
+			<checkBox align="client" horzTextAlign="center" field="maestria_vontade" opacity="0" />
 		</layout>
+		<dataLink field="maestria_vontade">
+				<event name="onChange"><![CDATA[
+				if sheet.maestria_vontade == true then
+					self.maestria_vontade.color = "#00FF00"
+				else
+					self.maestria_vontade.color = "#00000000"
+				end
+			]]></event>
+		</dataLink>
 
 		<!-- Pericias Especializacao -->
 
 		<layout left="874.63568" top="209.18765" height="17.9142" width="16.694559">
-			<checkBox align="client" horzTextAlign="center" field="especializacao_atletismo" />
+			<rectangle align="client" color="#00000000" xradius="7" yradius="7" cornerType="bevel" name="especializacao_atletismo"/>
+			<checkBox align="client" horzTextAlign="center" field="especializacao_atletismo" opacity="0" />
 		</layout>
+		<dataLink field="especializacao_atletismo">
+				<event name="onChange"><![CDATA[
+				if sheet.especializacao_atletismo == true then
+					self.especializacao_atletismo.color = "#00FF00"
+				else
+					self.especializacao_atletismo.color = "#00000000"
+				end
+			]]></event>
+		</dataLink>
 
 		<layout left="874.573" top="272.97552" height="17.9142" width="16.694559">
-			<checkBox align="client" horzTextAlign="center" field="especializacao_acrobacia" />
+			<rectangle align="client" color="#00000000" xradius="7" yradius="7" cornerType="bevel" name="especializacao_acrobacia"/>
+			<checkBox align="client" horzTextAlign="center" field="especializacao_acrobacia" opacity="0" />
 		</layout>
+		<dataLink field="especializacao_acrobacia">
+				<event name="onChange"><![CDATA[
+				if sheet.especializacao_acrobacia == true then
+					self.especializacao_acrobacia.color = "#00FF00"
+				else
+					self.especializacao_acrobacia.color = "#00000000"
+				end
+			]]></event>
+		</dataLink>
 
 		<layout left="874.573" top="304.86948" height="17.9142" width="16.694559">
-			<checkBox align="client" horzTextAlign="center" field="especializacao_furtividade" />
+			<rectangle align="client" color="#00000000" xradius="7" yradius="7" cornerType="bevel" name="especializacao_furtividade"/>
+			<checkBox align="client" horzTextAlign="center" field="especializacao_furtividade" opacity="0" />
 		</layout>
+		<dataLink field="especializacao_furtividade">
+				<event name="onChange"><![CDATA[
+				if sheet.especializacao_furtividade == true then
+					self.especializacao_furtividade.color = "#00FF00"
+				else
+					self.especializacao_furtividade.color = "#00000000"
+				end
+			]]></event>
+		</dataLink>
 
 		<layout left="874.63568" top="368.65735" height="17.9142" width="16.694559">
-			<checkBox align="client" horzTextAlign="center" field="especializacao_prestidigitacao" />
+			<rectangle align="client" color="#00000000" xradius="7" yradius="7" cornerType="bevel" name="especializacao_prestidigitacao"/>
+			<checkBox align="client" horzTextAlign="center" field="especializacao_prestidigitacao" opacity="0" />
 		</layout>
+		<dataLink field="especializacao_prestidigitacao">
+				<event name="onChange"><![CDATA[
+				if sheet.especializacao_prestidigitacao == true then
+					self.especializacao_prestidigitacao.color = "#00FF00"
+				else
+					self.especializacao_prestidigitacao.color = "#00000000"
+				end
+			]]></event>
+		</dataLink>
 
 		<layout left="874.573" top="400.55127" height="17.9142" width="16.694559">
-			<checkBox align="client" horzTextAlign="center" field="especializacao_reflexo" />
+			<rectangle align="client" color="#00000000" xradius="7" yradius="7" cornerType="bevel" name="especializacao_reflexo"/>
+			<checkBox align="client" horzTextAlign="center" field="especializacao_reflexo" opacity="0" />
 		</layout>
+		<dataLink field="especializacao_reflexo">
+				<event name="onChange"><![CDATA[
+				if sheet.especializacao_reflexo == true then
+					self.especializacao_reflexo.color = "#00FF00"
+				else
+					self.especializacao_reflexo.color = "#00000000"
+				end
+			]]></event>
+		</dataLink>
 
 		<layout left="874.573" top="432.44522" height="17.9142" width="16.694559">
-			<checkBox align="client" horzTextAlign="center" field="especializacao_fortitude" />
+			<rectangle align="client" color="#00000000" xradius="7" yradius="7" cornerType="bevel" name="especializacao_fortitude"/>
+			<checkBox align="client" horzTextAlign="center" field="especializacao_fortitude" opacity="0" />
 		</layout>
+		<dataLink field="especializacao_fortitude">
+				<event name="onChange"><![CDATA[
+				if sheet.especializacao_fortitude == true then
+					self.especializacao_fortitude.color = "#00FF00"
+				else
+					self.especializacao_fortitude.color = "#00000000"
+				end
+			]]></event>
+		</dataLink>
 
 		<layout left="874.573" top="464.33911" height="17.9142" width="16.694559">
-			<checkBox align="client" horzTextAlign="center" field="especializacao_integridade" />
+			<rectangle align="client" color="#00000000" xradius="7" yradius="7" cornerType="bevel" name="especializacao_integridade"/>
+			<checkBox align="client" horzTextAlign="center" field="especializacao_integridade" opacity="0" />
 		</layout>
+		<dataLink field="eespecializacao_integridade">
+				<event name="onChange"><![CDATA[
+				if sheet.eespecializacao_integridade == true then
+					self.eespecializacao_integridade.color = "#00FF00"
+				else
+					self.eespecializacao_integridade.color = "#00000000"
+				end
+			]]></event>
+		</dataLink>
 
 		<layout left="874.573" top="496.23306" height="17.9142" width="16.694559">
-			<checkBox align="client" horzTextAlign="center" field="especializacao_intuicao" />
+			<rectangle align="client" color="#00000000" xradius="7" yradius="7" cornerType="bevel" name="especializacao_intuicao"/>
+			<checkBox align="client" horzTextAlign="center" field="especializacao_intuicao" opacity="0" />
 		</layout>
+		<dataLink field="especializacao_intuicao">
+				<event name="onChange"><![CDATA[
+				if sheet.especializacao_intuicao == true then
+					self.especializacao_intuicao.color = "#00FF00"
+				else
+					self.especializacao_intuicao.color = "#00000000"
+				end
+			]]></event>
+		</dataLink>
 
 		<layout left="874.51031" top="528.12695" height="17.9142" width="16.694559">
-			<checkBox align="client" horzTextAlign="center" field="especializacao_medicina" />
+			<rectangle align="client" color="#00000000" xradius="7" yradius="7" cornerType="bevel" name="especializacao_medicina"/>
+			<checkBox align="client" horzTextAlign="center" field="especializacao_medicina" opacity="0" />
 		</layout>
+		<dataLink field="especializacao_medicina">
+				<event name="onChange"><![CDATA[
+				if sheet.especializacao_medicina == true then
+					self.especializacao_medicina.color = "#00FF00"
+				else
+					self.especializacao_medicina.color = "#00000000"
+				end
+			]]></event>
+		</dataLink>
 
 		<layout left="874.51031" top="560.02094" height="17.9142" width="16.694559">
-			<checkBox align="client" horzTextAlign="center" field="especializacao_percepcao" />
+			<rectangle align="client" color="#00000000" xradius="7" yradius="7" cornerType="bevel" name="especializacao_percepcao"/>
+			<checkBox align="client" horzTextAlign="center" field="especializacao_percepcao" opacity="0" />
 		</layout>
+		<dataLink field="especializacao_percepcao">
+				<event name="onChange"><![CDATA[
+				if sheet.especializacao_percepcao == true then
+					self.especializacao_percepcao.color = "#00FF00"
+				else
+					self.especializacao_percepcao.color = "#00000000"
+				end
+			]]></event>
+		</dataLink>
 
 		<layout left="874.573" top="591.91486" height="17.9142" width="16.694559">
-			<checkBox align="client" horzTextAlign="center" field="especializacao_ocultismo" />
+			<rectangle align="client" color="#00000000" xradius="7" yradius="7" cornerType="bevel" name="especializacao_ocultismo"/>
+			<checkBox align="client" horzTextAlign="center" field="especializacao_ocultismo" opacity="0" />
 		</layout>
+		<dataLink field="especializacao_ocultismo">
+				<event name="onChange"><![CDATA[
+				if sheet.especializacao_ocultismo == true then
+					self.especializacao_ocultismo.color = "#00FF00"
+				else
+					self.especializacao_ocultismo.color = "#00000000"
+				end
+			]]></event>
+		</dataLink>
 
 		<layout left="1190.2604" top="209.18765" height="17.9142" width="16.694559">
-			<checkBox align="client" horzTextAlign="center" field="especializacao_astucia" />
+			<rectangle align="client" color="#00000000" xradius="7" yradius="7" cornerType="bevel" name="especializacao_astucia"/>
+			<checkBox align="client" horzTextAlign="center" field="especializacao_astucia" opacity="0" />
 		</layout>
+		<dataLink field="especializacao_astucia">
+				<event name="onChange"><![CDATA[
+				if sheet.especializacao_astucia == true then
+					self.especializacao_astucia.color = "#00FF00"
+				else
+					self.especializacao_astucia.color = "#00000000"
+				end
+			]]></event>
+		</dataLink>
 
 		<layout left="1190.2604" top="241.08159" height="17.9142" width="16.694559">
-			<checkBox align="client" horzTextAlign="center" field="especializacao_feiticaria" />
+			<rectangle align="client" color="#00000000" xradius="7" yradius="7" cornerType="bevel" name="especializacao_feiticaria"/>
+			<checkBox align="client" horzTextAlign="center" field="especializacao_feiticaria" opacity="0" />
 		</layout>
+		<dataLink field="especializacao_feiticaria">
+				<event name="onChange"><![CDATA[
+				if sheet.especializacao_feiticaria == true then
+					self.especializacao_feiticaria.color = "#00FF00"
+				else
+					self.especializacao_feiticaria.color = "#00000000"
+				end
+			]]></event>
+		</dataLink>
 
 		<layout left="1190.1976" top="272.97552" height="17.9142" width="16.694559">
-			<checkBox align="client" horzTextAlign="center" field="especializacao_investigacao" />
+			<rectangle align="client" color="#00000000" xradius="7" yradius="7" cornerType="bevel" name="especializacao_investigacao"/>
+			<checkBox align="client" horzTextAlign="center" field="especializacao_investigacao" opacity="0" />
 		</layout>
+		<dataLink field="especializacao_investigacao">
+				<event name="onChange"><![CDATA[
+				if sheet.especializacao_investigacao == true then
+					self.especializacao_investigacao.color = "#00FF00"
+				else
+					self.especializacao_investigacao.color = "#00000000"
+				end
+			]]></event>
+		</dataLink>
 
 		<layout left="1190.1976" top="304.86948" height="17.9142" width="16.694559">
-			<checkBox align="client" horzTextAlign="center" field="especializacao_historia" />
+			<rectangle align="client" color="#00000000" xradius="7" yradius="7" cornerType="bevel" name="especializacao_historia"/>
+			<checkBox align="client" horzTextAlign="center" field="especializacao_historia" opacity="0" />
 		</layout>
+		<dataLink field="especializacao_historia">
+				<event name="onChange"><![CDATA[
+				if sheet.especializacao_historia == true then
+					self.especializacao_historia.color = "#00FF00"
+				else
+					self.especializacao_historia.color = "#00000000"
+				end
+			]]></event>
+		</dataLink>
 
 		<layout left="1190.2604" top="336.7634" height="17.9142" width="16.694559">
-			<checkBox align="client" horzTextAlign="center" field="especializacaoOficio_1" />
+			<rectangle align="client" color="#00000000" xradius="7" yradius="7" cornerType="bevel" name="especializacaoOficio_1"/>
+			<checkBox align="client" horzTextAlign="center" field="especializacaoOficio_1" opacity="0" />
 		</layout>
+		<dataLink field="especializacaoOficio_1">
+				<event name="onChange"><![CDATA[
+				if sheet.especializacaoOficio_1 == true then
+					self.especializacaoOficio_1.color = "#00FF00"
+				else
+					self.especializacaoOficio_1.color = "#00000000"
+				end
+			]]></event>
+		</dataLink>
 
 		<layout left="1190.2604" top="368.65735" height="17.9142" width="16.694559">
-			<checkBox align="client" horzTextAlign="center" field="especializacaoOfivio_2" />
+			<rectangle align="client" color="#00000000" xradius="7" yradius="7" cornerType="bevel" name="especializacaoOficio_2"/>
+			<checkBox align="client" horzTextAlign="center" field="especializacaoOfivio_2" opacity="0" />
 		</layout>
+		<dataLink field="especializacaoOficio_2">
+				<event name="onChange"><![CDATA[
+				if sheet.especializacaoOficio_2 == true then
+					self.especializacaoOficio_2.color = "#00FF00"
+				else
+					self.especializacaoOficio_2.color = "#00000000"
+				end
+			]]></event>
+		</dataLink>
 
 		<layout left="1190.1976" top="400.55127" height="17.9142" width="16.694559">
-			<checkBox align="client" horzTextAlign="center" field="especializacaoOficio_3" />
+			<rectangle align="client" color="#00000000" xradius="7" yradius="7" cornerType="bevel" name="especializacaoOficio_3"/>
+			<checkBox align="client" horzTextAlign="center" field="especializacaoOficio_3" opacity="0" />
 		</layout>
+		<dataLink field="especializacaoOficio_3">
+				<event name="onChange"><![CDATA[
+				if sheet.especializacaoOficio_3 == true then
+					self.especializacaoOficio_3.color = "#00FF00"
+				else
+					self.especializacaoOficio_3.color = "#00000000"
+				end
+			]]></event>
+		</dataLink>
 
 		<layout left="1190.1976" top="432.44522" height="17.9142" width="16.694559">
-			<checkBox align="client" horzTextAlign="center" field="especializacao_religiao" />
+			<rectangle align="client" color="#00000000" xradius="7" yradius="7" cornerType="bevel" name="especializacao_religiao"/>
+			<checkBox align="client" horzTextAlign="center" field="especializacao_religiao" opacity="0" />
 		</layout>
+		<dataLink field="especializacao_religiao">
+				<event name="onChange"><![CDATA[
+				if sheet.especializacao_religiao == true then
+					self.especializacao_religiao.color = "#00FF00"
+				else
+					self.especializacao_religiao.color = "#00000000"
+				end
+			]]></event>
+		</dataLink>
 
 		<layout left="1190.1976" top="464.33911" height="17.9142" width="16.694559">
-			<checkBox align="client" horzTextAlign="center" field="especializacao_persuasao" />
+			<rectangle align="client" color="#00000000" xradius="7" yradius="7" cornerType="bevel" name="especializacao_persuasao"/>
+			<checkBox align="client" horzTextAlign="center" field="especializacao_persuasao" opacity="0" />
 		</layout>
+		<dataLink field="especializacao_persuasao">
+				<event name="onChange"><![CDATA[
+				if sheet.especializacao_persuasao == true then
+					self.especializacao_persuasao.color = "#00FF00"
+				else
+					self.especializacao_persuasao.color = "#00000000"
+				end
+			]]></event>
+		</dataLink>
 
 		<layout left="1190.1976" top="496.23306" height="17.9142" width="16.694559">
-			<checkBox align="client" horzTextAlign="center" field="especializacao_enganacao" />
+			<rectangle align="client" color="#00000000" xradius="7" yradius="7" cornerType="bevel" name="especializacao_enganacao"/>
+			<checkBox align="client" horzTextAlign="center" field="especializacao_enganacao" opacity="0" />
 		</layout>
+		<dataLink field="especializacao_enganacao">
+				<event name="onChange"><![CDATA[
+				if sheet.especializacao_enganacao == true then
+					self.especializacao_enganacao.color = "#00FF00"
+				else
+					self.especializacao_enganacao.color = "#00000000"
+				end
+			]]></event>
+		</dataLink>
 
 		<layout left="1190.135" top="528.12695" height="17.9142" width="16.694559">
-			<checkBox align="client" horzTextAlign="center" field="especializacao_intimidacao" />
+			<rectangle align="client" color="#00000000" xradius="7" yradius="7" cornerType="bevel" name="especializacao_intimidacao"/>
+			<checkBox align="client" horzTextAlign="center" field="especializacao_intimidacao" opacity="0" />
 		</layout>
+		<dataLink field="especializacao_intimidacao">
+				<event name="onChange"><![CDATA[
+				if sheet.especializacao_intimidacao == true then
+					self.especializacao_intimidacao.color = "#00FF00"
+				else
+					self.especializacao_intimidacao.color = "#00000000"
+				end
+			]]></event>
+		</dataLink>
 
 		<layout left="1190.135" top="560.02094" height="17.9142" width="16.694559">
-			<checkBox align="client" horzTextAlign="center" field="especializacao_performance" />
+			<rectangle align="client" color="#00000000" xradius="7" yradius="7" cornerType="bevel" name="especializacao_performance"/>
+			<checkBox align="client" horzTextAlign="center" field="especializacao_performance" opacity="0" />
 		</layout>
+		<dataLink field="especializacao_performance">
+				<event name="onChange"><![CDATA[
+				if sheet.especializacao_performance == true then
+					self.especializacao_performance.color = "#00FF00"
+				else
+					self.especializacao_performance.color = "#00000000"
+				end
+			]]></event>
+		</dataLink>
 
 		<layout left="1190.1976" top="591.91486" height="17.9142" width="16.694559">
-			<checkBox align="client" horzTextAlign="center" field="especializacao_vontade" />
-		</layout>	
+			<rectangle align="client" color="#00000000" xradius="7" yradius="7" cornerType="bevel" name="especializacao_vontade"/>
+			<checkBox align="client" horzTextAlign="center" field="especializacao_vontade" opacity="0" />
+		</layout>
+		<dataLink field="especializacao_vontade">
+				<event name="onChange"><![CDATA[
+				if sheet.especializacao_vontade == true then
+					self.especializacao_vontade.color = "#00FF00"
+				else
+					self.especializacao_vontade.color = "#00000000"
+				end
+			]]></event>
+		</dataLink>
 
 		<!-- Pericias Valores Totais -->
 
 		<layout left="1207.4429" top="586.88074" height="20.575001" width="36.557999">
-			<edit align="client" horzTextAlign="center" field="total_vontade" />
+			<label align="client" horzTextAlign="center" field="total_vontade" fontColor="white" name="total_vontade" fontSize="18" fontFamily="Chiller"/>
 		</layout>
+		<dataLink fields="{'outros_vontade', 'maestria_vontade', 'especializacao_vontade', 'sheet.valor_nivel', 'maestria_nivel', 'base_carisma'}">
+			<event name="onPersistedChange"><![CDATA[
+
+				local valoroutros = tonumber(sheet.outros_vontade) or 0
+				local valornivel = tonumber(sheet.valor_nivel) or 0
+				local valormaestria = tonumber(sheet.maestria_nivel) or 0 
+				local valormodificador = tonumber(sheet.modificadorBase_carisma) or 0
+
+				if sheet.especializacao_vontade == true then
+					sheet.total_vontade = math.floor(valornivel/2) + math.floor((valormaestria+valormodificador)*1.5) + valoroutros;
+				elseif sheet.maestria_vontade == true then
+					sheet.total_vontade = math.floor(valornivel/2) + valormaestria + valormodificador + valoroutros;
+				else
+					sheet.total_vontade = math.floor(valornivel/2) + valormodificador + valoroutros;
+				end
+
+			]]></event>
+		</dataLink>
+
 		<layout left="1207.4429" top="554.98682" height="20.575001" width="36.557999">
-			<edit align="client" horzTextAlign="center" field="total_performance" />
+			<edit align="client" horzTextAlign="center" field="total_performance" fontColor="white" fontSize="18" fontFamily="Chiller"/>
 		</layout>
+		
 		<layout left="1207.4429" top="523.09283" height="20.575001" width="36.557999">
-			<edit align="client" horzTextAlign="center" field="total_intimidacao" />
+			<edit align="client" horzTextAlign="center" field="total_intimidacao" fontColor="white" fontSize="18" fontFamily="Chiller"/>
 		</layout>
+		
 		<layout left="1207.4429" top="491.19891" height="20.575001" width="36.557999">
-			<edit align="client" horzTextAlign="center" field="total_enganacao" />
+			<edit align="client" horzTextAlign="center" field="total_enganacao" fontColor="white" fontSize="18" fontFamily="Chiller"/>
 		</layout>
+		
 		<layout left="1207.4429" top="459.30496" height="20.575001" width="36.557999">
-			<edit align="client" horzTextAlign="center" field="total_persuasao" />
+			<edit align="client" horzTextAlign="center" field="total_persuasao" fontColor="white" fontSize="18" fontFamily="Chiller"/>
 		</layout>
+		
 		<layout left="1207.4429" top="427.41101" height="20.575001" width="36.557999">
-			<edit align="client" horzTextAlign="center" field="total_religiao" />
+			<edit align="client" horzTextAlign="center" field="total_religiao" fontColor="white" fontSize="18" fontFamily="Chiller"/>
 		</layout>
+		
 		<layout left="1207.4429" top="395.51709" height="20.575001" width="36.557999">
-			<edit align="client" horzTextAlign="center" field="totalOficio_3" />
+			<edit align="client" horzTextAlign="center" field="totalOficio_3" fontColor="white" fontSize="18" fontFamily="Chiller"/>
 		</layout>
+		
 		<layout left="1207.4429" top="363.62314" height="20.575001" width="36.557999">
-			<edit align="client" horzTextAlign="center" field="totalOficio_2" />
+			<edit align="client" horzTextAlign="center" field="totalOficio_2" fontColor="white" fontSize="18" fontFamily="Chiller"/>
 		</layout>
+		
 		<layout left="1207.4429" top="331.72922" height="20.575001" width="36.557999">
-			<edit align="client" horzTextAlign="center" field="totalOficio_1" />
+			<edit align="client" horzTextAlign="center" field="totalOficio_1" fontColor="white" fontSize="18" fontFamily="Chiller"/>
 		</layout>
+		
 		<layout left="1207.4429" top="299.54178" height="20.575001" width="36.557999">
-			<edit align="client" horzTextAlign="center" field="total_historia" />
+			<edit align="client" horzTextAlign="center" field="total_historia" fontColor="white" fontSize="18" fontFamily="Chiller"/>
 		</layout>
+		
 		<layout left="1207.4429" top="267.78433" height="20.575001" width="36.557999">
-			<edit align="client" horzTextAlign="center" field="total_investigacao" />
+			<edit align="client" horzTextAlign="center" field="total_investigacao" fontColor="white" fontSize="18" fontFamily="Chiller"/>
 		</layout>
+		
 		<layout left="1207.4429" top="236.04742" height="20.575001" width="36.557999">
-			<edit align="client" horzTextAlign="center" field="total_feiticaria" />
+			<edit align="client" horzTextAlign="center" field="total_feiticaria" fontColor="white" fontSize="18" fontFamily="Chiller"/>
 		</layout>
+		
 		<layout left="1207.4429" top="204.15352" height="20.575001" width="36.557999">
-			<edit align="client" horzTextAlign="center" field="total_astucia" />
+			<edit align="client" horzTextAlign="center" field="total_astucia" fontColor="white" fontSize="18" fontFamily="Chiller"/>
 		</layout>
+		
 		<layout left="891.69287" top="586.88074" height="20.575001" width="36.557999">
-			<edit align="client" horzTextAlign="center" field="total_ocultismo" />
+			<edit align="client" horzTextAlign="center" field="total_ocultismo" fontColor="white" fontSize="18" fontFamily="Chiller"/>
 		</layout>
+		
 		<layout left="891.69287" top="554.98682" height="20.575001" width="36.557999">
-			<edit align="client" horzTextAlign="center" field="total_percepcao" />
+			<edit align="client" horzTextAlign="center" field="total_percepcao" fontColor="white" fontSize="18" fontFamily="Chiller"/>
 		</layout>
+		
 		<layout left="891.69287" top="523.09283" height="20.575001" width="36.557999">
-			<edit align="client" horzTextAlign="center" field="total_medicina" />
+			<edit align="client" horzTextAlign="center" field="total_medicina" fontColor="white" fontSize="18" fontFamily="Chiller"/>
 		</layout>
+		
 		<layout left="891.69287" top="491.19888" height="20.575001" width="36.557999">
-			<edit align="client" horzTextAlign="center" field="total_intuicao" />
+			<edit align="client" horzTextAlign="center" field="total_intuicao" fontColor="white" fontSize="18" fontFamily="Chiller"/>
 		</layout>
+		
 		<layout left="891.69287" top="459.30496" height="20.575001" width="36.557999">
-			<edit align="client" horzTextAlign="center" field="total_integridade" />
+			<edit align="client" horzTextAlign="center" field="total_integridade" fontColor="white" fontSize="18" fontFamily="Chiller"/>
 		</layout>
+		
 		<layout left="891.69287" top="427.41101" height="20.575001" width="36.557999">
-			<edit align="client" horzTextAlign="center" field="total_fortitude" />
+			<edit align="client" horzTextAlign="center" field="total_fortitude" fontColor="white" fontSize="18" fontFamily="Chiller"/>
 		</layout>
+		
 		<layout left="891.69287" top="395.51709" height="20.575001" width="36.557999">
-			<edit align="client" horzTextAlign="center" field="total_reflexo" />
+			<edit align="client" horzTextAlign="center" field="total_reflexo" fontColor="white" fontSize="18" fontFamily="Chiller"/>
 		</layout>
+		
 		<layout left="891.69287" top="363.59836" height="20.575001" width="36.557999">
-			<edit align="client" horzTextAlign="center" field="total_prestidigitacao" />
+			<edit align="client" horzTextAlign="center" field="total_prestidigitacao" fontColor="white" fontSize="18" fontFamily="Chiller"/>
 		</layout>
+		
 		<layout left="891.69287" top="331.66983" height="20.575001" width="36.557999">
-			<edit align="client" horzTextAlign="center" field="total_pontaria" />
+			<edit align="client" horzTextAlign="center" field="total_pontaria" fontColor="white" fontSize="18" fontFamily="Chiller"/>
 		</layout>
+		
 		<layout left="891.69287" top="299.54178" height="20.575001" width="36.557999">
-			<edit align="client" horzTextAlign="center" field="total_furtividade" />
+			<edit align="client" horzTextAlign="center" field="total_furtividade" fontColor="white" fontSize="18" fontFamily="Chiller"/>
 		</layout>
+		
 		<layout left="891.69287" top="267.78433" height="20.575001" width="36.557999">
-			<edit align="client" horzTextAlign="center" field="total_acrobacia" />
+			<edit align="client" horzTextAlign="center" field="total_acrobacia" fontColor="white" fontSize="18" fontFamily="Chiller"/>
 		</layout>
+		
 		<layout left="891.69281" top="236.04744" height="20.575001" width="36.558167">
-			<edit align="client" horzTextAlign="center" field="total_luta" />
+			<edit align="client" horzTextAlign="center" field="total_luta" fontColor="white" fontSize="18" fontFamily="Chiller"/>
 		</layout>
+		
 		<layout left="891.69281" top="204.15373" height="20.574789" width="36.558167">
-			<edit align="client" horzTextAlign="center" field="total_atletismo" />
+			<edit align="client" horzTextAlign="center" field="total_atletismo" fontColor="white" fontSize="18" fontFamily="Chiller"/>
 		</layout>
 
 
