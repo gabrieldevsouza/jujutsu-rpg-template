@@ -9,6 +9,9 @@
 				optimize="true" compilerOrder="0" />&#xD; </rectangle>
 	</scrollBox>
 
+	require("firecast.lua");
+	Firecast.FUNCAO_DA_BIBLIOTECA(Parametro1, Parametro2, ...);
+
 	<!-- VALORES BASE -->
 
 	<layout left="337.49808" top="427.88306" height="60.473999" width="74.075996">
@@ -136,15 +139,15 @@
 	<!-- PONTOS -->
 
 	<layout left="41.38762" top="583.36925" height="67.19495" width="65.000">
-		<edit align="client" horzTextAlign="center" field="pontosDeVida_atual" fontSize="35" fontFamily="Chiller" transparent="true" />
+		<edit align="client" horzTextAlign="center" field="pontosDevida_atual" fontSize="35" fontFamily="Chiller" transparent="true" />
 	</layout>
-	
+
 	<layout left="125.375" top="583.36925" height="67.19495" width="65.000">
-		<edit align="client" horzTextAlign="center" field="pontosDeVida_maximo" fontSize="35" fontFamily="Chiller" transparent="true"/>
+		<edit align="client" horzTextAlign="center" field="pontosDevida_maximo" fontColor="#00FF00" fontSize="35" fontFamily="Chiller" transparent="true"/>
 	</layout>
 	
 	<layout left="209.36236" top="583.22645" height="67.19495" width="65.000">
-		<edit align="client" horzTextAlign="center" field="pontosDeVida_temporario" fontSize="35" fontFamily="Chiller" transparent="true"/>
+		<edit align="client" horzTextAlign="center" field="pontosDeVida_temporario" fontColor="#FFD700" fontSize="35" fontFamily="Chiller" transparent="true"/>
 	</layout>
 	
 	<layout left="314.61234" top="583.2981" height="67.19491" width="65.000">
@@ -189,35 +192,34 @@
 
 	<!-- Clase de Armadura -->
 
-	<layout left="639.21924" top="718.74384" height="95.187698" width="69.611977">
-    	<edit align="client" horzTextAlign="center" field="valor_total" fontSize="50" fontFamily="Chiller" transparent="true" fontStyle="bold"/>
-	</layout>
-	<dataLink field="base_forca">
-		<event name="onChange">
-			sheet.valor_total = math.floor(sheet.valor_outros + sheet.valor_destreza + sheet.valor_escudo + sheet.valor_armadura + sheet.valor_natural)
-		</event>
-	</dataLink>
+<layout left="874.97015" top="710.1712" height="28.067169" width="51.017101">
+	<edit align="client" horzTextAlign="center" field="valor_natural" fontSize="20" fontFamily="Chiller" transparent="true"/>
+</layout>
 
+<layout left="874.97015" top="738.23816" height="28.067169" width="51.017101">
+	<edit align="client" horzTextAlign="center" field="valor_armadura" fontSize="20" fontFamily="Chiller" transparent="true"/>
+</layout>
 
-	<layout left="874.97015" top="822.43811" height="28.067169" width="51.017101">
-		<edit align="client" horzTextAlign="center" field="valor_outros" fontSize="20" fontFamily="Chiller" transparent="true"/>
-	</layout>
+<layout left="874.97015" top="766.30481" height="28.067169" width="51.017101">
+	<edit align="client" horzTextAlign="center" field="valor_escudo" fontSize="20" fontFamily="Chiller" transparent="true"/>
+</layout>
 
-	<layout left="874.97015" top="794.37146" height="28.067169" width="51.017101">
-		<edit align="client" horzTextAlign="center" field="valor_destreza" fontSize="20" fontFamily="Chiller" transparent="true"/>
-	</layout>
+<layout left="874.97015" top="794.37146" height="28.067169" width="51.017101">
+	<edit align="client" horzTextAlign="center" field="valor_destreza" fontSize="20" fontFamily="Chiller" transparent="true"/>
+</layout>
 
-	<layout left="874.97015" top="766.30481" height="28.067169" width="51.017101">
-		<edit align="client" horzTextAlign="center" field="valor_escudo" fontSize="20" fontFamily="Chiller" transparent="true"/>
-	</layout>
+<layout left="874.97015" top="822.43811" height="28.067169" width="51.017101">
+	<edit align="client" horzTextAlign="center" field="valor_outros" fontSize="20" fontFamily="Chiller" transparent="true"/>
+</layout>
 
-	<layout left="874.97015" top="738.23816" height="28.067169" width="51.017101">
-		<edit align="client" horzTextAlign="center" field="valor_armadura" fontSize="20" fontFamily="Chiller" transparent="true"/>
-	</layout>
-
-	<layout left="874.97015" top="710.1712" height="28.067169" width="51.017101">
-		<edit align="client" horzTextAlign="center" field="valor_natural" fontSize="20" fontFamily="Chiller" transparent="true"/>
-	</layout>
+<layout left="639.21924" top="718.74384" height="95.187698" width="69.611977">
+	<label align="client" horzTextAlign="center" field="valor_total" fontSize="50" fontFamily="Chiller" fontStyle="bold" fontColor="white"/>
+</layout>
+<dataLink field="base_forca">
+	<event name="onChange">
+		sheet.valor_total = math.floor(sheet.valor_outros + sheet.valor_destreza + sheet.valor_escudo + sheet.valor_armadura + sheet.valor_natural)
+	</event>
+</dataLink>
 
 
 	<!--====================================================================================================================-->
@@ -225,34 +227,367 @@
 
 	<!-- Teste de Morte -->
 
-	<layout left="1171.3097" top="790.42145" height="50" width="50">
-    	<edit align="client" horzTextAlign="center" field="fracasso_3"  />
-	</layout>
-
-	<layout left="1101.3076" top="790.42194" height="50" width="50">
-		<edit align="client" horzTextAlign="center" field="fracasso_2"  />
-	</layout>
-
-	<layout left="1031.3054" top="790.42194" height="50" width="50">
-		<edit align="client" horzTextAlign="center" field="fracasso_1"  />
-	</layout>
-
-	<layout left="1171.105" top="720.25476" height="50" width="50">
-		<edit align="client" horzTextAlign="center" field="sucesso_3"/>
+	<layout left="1031.1007" top="720.25525" height="50" width="50">
+		<edit align="client" horzTextAlign="center" field="sucesso_1"/>
 	</layout>
 
 	<layout left="1101.1029" top="720.25525" height="50" width="50">
 		<edit align="client" horzTextAlign="center" field="sucesso_2"/>
 	</layout>
 
-	<layout left="1031.1007" top="720.25525" height="50" width="50">
-		<edit align="client" horzTextAlign="center" field="sucesso_1"/>
+	<layout left="1171.105" top="720.25476" height="50" width="50">
+		<edit align="client" horzTextAlign="center" field="sucesso_3"/>
+	</layout>
+
+	<layout left="1031.3054" top="790.42194" height="50" width="50">
+		<edit align="client" horzTextAlign="center" field="fracasso_1"  />
+	</layout>
+
+	<layout left="1101.3076" top="790.42194" height="50" width="50">
+		<edit align="client" horzTextAlign="center" field="fracasso_2"  />
+	</layout>
+
+	<layout left="1171.3097" top="790.42145" height="50" width="50">
+		<edit align="client" horzTextAlign="center" field="fracasso_3"  />
 	</layout>
 
 	<!-- Teste de Morte Botão -->
 
-	<layout left="1007.771" top="679.09332" height="23.995781" width="152.1774" opacity="0">
+	<layout left="1007.771" top="679.09332" height="23.995781" width="152.1774" opacity="0.5">
 		<button align="client" horzTextAlign="center"/>
+	</layout>
+
+
+	<!--====================================================================================================================-->
+	<!--====================================================================================================================-->
+
+	<!-- Pericias -->
+
+	<!-- Pericias outros -->
+
+	<layout left="810.51935" top="209.18765" height="15.53607" width="36.461948">
+		<edit align="client" horzTextAlign="center" field="outros_atletismo" fontSize="13" fontFamily="Chiller" transparent="true"/>
+	
+	</layout>
+	<layout left="810.51935" top="241.08159" height="15.53607" width="36.461948">
+		<edit align="client" horzTextAlign="center" field="outros_luta" fontSize="13" fontFamily="Chiller" transparent="true"/>
+	</layout>
+	
+	<layout left="810.51935" top="272.97552" height="15.53607" width="36.461948">
+		<edit align="client" horzTextAlign="center" field="outros_acrobacia" fontSize="13" fontFamily="Chiller" transparent="true"/>
+	</layout>
+	
+	<layout left="810.51935" top="304.86948" height="15.53607" width="36.461948">
+		<edit align="client" horzTextAlign="center" field="outros_furtividade" fontSize="13" fontFamily="Chiller" transparent="true"/>
+	</layout>
+	
+	<layout left="810.51935" top="336.7634" height="15.53607" width="36.461948">
+		<edit align="client" horzTextAlign="center" field="outros_pontaria" fontSize="13" fontFamily="Chiller" transparent="true"/>
+	</layout>
+	
+	<layout left="810.51935" top="368.65735" height="15.53607" width="36.461948">
+		<edit align="client" horzTextAlign="center" field="outros_prestidigitacao" fontSize="13" fontFamily="Chiller" transparent="true"/>
+	</layout>
+	
+	<layout left="810.51935" top="400.55127" height="15.53607" width="36.461948">
+		<edit align="client" horzTextAlign="center" field="outros_reflexo" fontSize="13" fontFamily="Chiller" transparent="true"/>
+	</layout>
+	
+	<layout left="810.51935" top="432.44522" height="15.53607" width="36.461948">
+		<edit align="client" horzTextAlign="center" field="outros_fortitude" fontSize="13" fontFamily="Chiller" transparent="true"/>
+	</layout>
+	
+	<layout left="810.51935" top="464.33917" height="15.53607" width="36.461948">
+		<edit align="client" horzTextAlign="center" field="outros_integridade" fontSize="13" fontFamily="Chiller" transparent="true"/>
+	</layout>
+	
+	<layout left="810.51935" top="496.23312" height="15.53607" width="36.461948">
+		<edit align="client" horzTextAlign="center" field="outros_intuicao" fontSize="13" fontFamily="Chiller" transparent="true"/>
+	</layout>
+	
+	<layout left="810.51935" top="528.12701" height="15.53607" width="36.461948">
+		<edit align="client" horzTextAlign="center" field="outros_medicina" fontSize="13" fontFamily="Chiller" transparent="true"/>
+	</layout>
+	
+	<layout left="810.51935" top="560.021" height="15.53607" width="36.461948">
+		<edit align="client" horzTextAlign="center" field="outros_percepcao" fontSize="13" fontFamily="Chiller" transparent="true"/>
+	</layout>
+	
+	<layout left="810.51935" top="591.91492" height="15.53607" width="36.461948">
+		<edit align="client" horzTextAlign="center" field="outros_ocultismo" fontSize="13" fontFamily="Chiller" transparent="true"/>
+	</layout>
+	
+	<layout left="1126.2676" top="209.64531" height="15.53607" width="36.461948">
+		<edit align="client" horzTextAlign="center" field="outros_astucia" fontSize="13" fontFamily="Chiller" transparent="true"/>
+	</layout>
+	
+	<layout left="1126.2676" top="241.53925" height="15.53607" width="36.461948">
+		<edit align="client" horzTextAlign="center" field="outros_feiticaria" fontSize="13" fontFamily="Chiller" transparent="true"/>
+	</layout>
+	
+	<layout left="1126.2676" top="273.4332" height="15.53607" width="36.461948">
+		<edit align="client" horzTextAlign="center" field="outros_investigcao" fontSize="13" fontFamily="Chiller" transparent="true"/>
+	</layout>
+	
+	<layout left="1126.2676" top="305.32715" height="15.53607" width="36.461948">
+		<edit align="client" horzTextAlign="center" field="outros_historia" fontSize="13" fontFamily="Chiller" transparent="true"/>
+	</layout>
+	
+	<layout left="1126.2676" top="337.22107" height="15.53607" width="36.461948">
+		<edit align="client" horzTextAlign="center" field="outrosOficio_1" fontSize="13" fontFamily="Chiller" transparent="true"/>
+	</layout>
+	
+	<layout left="1126.2676" top="369.11502" height="15.53607" width="36.461948">
+		<edit align="client" horzTextAlign="center" field="outrosOficio_2" fontSize="13" fontFamily="Chiller" transparent="true"/>
+	</layout>
+	
+	<layout left="1126.2676" top="401.00894" height="15.53607" width="36.461948">
+		<edit align="client" horzTextAlign="center" field="outrosOficio_3" fontSize="13" fontFamily="Chiller" transparent="true"/>
+	</layout>
+	
+	<layout left="1126.2676" top="432.90289" height="15.53607" width="36.461948">
+		<edit align="client" horzTextAlign="center" field="outros_religiao" fontSize="13" fontFamily="Chiller" transparent="true"/>
+	</layout>
+	
+	<layout left="1126.2676" top="464.79684" height="15.53607" width="36.461948">
+		<edit align="client" horzTextAlign="center" field="outros_persuasao" fontSize="13" fontFamily="Chiller" transparent="true"/>
+	</layout>
+	
+	<layout left="1126.2676" top="496.6908" height="15.53607" width="36.461948">
+		<edit align="client" horzTextAlign="center" field="outros_enganacao" fontSize="13" fontFamily="Chiller" transparent="true"/>
+	</layout>
+	
+	<layout left="1126.2676" top="528.58466" height="15.53607" width="36.461948">
+		<edit align="client" horzTextAlign="center" field="outros_intimidacao" fontSize="13" fontFamily="Chiller" transparent="true"/>
+	</layout>
+	
+	<layout left="1126.2676" top="560.4787" height="15.53607" width="36.461948">
+		<edit align="client" horzTextAlign="center" field="outros_performance" fontSize="13" fontFamily="Chiller" transparent="true"/>
+	</layout>
+	
+	<layout left="1126.2676" top="592.37262" height="15.53607" width="36.461948">
+		<edit align="client" horzTextAlign="center" field="outros_vontade" fontSize="13" fontFamily="Chiller" transparent="true"/>
+	</layout>
+
+	<!-- Pericias maestria -->
+
+	<layout left="852.46118" top="209.18765" height="17.9142" width="16.694559">
+		<edit align="client" horzTextAlign="center" field="maestria_atletismo" />
+	</layout>
+
+	<layout left="852.46118" top="241.08159" height="17.9142" width="16.694559">
+		<edit align="client" horzTextAlign="center" field="maestria_luta" />
+	</layout>
+
+	<layout left="852.3985" top="272.97552" height="17.9142" width="16.694559">
+		<edit align="client" horzTextAlign="center" field="maestria_acrobacia" />
+	</layout>
+
+	<layout left="852.3985" top="304.86948" height="17.9142" width="16.694559">
+		<edit align="client" horzTextAlign="center" field="maestria_furtividade" />
+	</layout>
+
+	<layout left="852.46118" top="336.7634" height="17.9142" width="16.694559">
+		<edit align="client" horzTextAlign="center" field="maestria_pontaria" />
+	</layout>
+
+	<layout left="852.46118" top="368.65735" height="17.9142" width="16.694559">
+		<edit align="client" horzTextAlign="center" field="maestria_prestidigitacao" />
+	</layout>
+
+	<layout left="852.3985" top="400.55127" height="17.9142" width="16.694559">
+		<edit align="client" horzTextAlign="center" field="maestria_reflexo" />
+	</layout>
+
+	<layout left="852.3985" top="432.44522" height="17.9142" width="16.694559">
+		<edit align="client" horzTextAlign="center" field="maestria_fortitude" />
+	</layout>
+
+	<layout left="852.3985" top="464.33911" height="17.9142" width="16.694559">
+		<edit align="client" horzTextAlign="center" field="maestria_integridade" />
+	</layout>
+
+	<layout left="852.3985" top="496.23306" height="17.9142" width="16.694559">
+		<edit align="client" horzTextAlign="center" field="maestria_intuicao" />
+	</layout>
+
+	<layout left="852.33582" top="528.12695" height="17.9142" width="16.694559">
+		<edit align="client" horzTextAlign="center" field="maestria_medicina" />
+	</layout>
+
+	<layout left="852.33582" top="560.02094" height="17.9142" width="16.694559">
+		<edit align="client" horzTextAlign="center" field="maestria_persepcao" />
+	</layout>
+
+	<layout left="852.3985" top="591.91486" height="17.9142" width="16.694559">
+		<edit align="client" horzTextAlign="center" field="maestria_ocultismo" />
+	</layout>
+
+	<layout left="1168.1486" top="209.18767" height="17.9142" width="16.694559">
+		<edit align="client" horzTextAlign="center" field="maestria_astucia" />
+	</layout>
+
+	<layout left="1168.1486" top="241.0816" height="17.9142" width="16.694559">
+		<edit align="client" horzTextAlign="center" field="maestria_feiticaria" />
+	</layout>
+
+	<layout left="1168.0858" top="272.97552" height="17.9142" width="16.694559">
+		<edit align="client" horzTextAlign="center" field="maestria_investigacao" />
+	</layout>
+
+	<layout left="1168.0858" top="304.86948" height="17.9142" width="16.694559">
+		<edit align="client" horzTextAlign="center" field="maestria_historia" />
+	</layout>
+
+	<layout left="1168.1486" top="336.7634" height="17.9142" width="16.694559">
+		<edit align="client" horzTextAlign="center" field="maestriaOficio_1" />
+	</layout>
+
+	<layout left="1168.1486" top="368.65735" height="17.9142" width="16.694559">
+		<edit align="client" horzTextAlign="center" field="maestriaOficio_2" />
+	</layout>
+
+	<layout left="1168.0858" top="400.55127" height="17.9142" width="16.694559">
+		<edit align="client" horzTextAlign="center" field="maestriaOficio_3" />
+	</layout>
+
+	<layout left="1168.0858" top="432.44522" height="17.9142" width="16.694559">
+		<edit align="client" horzTextAlign="center" field="maestria_religiao" />
+	</layout>
+
+	<layout left="1168.0858" top="464.33911" height="17.9142" width="16.694559">
+		<edit align="client" horzTextAlign="center" field="maestria_persuasao" />
+	</layout>
+
+	<layout left="1168.0858" top="496.23306" height="17.9142" width="16.694559">
+		<edit align="client" horzTextAlign="center" field="maestria_enganacao" />
+	</layout>
+
+	<layout left="1168.0232" top="528.12695" height="17.9142" width="16.694559">
+		<edit align="client" horzTextAlign="center" field="maestria_invimidaco" />
+	</layout>
+
+	<layout left="1168.0232" top="560.02094" height="17.9142" width="16.694559">
+		<edit align="client" horzTextAlign="center" field="maestria_performance" />
+	</layout>
+
+	<layout left="1168.0858" top="591.91486" height="17.9142" width="16.694559">
+		<edit align="client" horzTextAlign="center" field="maestria_vontade" />
+	</layout>
+
+	<!-- Pericias Especializacao -->
+
+	<layout left="874.63568" top="209.18765" height="17.9142" width="16.694559">
+		<edit align="client" horzTextAlign="center" field="especializacao_atletismo" />
+	</layout>
+
+	<layout left="874.573" top="272.97552" height="17.9142" width="16.694559">
+		<edit align="client" horzTextAlign="center" field="especializacao_acrobacia" />
+	</layout>
+
+	<layout left="874.573" top="304.86948" height="17.9142" width="16.694559">
+		<edit align="client" horzTextAlign="center" field="especializacao_furtividade" />
+	</layout>
+
+	<layout left="874.63568" top="368.65735" height="17.9142" width="16.694559">
+		<edit align="client" horzTextAlign="center" field="especializacao_prestidigitacao" />
+	</layout>
+
+	<layout left="874.573" top="400.55127" height="17.9142" width="16.694559">
+		<edit align="client" horzTextAlign="center" field="especializacao_reflexo" />
+	</layout>
+
+	<layout left="874.573" top="432.44522" height="17.9142" width="16.694559">
+		<edit align="client" horzTextAlign="center" field="especializacao_fortitude" />
+	</layout>
+
+	<layout left="874.573" top="464.33911" height="17.9142" width="16.694559">
+		<edit align="client" horzTextAlign="center" field="especializacao_integridade" />
+	</layout>
+
+	<layout left="874.573" top="496.23306" height="17.9142" width="16.694559">
+		<edit align="client" horzTextAlign="center" field="especializacao_intuicao" />
+	</layout>
+
+	<layout left="874.51031" top="528.12695" height="17.9142" width="16.694559">
+		<edit align="client" horzTextAlign="center" field="especializacao_medicina" />
+	</layout>
+
+	<layout left="874.51031" top="560.02094" height="17.9142" width="16.694559">
+		<edit align="client" horzTextAlign="center" field="especializacao_percepcao" />
+	</layout>
+
+	<layout left="874.573" top="591.91486" height="17.9142" width="16.694559">
+		<edit align="client" horzTextAlign="center" field="especializacao_ocultismo" />
+	</layout>
+
+	<layout left="1190.2604" top="209.18765" height="17.9142" width="16.694559">
+		<edit align="client" horzTextAlign="center" field="especializacao_astucia" />
+	</layout>
+
+	<layout left="1190.2604" top="241.08159" height="17.9142" width="16.694559">
+		<edit align="client" horzTextAlign="center" field="especializacao_feiticaria" />
+	</layout>
+
+	<layout left="1190.1976" top="272.97552" height="17.9142" width="16.694559">
+		<edit align="client" horzTextAlign="center" field="especializacao_investigacao" />
+	</layout>
+
+	<layout left="1190.1976" top="304.86948" height="17.9142" width="16.694559">
+		<edit align="client" horzTextAlign="center" field="especializacao_historia" />
+	</layout>
+
+	<layout left="1190.2604" top="336.7634" height="17.9142" width="16.694559">
+		<edit align="client" horzTextAlign="center" field="especializacaoOficio_1" />
+	</layout>
+
+	<layout left="1190.2604" top="368.65735" height="17.9142" width="16.694559">
+		<edit align="client" horzTextAlign="center" field="especializacaoOfivio_2" />
+	</layout>
+
+	<layout left="1190.1976" top="400.55127" height="17.9142" width="16.694559">
+		<edit align="client" horzTextAlign="center" field="especializacaoOficio_3" />
+	</layout>
+
+	<layout left="1190.1976" top="432.44522" height="17.9142" width="16.694559">
+		<edit align="client" horzTextAlign="center" field="especializacao_religiao" />
+	</layout>
+
+	<layout left="1190.1976" top="464.33911" height="17.9142" width="16.694559">
+		<edit align="client" horzTextAlign="center" field="especializacao_persuasao" />
+	</layout>
+
+	<layout left="1190.1976" top="496.23306" height="17.9142" width="16.694559">
+		<edit align="client" horzTextAlign="center" field="especializacao_enganacao" />
+	</layout>
+
+	<layout left="1190.135" top="528.12695" height="17.9142" width="16.694559">
+		<edit align="client" horzTextAlign="center" field="especializacao_intimidacao" />
+	</layout>
+
+	<layout left="1190.135" top="560.02094" height="17.9142" width="16.694559">
+		<edit align="client" horzTextAlign="center" field="especializacao_performance" />
+	</layout>
+
+	<layout left="1190.1976" top="591.91486" height="17.9142" width="16.694559">
+		<edit align="client" horzTextAlign="center" field="especializacao_vontade" />
+	</layout>	
+
+	<!-- Pericias Valores Totais -->
+
+
+	<!-- Pericias Texto Oficio -->
+
+	<layout left="994.14417" top="338.75235" height="18.25411" width="60.513538">
+    	<edit align="client" horzTextAlign="center" field="oficio_3" />
+	</layout>
+
+	<layout left="994.14417" top="370.62036" height="18.25411" width="60.513538">
+		<edit align="client" horzTextAlign="center" field="oficio_2" />
+	</layout>
+
+	<layout left="994.14417" top="402.54153" height="18.25411" width="60.444386">
+		<edit align="client" horzTextAlign="center" field="oficio_1" />
 	</layout>
 
 </form>
