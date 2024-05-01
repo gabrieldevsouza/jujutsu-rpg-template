@@ -1828,16 +1828,16 @@
 
 		<!-- Pericias Texto Oficio -->
 
-		<layout left="994.14417" top="338.75235" height="18.25411" width="60.513538">
-			<edit align="client" horzTextAlign="center" field="oficio_3" fontSize="18" fontFamily="Chiller" transparent="true" />
+		<layout left="994.10962" top="328.48383" height="28.403999" width="60.513538">
+			<edit align="client" horzTextAlign="leading" field="oficio_3" fontSize="25" fontFamily="Chiller" transparent="true" />
 		</layout>
 
-		<layout left="994.14417" top="370.62036" height="18.25411" width="60.513538">
-			<edit align="client" horzTextAlign="center" field="oficio_2" fontSize="18" fontFamily="Chiller" transparent="true" />
+		<layout left="994.10962" top="360.43777" height="28.403999" width="60.513538">
+			<edit align="client" horzTextAlign="leading" field="oficio_2" fontSize="25" fontFamily="Chiller" transparent="true" />
 		</layout>
 
-		<layout left="994.14417" top="402.54153" height="18.25411" width="60.444386">
-			<edit align="client" horzTextAlign="center" field="oficio_1" fontSize="18" fontFamily="Chiller" transparent="true" />
+		<layout left="994.14417" top="392.39172" height="28.403999" width="60.513538">
+			<edit align="client" horzTextAlign="leading" field="oficio_1" fontSize="25" fontFamily="Chiller" transparent="true" />
 		</layout>
 
 	</scrollBox>
