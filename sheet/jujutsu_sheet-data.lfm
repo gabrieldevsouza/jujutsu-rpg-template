@@ -1038,12 +1038,12 @@
 			<rectangle align="client" color="#00000000" xradius="7" yradius="7" cornerType="bevel" name="especializacao_integridade"/>
 			<checkBox align="client" horzTextAlign="center" field="especializacao_integridade" opacity="0" />
 		</layout>
-		<dataLink field="eespecializacao_integridade">
+		<dataLink field="especializacao_integridade">
 				<event name="onChange"><![CDATA[
-				if sheet.eespecializacao_integridade == true then
-					self.eespecializacao_integridade.color = "#00FF00"
+				if sheet.especializacao_integridade == true then
+					self.especializacao_integridade.color = "#00FF00"
 				else
-					self.eespecializacao_integridade.color = "#00000000"
+					self.especializacao_integridade.color = "#00000000"
 				end
 			]]></event>
 		</dataLink>
@@ -1176,7 +1176,7 @@
 
 		<layout left="1190.2604" top="368.65735" height="17.9142" width="16.694559">
 			<rectangle align="client" color="#00000000" xradius="7" yradius="7" cornerType="bevel" name="especializacaoOficio_2"/>
-			<checkBox align="client" horzTextAlign="center" field="especializacaoOfivio_2" opacity="0" />
+			<checkBox align="client" horzTextAlign="center" field="especializacaoOficio_2" opacity="0" />
 		</layout>
 		<dataLink field="especializacaoOficio_2">
 				<event name="onChange"><![CDATA[
@@ -1291,7 +1291,7 @@
 		<layout left="1207.4429" top="586.88074" height="20.575001" width="36.557999">
 			<label align="client" horzTextAlign="center" field="total_vontade" name="total_vontade" fontColor="white" fontSize="18" fontFamily="Chiller"/>
 		</layout>
-		<dataLink fields="{'outros_vontade', 'maestria_vontade', 'especializacao_vontade', 'sheet.valor_nivel', 'maestria_nivel', 'base_carisma'}">
+		<dataLink fields="{'outros_vontade', 'maestria_vontade', 'especializacao_vontade', 'sheet.valor_nivel', 'maestria_nivel', 'modificadorBase_carisma'}">
 			<event name="onPersistedChange"><![CDATA[
 
 				local valoroutros = tonumber(sheet.outros_vontade) or 0
@@ -1313,7 +1313,7 @@
 		<layout left="1207.4429" top="554.98682" height="20.575001" width="36.557999">
 			<label align="client" horzTextAlign="center" field="total_performance" name="total_performance" fontColor="white" fontSize="18" fontFamily="Chiller"/>
 		</layout>
-		<dataLink fields="{'outros_performance', 'maestria_performance', 'especializacao_performance', 'sheet.valor_nivel', 'maestria_nivel', 'base_carisma'}">
+		<dataLink fields="{'outros_performance', 'maestria_performance', 'especializacao_performance', 'sheet.valor_nivel', 'maestria_nivel', 'modificadorBase_carisma'}">
 			<event name="onPersistedChange"><![CDATA[
 
 				local valoroutros = tonumber(sheet.outros_performance) or 0
@@ -1335,7 +1335,7 @@
 		<layout left="1207.4429" top="523.09283" height="20.575001" width="36.557999">
 			<label align="client" horzTextAlign="center" field="total_intimidacao" name="total_intimidacao" fontColor="white" fontSize="18" fontFamily="Chiller"/>
 		</layout>
-		<dataLink fields="{'outros_intimidacao', 'maestria_intimidacao', 'especializacao_intimidacao', 'sheet.valor_nivel', 'maestria_nivel', 'base_carisma'}">
+		<dataLink fields="{'outros_intimidacao', 'maestria_intimidacao', 'especializacao_intimidacao', 'sheet.valor_nivel', 'maestria_nivel', 'modificadorBase_carisma'}">
 			<event name="onPersistedChange"><![CDATA[
 
 				local valoroutros = tonumber(sheet.outros_intimidacao) or 0
@@ -1357,7 +1357,7 @@
 		<layout left="1207.4429" top="491.19891" height="20.575001" width="36.557999">
 			<label align="client" horzTextAlign="center" field="total_enganacao" name="total_enganacao" fontColor="white" fontSize="18" fontFamily="Chiller"/>
 		</layout>
-		<dataLink fields="{'outros_enganacao', 'maestria_enganacao', 'especializacao_enganacao', 'sheet.valor_nivel', 'maestria_nivel', 'base_carisma'}">
+		<dataLink fields="{'outros_enganacao', 'maestria_enganacao', 'especializacao_enganacao', 'sheet.valor_nivel', 'maestria_nivel', 'modificadorBase_carisma'}">
 			<event name="onPersistedChange"><![CDATA[
 
 				local valoroutros = tonumber(sheet.outros_enganacao) or 0
@@ -1379,7 +1379,7 @@
 		<layout left="1207.4429" top="459.30496" height="20.575001" width="36.557999">
 			<label align="client" horzTextAlign="center" field="total_persuasao" name="total_persuasao" fontColor="white" fontSize="18" fontFamily="Chiller"/>
 		</layout>
-		<dataLink fields="{'outros_persuasao', 'maestria_persuasao', 'especializacao_persuasao', 'sheet.valor_nivel', 'maestria_nivel', 'base_carisma'}">
+		<dataLink fields="{'outros_persuasao', 'maestria_persuasao', 'especializacao_persuasao', 'sheet.valor_nivel', 'maestria_nivel', 'modificadorBase_carisma'}">
 			<event name="onPersistedChange"><![CDATA[
 
 				local valoroutros = tonumber(sheet.outros_persuasao) or 0
@@ -1401,7 +1401,7 @@
 		<layout left="1207.4429" top="427.41101" height="20.575001" width="36.557999">
 			<label align="client" horzTextAlign="center" field="total_religiao" name="total_religiao" fontColor="white" fontSize="18" fontFamily="Chiller"/>
 		</layout>
-		<dataLink fields="{'outros_religiao', 'maestria_religiao', 'especializacao_religiao', 'sheet.valor_nivel', 'maestria_nivel', 'base_carisma'}">
+		<dataLink fields="{'outros_religiao', 'maestria_religiao', 'especializacao_religiao', 'sheet.valor_nivel', 'maestria_nivel', 'modificadorBase_inteligencia'}">
 			<event name="onPersistedChange"><![CDATA[
 
 				local valoroutros = tonumber(sheet.outros_religiao) or 0
@@ -1423,7 +1423,7 @@
 		<layout left="1207.4429" top="395.51709" height="20.575001" width="36.557999">
 			<label align="client" horzTextAlign="center" field="totalOficio_3" name="totalOficio_3" fontColor="white" fontSize="18" fontFamily="Chiller"/>
 		</layout>
-		<dataLink fields="{'outrosOficio_3', 'maestriaOficio_3', 'especializacaoOficio_3', 'sheet.valor_nivel', 'maestria_nivel', 'base_carisma'}">
+		<dataLink fields="{'outrosOficio_3', 'maestriaOficio_3', 'especializacaoOficio_3', 'sheet.valor_nivel', 'maestria_nivel', 'modificadorBase_inteligencia'}">
 			<event name="onPersistedChange"><![CDATA[
 
 				local valoroutros = tonumber(sheet.outrosOficio_3) or 0
@@ -1445,7 +1445,7 @@
 		<layout left="1207.4429" top="363.62314" height="20.575001" width="36.557999">
 			<label align="client" horzTextAlign="center" field="totalOficio_2" name="totalOficio_2" fontColor="white" fontSize="18" fontFamily="Chiller"/>
 		</layout>
-		<dataLink fields="{'outrosOficio_2', 'maestriaOficio_2', 'especializacaoOficio_2', 'sheet.valor_nivel', 'maestria_nivel', 'base_carisma'}">
+		<dataLink fields="{'outrosOficio_2', 'maestriaOficio_2', 'especializacaoOficio_2', 'sheet.valor_nivel', 'maestria_nivel', 'modificadorBase_inteligencia'}">
 			<event name="onPersistedChange"><![CDATA[
 
 				local valoroutros = tonumber(sheet.outrosOficio_2) or 0
@@ -1467,7 +1467,7 @@
 		<layout left="1207.4429" top="331.72922" height="20.575001" width="36.557999">
 			<label align="client" horzTextAlign="center" field="totalOficio_1" name="totalOficio_1" fontColor="white" fontSize="18" fontFamily="Chiller"/>
 		</layout>
-		<dataLink fields="{'outrosOficio_1', 'maestriaOficio_1', 'especializacaoOficio_1', 'sheet.valor_nivel', 'maestria_nivel', 'base_carisma'}">
+		<dataLink fields="{'outrosOficio_1', 'maestriaOficio_1', 'especializacaoOficio_1', 'sheet.valor_nivel', 'maestria_nivel', 'modificadorBase_inteligencia'}">
 			<event name="onPersistedChange"><![CDATA[
 
 				local valoroutros = tonumber(sheet.outrosOficio_1) or 0
@@ -1489,7 +1489,7 @@
 		<layout left="1207.4429" top="299.54178" height="20.575001" width="36.557999">
 			<label align="client" horzTextAlign="center" field="total_historia" name="total_historia" fontColor="white" fontSize="18" fontFamily="Chiller"/>
 		</layout>
-		<dataLink fields="{'outros_historia', 'maestria_historia', 'especializacao_historia', 'sheet.valor_nivel', 'maestria_nivel', 'base_carisma'}">
+		<dataLink fields="{'outros_historia', 'maestria_historia', 'especializacao_historia', 'sheet.valor_nivel', 'maestria_nivel', 'modificadorBase_inteligencia'}">
 			<event name="onPersistedChange"><![CDATA[
 
 				local valoroutros = tonumber(sheet.outros_historia) or 0
@@ -1511,7 +1511,7 @@
 		<layout left="1207.4429" top="267.78433" height="20.575001" width="36.557999">
 			<label align="client" horzTextAlign="center" field="total_investigacao"  name="total_investigacao" fontColor="white" fontSize="18" fontFamily="Chiller"/>
 		</layout>
-		<dataLink fields="{'outros_investigacao', 'maestria_investigacao', 'especializacao_investigacao', 'sheet.valor_nivel', 'maestria_nivel', 'base_carisma'}">
+		<dataLink fields="{'outros_investigacao', 'maestria_investigacao', 'especializacao_investigacao', 'sheet.valor_nivel', 'maestria_nivel', 'modificadorBase_inteligencia'}">
 			<event name="onPersistedChange"><![CDATA[
 
 				local valoroutros = tonumber(sheet.outros_investigacao) or 0
@@ -1533,7 +1533,7 @@
 		<layout left="1207.4429" top="236.04742" height="20.575001" width="36.557999">
 			<label align="client" horzTextAlign="center" field="total_feiticaria" name="total_feiticaria" fontColor="white" fontSize="18" fontFamily="Chiller"/>
 		</layout>
-		<dataLink fields="{'outros_feiticaria', 'maestria_feiticaria', 'especializacao_feiticaria', 'sheet.valor_nivel', 'maestria_nivel', 'base_carisma'}">
+		<dataLink fields="{'outros_feiticaria', 'maestria_feiticaria', 'especializacao_feiticaria', 'sheet.valor_nivel', 'maestria_nivel', 'modificadorBase_inteligencia'}">
 			<event name="onPersistedChange"><![CDATA[
 
 				local valoroutros = tonumber(sheet.outros_feiticaria) or 0
@@ -1555,7 +1555,7 @@
 		<layout left="1207.4429" top="204.15352" height="20.575001" width="36.557999">
 			<label align="client" horzTextAlign="center" field="total_astucia" name="total_astucia" fontColor="white" fontSize="18" fontFamily="Chiller"/>
 		</layout>
-		<dataLink fields="{'outros_astucia', 'maestria_astucia', 'especializacao_astucia', 'sheet.valor_nivel', 'maestria_nivel', 'base_carisma'}">
+		<dataLink fields="{'outros_astucia', 'maestria_astucia', 'especializacao_astucia', 'sheet.valor_nivel', 'maestria_nivel', 'modificadorBase_inteligencia'}">
 			<event name="onPersistedChange"><![CDATA[
 
 				local valoroutros = tonumber(sheet.outros_astucia) or 0
@@ -1577,7 +1577,7 @@
 		<layout left="891.69287" top="586.88074" height="20.575001" width="36.557999">
 			<label align="client" horzTextAlign="center" field="total_ocultismo" name="total_ocultismo" fontColor="white" fontSize="18" fontFamily="Chiller"/>
 		</layout>
-		<dataLink fields="{'outros_ocultismo', 'maestria_ocultismo', 'especializacao_ocultismo', 'sheet.valor_nivel', 'maestria_nivel', 'base_carisma'}">
+		<dataLink fields="{'outros_ocultismo', 'maestria_ocultismo', 'especializacao_ocultismo', 'sheet.valor_nivel', 'maestria_nivel', 'modificadorBase_sabedoria'}">
 			<event name="onPersistedChange"><![CDATA[
 
 				local valoroutros = tonumber(sheet.outros_ocultismo) or 0
@@ -1599,7 +1599,7 @@
 		<layout left="891.69287" top="554.98682" height="20.575001" width="36.557999">
 			<label align="client" horzTextAlign="center" field="total_percepcao" name="total_percepcao" fontColor="white" fontSize="18" fontFamily="Chiller"/>
 		</layout>
-		<dataLink fields="{'outros_percepcao', 'maestria_percepcao', 'especializacao_percepcao', 'sheet.valor_nivel', 'maestria_nivel', 'base_carisma'}">
+		<dataLink fields="{'outros_percepcao', 'maestria_percepcao', 'especializacao_percepcao', 'sheet.valor_nivel', 'maestria_nivel', 'modificadorBase_sabedoria'}">
 			<event name="onPersistedChange"><![CDATA[
 
 				local valoroutros = tonumber(sheet.outros_percepcao) or 0
@@ -1621,7 +1621,7 @@
 		<layout left="891.69287" top="523.09283" height="20.575001" width="36.557999">
 			<label align="client" horzTextAlign="center" field="total_medicina" name="total_medicina" fontColor="white" fontSize="18" fontFamily="Chiller"/>
 		</layout>
-		<dataLink fields="{'outros_medicina', 'maestria_medicina', 'especializacao_medicina', 'sheet.valor_nivel', 'maestria_nivel', 'base_carisma'}">
+		<dataLink fields="{'outros_medicina', 'maestria_medicina', 'especializacao_medicina', 'sheet.valor_nivel', 'maestria_nivel', 'modificadorBase_sabedoria'}">
 			<event name="onPersistedChange"><![CDATA[
 
 				local valoroutros = tonumber(sheet.outros_medicina) or 0
@@ -1643,7 +1643,7 @@
 		<layout left="891.69287" top="491.19888" height="20.575001" width="36.557999">
 			<label align="client" horzTextAlign="center" field="total_intuicao" name="total_intuicao" fontColor="white" fontSize="18" fontFamily="Chiller"/>
 		</layout>
-		<dataLink fields="{'outros_intuicao', 'maestria_intuicao', 'especializacao_intuicao', 'sheet.valor_nivel', 'maestria_nivel', 'base_carisma'}">
+		<dataLink fields="{'outros_intuicao', 'maestria_intuicao', 'especializacao_intuicao', 'sheet.valor_nivel', 'maestria_nivel', 'modificadorBase_sabedoria'}">
 			<event name="onPersistedChange"><![CDATA[
 
 				local valoroutros = tonumber(sheet.outros_intuicao) or 0
@@ -1665,7 +1665,7 @@
 		<layout left="891.69287" top="459.30496" height="20.575001" width="36.557999">
 			<label align="client" horzTextAlign="center" field="total_integridade" name="total_integridade" fontColor="white" fontSize="18" fontFamily="Chiller"/>
 		</layout>
-		<dataLink fields="{'outros_integridade', 'maestria_integridade', 'especializacao_integridade', 'sheet.valor_nivel', 'maestria_nivel', 'base_carisma'}">
+		<dataLink fields="{'outros_integridade', 'maestria_integridade', 'especializacao_integridade', 'sheet.valor_nivel', 'maestria_nivel', 'modificadorBase_constituicao'}">
 			<event name="onPersistedChange"><![CDATA[
 
 				local valoroutros = tonumber(sheet.outros_integridade) or 0
@@ -1687,7 +1687,7 @@
 		<layout left="891.69287" top="427.41101" height="20.575001" width="36.557999">
 			<label align="client" horzTextAlign="center" field="total_fortitude" name="total_fortitude" fontColor="white" fontSize="18" fontFamily="Chiller"/>
 		</layout>
-		<dataLink fields="{'outros_fortitude', 'maestria_fortitude', 'especializacao_fortitude', 'sheet.valor_nivel', 'maestria_nivel', 'base_carisma'}">
+		<dataLink fields="{'outros_fortitude', 'maestria_fortitude', 'especializacao_fortitude', 'sheet.valor_nivel', 'maestria_nivel', 'modificadorBase_constituicao'}">
 			<event name="onPersistedChange"><![CDATA[
 
 				local valoroutros = tonumber(sheet.outros_fortitude) or 0
@@ -1709,7 +1709,7 @@
 		<layout left="891.69287" top="395.51709" height="20.575001" width="36.557999">
 			<label align="client" horzTextAlign="center" field="total_reflexo" name="total_reflexo" fontColor="white" fontSize="18" fontFamily="Chiller"/>
 		</layout>
-		<dataLink fields="{'outros_reflexo', 'maestria_reflexo', 'especializacao_reflexo', 'sheet.valor_nivel', 'maestria_nivel', 'base_carisma'}">
+		<dataLink fields="{'outros_reflexo', 'maestria_reflexo', 'especializacao_reflexo', 'sheet.valor_nivel', 'maestria_nivel', 'modificadorBase_destreza'}">
 			<event name="onPersistedChange"><![CDATA[
 
 				local valoroutros = tonumber(sheet.outros_reflexo) or 0
@@ -1731,7 +1731,7 @@
 		<layout left="891.69287" top="363.59836" height="20.575001" width="36.557999">
 			<label align="client" horzTextAlign="center" field="total_prestidigitacao" name="total_prestidigitacao" fontColor="white" fontSize="18" fontFamily="Chiller"/>
 		</layout>
-		<dataLink fields="{'outros_prestidigitacao', 'maestria_prestidigitacao', 'especializacao_prestidigitacao', 'sheet.valor_nivel', 'maestria_nivel', 'base_carisma'}">
+		<dataLink fields="{'outros_prestidigitacao', 'maestria_prestidigitacao', 'especializacao_prestidigitacao', 'sheet.valor_nivel', 'maestria_nivel', 'modificadorBase_destreza'}">
 			<event name="onPersistedChange"><![CDATA[
 
 				local valoroutros = tonumber(sheet.outros_prestidigitacao) or 0
@@ -1758,7 +1758,7 @@
 		<layout left="891.69287" top="299.54178" height="20.575001" width="36.557999">
 			<label align="client" horzTextAlign="center" field="total_furtividade" name="total_furtividade" fontColor="white" fontSize="18" fontFamily="Chiller"/>
 		</layout>
-		<dataLink fields="{'outros_furtividade', 'maestria_furtividade', 'especializacao_furtividade', 'sheet.valor_nivel', 'maestria_nivel', 'base_carisma'}">
+		<dataLink fields="{'outros_furtividade', 'maestria_furtividade', 'especializacao_furtividade', 'sheet.valor_nivel', 'maestria_nivel', 'modificadorBase_destreza'}">
 			<event name="onPersistedChange"><![CDATA[
 
 				local valoroutros = tonumber(sheet.outros_furtividade) or 0
@@ -1780,7 +1780,7 @@
 		<layout left="891.69287" top="267.78433" height="20.575001" width="36.557999">
 			<label align="client" horzTextAlign="center" field="total_acrobacia" name="total_acrobacia" fontColor="white" fontSize="18" fontFamily="Chiller"/>
 		</layout>
-		<dataLink fields="{'outros_acrobacia', 'maestria_acrobacia', 'especializacao_acrobacia', 'sheet.valor_nivel', 'maestria_nivel', 'base_carisma'}">
+		<dataLink fields="{'outros_acrobacia', 'maestria_acrobacia', 'especializacao_acrobacia', 'sheet.valor_nivel', 'maestria_nivel', 'modificadorBase_destreza'}">
 			<event name="onPersistedChange"><![CDATA[
 
 				local valoroutros = tonumber(sheet.outros_acrobacia) or 0
@@ -1806,8 +1806,8 @@
 		<layout left="891.69281" top="204.15373" height="20.574789" width="36.558167">
 			<label align="client" horzTextAlign="center" field="total_atletismo" name="total_atletismo" fontColor="white" fontSize="18" fontFamily="Chiller"/>
 		</layout>
-		<dataLink fields="{'outros_atletismo', 'maestria_atletismo', 'especializacao_atletismo', 'sheet.valor_nivel', 'maestria_nivel', 'base_carisma'}">
-			<event name="onPersistedChange"><![CDATA[
+		<dataLink fields="{'outros_atletismo', 'maestria_atletismo', 'especializacao_atletismo', 'sheet.valor_nivel', 'maestria_nivel', 'modificadorBase_forca'}">
+			<event name="onChange"><![CDATA[
 
 				local valoroutros = tonumber(sheet.outros_atletismo) or 0
 				local valornivel = tonumber(sheet.valor_nivel) or 0
@@ -1829,15 +1829,15 @@
 		<!-- Pericias Texto Oficio -->
 
 		<layout left="994.14417" top="338.75235" height="18.25411" width="60.513538">
-			<edit align="client" horzTextAlign="center" field="oficio_3" />
+			<edit align="client" horzTextAlign="center" field="oficio_3" fontSize="18" fontFamily="Chiller" transparent="true" />
 		</layout>
 
 		<layout left="994.14417" top="370.62036" height="18.25411" width="60.513538">
-			<edit align="client" horzTextAlign="center" field="oficio_2" />
+			<edit align="client" horzTextAlign="center" field="oficio_2" fontSize="18" fontFamily="Chiller" transparent="true" />
 		</layout>
 
 		<layout left="994.14417" top="402.54153" height="18.25411" width="60.444386">
-			<edit align="client" horzTextAlign="center" field="oficio_1" />
+			<edit align="client" horzTextAlign="center" field="oficio_1" fontSize="18" fontFamily="Chiller" transparent="true" />
 		</layout>
 
 	</scrollBox>
