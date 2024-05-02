@@ -329,11 +329,11 @@
 		</layout>
 		
 		<layout left="398.59971" top="583.2981" height="67.19491" width="65.000">
-			<edit align="client" horzTextAlign="center" field="pontosDeEnergia_maximo" fontSize="35" fontFamily="Chiller" transparent="true"/>
+			<edit align="client" horzTextAlign="center" field="pontosDeEnergia_maximo" fontColor="#00BFFF" fontSize="35" fontFamily="Chiller" transparent="true"/>
 		</layout>
 		
 		<layout left="482.58708" top="583.15526" height="67.19496" width="65.000">
-			<edit align="client" horzTextAlign="center" field="pontosDeEnergia_temporario" fontSize="35" fontFamily="Chiller" transparent="true"/>
+			<edit align="client" horzTextAlign="center" field="pontosDeEnergia_temporario" fontColor="#00FFFF" fontSize="35" fontFamily="Chiller" transparent="true"/>
 		</layout>
 
 		<!-- #endregion -->
