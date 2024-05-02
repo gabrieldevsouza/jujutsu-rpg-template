@@ -15,11 +15,11 @@
 		<!--====================================================================================================================-->
 		<!--====================================================================================================================-->
 		
-		<!-- TOPO -->
+		<!-- #region DADOS TOPO -->
 
 		<!-- name -->
 
-		<!-- Nivel/Maestria/Experiencia -->
+		<!-- #region Nivel/Maestria/Experiencia -->
 
 		<layout left="676.05194" top="26.523771" height="18.25411" width="54.185398">
 			<edit align="client" horzTextAlign="center" field="valor_nivel" fontSize="15" transparent="true" fontFamily="Chiller"/>
@@ -38,14 +38,15 @@
 		<layout left="726.01697" top="77.222595" height="18.25411" width="54.185398">
 			<edit align="client" horzTextAlign="center" field="experiencia" fontSize="15" transparent="true" fontFamily="Chiller"/>
 		</layout>
+		<!-- #endregion -->
 
 		<!-- Especializacao/Origem -->
+
+		<!-- #endregion -->
 		
+		<!-- #region VALORES INICIAIS -->
 
-		<!--====================================================================================================================-->
-		<!--====================================================================================================================-->
-
-		<!-- VALORES BASE TESTE -->
+		<!-- #region VALORES BASE TESTE -->
 
 		<layout left="363.62717" top="399.09378" width="21.823225" height="16.55201" opacity="0" cursor="handPoint">
 			<button align="client" horzTextAlign="center" name="teste_carisma">
@@ -136,8 +137,8 @@
                 </event>
 			</button>
 		</layout>
-
-		<!-- VALORES BASE -->
+		<!-- #endregion -->
+		<!-- #region VALORES BASE -->
 
 		<layout left="337.49808" top="427.88306" height="60.473999" width="74.075996">
 			<edit align="client" horzTextAlign="center" field="base_carisma" fontSize="40" transparent="true" fontFamily="Chiller"/>
@@ -163,10 +164,8 @@
 			<edit align="client" horzTextAlign="center" field="base_forca" fontSize="40" transparent="true" fontFamily="Chiller"/>
 		</layout>
 
-		<!--====================================================================================================================-->
-		<!--====================================================================================================================-->
-
-		<!-- MODIFICADORES DE VALORES BASE -->
+		<!-- #endregion -->
+		<!-- #region MODIFICADORES DE VALORES BASE -->
 
 		<layout left="481.86078" top="426.90628" height="60.47377" width="90.469223">
 			<label align="client" horzTextAlign="center" field="modificadorBase_carisma" name="modificadorBase_carisma" fontColor="#FF0000" fontSize="45" fontStyle="bold" fontFamily="Chiller"/>
@@ -272,11 +271,13 @@
 			]]></event>
 		</dataLink>
 		
-		<!--====================================================================================================================-->
-		<!--====================================================================================================================-->
+		<!-- #endregion -->
 
-		<!-- PONTOS -->
+		<!-- #endregion -->
 
+		<!-- #region TIPOS DE PONTOS -->
+		
+		<!-- #region VIDA -->
 		<layout left="41.38762" top="583.36925" height="67.19495" width="65.000">
 			<edit align="client" horzTextAlign="center" field="pontosDevida_atual" fontSize="35" fontFamily="Chiller" transparent="true" name="pontosDevida_atual" />
 		</layout>
@@ -302,6 +303,9 @@
 			<edit align="client" horzTextAlign="center" field="pontosDeVida_temporario" fontColor="#FFD700" fontSize="35" fontFamily="Chiller" transparent="true"/>
 		</layout>
 		
+		<!-- #endregion -->
+		<!-- #region ENERGIA-->
+		
 		<layout left="314.61234" top="583.2981" height="67.19491" width="65.000">
 			<edit align="client" horzTextAlign="center" field="pontosDeEnergia_atual" fontColor="#00BFFF" fontSize="35" fontFamily="Chiller" transparent="true"/>
 		</layout>
@@ -313,6 +317,9 @@
 		<layout left="482.58708" top="583.15526" height="67.19496" width="65.000">
 			<edit align="client" horzTextAlign="center" field="pontosDeEnergia_temporario" fontSize="35" fontFamily="Chiller" transparent="true"/>
 		</layout>
+
+		<!-- #endregion -->
+		<!-- #region INTEGRIDADE -->
 		
 		<layout left="41.38762" top="749.14845" height="67.19491" width="65.000">
 			<edit align="client" horzTextAlign="center" field="pontosDeIntegridade_atual" fontSize="35" fontFamily="Chiller" transparent="true"/>
@@ -325,6 +332,9 @@
 		<layout left="209.36236" top="749.00565" height="67.19495" width="65.000">
 			<edit align="client" horzTextAlign="center" field="pontosDeIntegridade_temporario" fontSize="35" fontFamily="Chiller" transparent="true"/>
 		</layout>
+
+		<!-- #endregion -->
+		<!-- #region DERIVADOS -->
 		
 		<layout left="314.61234" top="749.29146" height="67.19496" width="65.000">
 			<edit align="client" horzTextAlign="center" field="pontosDerivados_atencao" fontSize="35" fontFamily="Chiller" transparent="true"/>
@@ -337,8 +347,9 @@
 		<layout left="482.58708" top="749.14866" height="67.19496" width="65.000">
 			<edit align="client" horzTextAlign="center" field="pontosDerivados_movimento" fontSize="35" fontFamily="Chiller" transparent="true"/>
 		</layout>
-		
-		<!-- PONTOS BOTÃO INICIATIVA -->
+
+		<!-- #endregion -->
+		<!-- #region PONTOS BOTÃO INICIATIVA -->
 
 		<layout left="389.53131" top="828.53217" height="21.269554" width="83.139832" opacity="0" cursor="handPoint">
     		<button align="client" horzTextAlign="center" name="teste_iniciativa">
@@ -356,11 +367,13 @@
 
 		</layout>
 
+		<!-- #endregion -->
 
-		<!--====================================================================================================================-->
-		<!--====================================================================================================================-->
+		<!-- #endregion -->
 
-		<!-- Clase de Armadura -->
+		<!-- #region MORTE E ARMADURA -->
+
+		<!-- #region Clase de Armadura -->
 
 		<layout left="874.97015" top="710.1712" height="28.067169" width="51.017101">
 			<edit align="client" horzTextAlign="center" field="valor_natural" fontSize="25" fontFamily="Chiller" transparent="true"/>
@@ -397,11 +410,8 @@
 			]]></event>
 		</dataLink>
 
-
-		<!--====================================================================================================================-->
-		<!--====================================================================================================================-->
-
-		<!-- Teste de Morte -->
+		<!-- #endregion -->
+		<!-- #region Teste de Morte -->
 
 		<layout left="1031.1007" top="720.25525" height="50" width="50">
 			<edit align="client" horzTextAlign="center" field="sucesso_1"/>
@@ -432,14 +442,14 @@
 		<layout left="1007.771" top="679.09332" height="23.995781" width="152.1774" opacity="0" cursor="handPoint">
 				<button align="client" horzTextAlign="center" name="teste_morte"/>
 		</layout>
+		
+		<!-- #endregion -->
 
+		<!-- #endregion -->
 
-		<!--====================================================================================================================-->
-		<!--====================================================================================================================-->
+		<!-- #region Pericias -->
 
-		<!-- Pericias -->
-
-		<!-- Pericias Testes -->
+		<!-- #region Pericias Testes -->
 
 		<layout left="937.27948" top="589.0498" height="21.477722" width="74.072662" opacity="0" cursor="handPoint">
 			<button align="client" horzTextAlign="center" name="teste_vontade">
@@ -831,7 +841,8 @@
 			</button>
 		</layout>
 
-		<!-- Pericias Atributos Escolha -->
+		<!-- #endregion -->
+		<!-- #region Pericias Atributos Escolha -->
 
 		<layout left="764.18207" top="241.08159" height="15.53607" width="36.461948">
 			<comboBox align="client" horzTextAlign="center" field="atributo_luta" name="atributo_luta" fontSize="18" fontFamily="Chiller" transparent="true"
@@ -843,7 +854,8 @@
 				items="{'For', 'Dex'}" values="{'F', 'D'}"/>
 		</layout>
 
-		<!-- Pericias outros -->
+		<!-- #endregion -->
+		<!-- #region Pericias outros -->
 
 		<layout left="810.51935" top="204.15363" height="20.575001" width="36.461948">
 			<edit align="client" horzTextAlign="center" field="outros_atletismo" fontSize="18" fontFamily="Chiller" transparent="true"/>
@@ -949,8 +961,8 @@
 			<edit align="client" horzTextAlign="center" field="outros_vontade" fontSize="18" fontFamily="Chiller" transparent="true"/>
 		</layout>
 
-
-		<!-- Pericias maestria -->
+		<!-- #endregion -->
+		<!-- #region Pericias maestria -->
 
 		<layout left="852.46118" top="209.18765" height="17.9142" width="16.694559">
 			<rectangle align="client" color="#00000000" xradius="7" yradius="7" cornerType="bevel" name="maestria_atletismo"/>
@@ -1316,7 +1328,8 @@
 			]]></event>
 		</dataLink>
 
-		<!-- Pericias Especializacao -->
+		<!-- #endregion -->
+		<!-- #region Pericias Especializacao -->
 
 		<layout left="874.63568" top="209.18765" height="17.9142" width="16.694559">
 			<rectangle align="client" color="#00000000" xradius="7" yradius="7" cornerType="bevel" name="especializacao_atletismo"/>
@@ -1654,7 +1667,8 @@
 			]]></event>
 		</dataLink>
 
-		<!-- Pericias Valores Totais -->
+		<!-- #endregion -->
+		<!-- #region Pericias Valores Totais -->
 
 		<layout left="1207.4429" top="586.88074" height="20.575001" width="36.557999">
 			<label align="client" horzTextAlign="center" field="total_vontade" name="total_vontade" fontColor="white" fontSize="18" fontFamily="Chiller"/>
@@ -2239,8 +2253,8 @@
 			]]></event>
 		</dataLink>
 
-
-		<!-- Pericias Texto Oficio -->
+		<!-- #endregion -->
+		<!-- #region Pericias Texto Oficio -->
 
 		<layout left="994.10962" top="328.48383" height="28.403999" width="60.513538">
 			<edit align="client" horzTextAlign="leading" field="oficio_3" fontSize="25" fontFamily="Chiller" transparent="true" />
@@ -2254,5 +2268,9 @@
 			<edit align="client" horzTextAlign="leading" field="oficio_1" fontSize="25" fontFamily="Chiller" transparent="true" />
 		</layout>
 
+		<!-- #endregion -->
+
+		<!-- #endregion -->
+	
 	</scrollBox>
 </form>
