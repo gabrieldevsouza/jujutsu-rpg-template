@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<group>
+
+<!-- #region VIDA -->
+	<layout left="41.38762" top="583.36925" height="67.19495" width="65.000">
+		<edit align="client" horzTextAlign="center" field="pontosDevida_atual" fontSize="35" fontFamily="Chiller" transparent="true" name="pontosDevida_atual" />
+	</layout>
+	<dataLink field="pontosDevida_atual">
+		<event name="onChange"><![CDATA[
+			local corvida = tonumber(sheet.pontosDevida_atual) or 0
+			local vidamax = tonumber(sheet.pontosDevida_maximo) or 0
+			if (corvida > (vidamax/2)) then
+				self.pontosDevida_atual.fontColor="#00FF00"
+			elseif (corvida <= (vidamax/2)) and (corvida > (vidamax/4)) then
+				self.pontosDevida_atual.fontColor="#FFFF00"
+			else
+				self.pontosDevida_atual.fontColor="#FF0000"
+			end
+		]]></event>
+	</dataLink>
+
+	<layout left="125.375" top="583.36925" height="67.19495" width="65.000">
+		<edit align="client" horzTextAlign="center" field="pontosDevida_maximo" fontColor="#00FF00" fontSize="35" fontFamily="Chiller" transparent="true"/>
+	</layout>
+		
+	<layout left="209.36236" top="583.22645" height="67.19495" width="65.000">
+		<edit align="client" horzTextAlign="center" field="pontosDeVida_temporario" fontColor="#FFD700" fontSize="35" fontFamily="Chiller" transparent="true"/>
+	</layout>
+		
+	<!-- #endregion -->
+	<!-- #region ENERGIA-->
+		
+	<layout left="314.61234" top="583.2981" height="67.19491" width="65.000">
+		<edit align="client" horzTextAlign="center" field="pontosDeEnergia_atual" fontColor="#00BFFF" fontSize="35" fontFamily="Chiller" transparent="true"/>
+	</layout>
+		
+	<layout left="398.59971" top="583.2981" height="67.19491" width="65.000">
+		<edit align="client" horzTextAlign="center" field="pontosDeEnergia_maximo" fontColor="#00BFFF" fontSize="35" fontFamily="Chiller" transparent="true"/>
+	</layout>
+		
+	<layout left="482.58708" top="583.15526" height="67.19496" width="65.000">
+		<edit align="client" horzTextAlign="center" field="pontosDeEnergia_temporario" fontColor="#00FFFF" fontSize="35" fontFamily="Chiller" transparent="true"/>
+	</layout>
+
+	<!-- #endregion -->
+	<!-- #region INTEGRIDADE -->
+		
+	<layout left="41.38762" top="749.14845" height="67.19491" width="65.000">
+		<edit align="client" horzTextAlign="center" field="pontosDeIntegridade_atual" fontSize="35" fontFamily="Chiller" transparent="true"/>
+	</layout>
+		
+	<layout left="125.375" top="749.14845" height="67.19491" width="65.000">
+		<edit align="client" horzTextAlign="center" field="pontosDeIntegridade_maximo" fontSize="35" fontFamily="Chiller" transparent="true"/>
+	</layout>
+		
+	<layout left="209.36236" top="749.00565" height="67.19495" width="65.000">
+		<edit align="client" horzTextAlign="center" field="pontosDeIntegridade_temporario" fontSize="35" fontFamily="Chiller" transparent="true"/>
+	</layout>
+
+	<!-- #endregion -->
+	<!-- #region DERIVADOS -->
+		
+	<layout left="314.61234" top="749.29146" height="67.19496" width="65.000">
+		<edit align="client" horzTextAlign="center" field="pontosDerivados_atencao" fontSize="35" fontFamily="Chiller" transparent="true"/>
+	</layout>
+	
+	<layout left="398.59971" top="749.29146" height="67.19496" width="65.000">
+		<edit align="client" horzTextAlign="center" field="pontosDerivados_iniciativa" fontSize="35" fontFamily="Chiller" transparent="true"/>
+	</layout>
+		
+	<layout left="482.58708" top="749.14866" height="67.19496" width="65.000">
+		<edit align="client" horzTextAlign="center" field="pontosDerivados_movimento" fontSize="35" fontFamily="Chiller" transparent="true"/>
+	</layout>
+
+	<!-- #endregion -->
+	<!-- #region PONTOS BOTÃO INICIATIVA -->
+
+	<layout left="389.53131" top="828.53217" height="21.269554" width="83.139832" opacity="0" cursor="handPoint">
+    	<button align="client" horzTextAlign="center" name="teste_iniciativa">
+            <event name="onClick">
+                local rolagem = Firecast.interpretarRolagem(sheet.pontosDerivados_iniciativa); 
+                if not rolagem.possuiAlgumDado then
+                    rolagem = Firecast.interpretarRolagem("1d20"):concatenar(rolagem);
+                end; 
+                local mesaDoPersonagem = Firecast.getMesaDe(sheet);
+                if mesaDoPersonagem ~= nil then
+                    mesaDoPersonagem.chat:rolarDados(rolagem, "Teste de Iniciativa");
+                end;
+            </event>
+		</button>
+
+		</layout>
+
+		<!-- #endregion -->
+
+
+</group>

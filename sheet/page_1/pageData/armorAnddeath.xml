@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<group>
+
+	<!-- #region Clase de Armadura -->
+
+	<layout left="874.97015" top="710.1712" height="28.067169" width="51.017101">
+		<edit align="client" horzTextAlign="center" field="valor_natural" fontSize="25" fontFamily="Chiller" transparent="true"/>
+	</layout>
+
+	<layout left="874.97015" top="738.23816" height="28.067169" width="51.017101">
+		<edit align="client" horzTextAlign="center" field="valor_armadura" fontSize="25" fontFamily="Chiller" transparent="true"/>
+	</layout>
+
+	<layout left="874.97015" top="766.30481" height="28.067169" width="51.017101">
+		<edit align="client" horzTextAlign="center" field="valor_escudo" fontSize="25" fontFamily="Chiller" transparent="true"/>
+	</layout>
+
+	<layout left="874.97015" top="794.37146" height="28.067169" width="51.017101">
+		<label align="client" horzTextAlign="center" field="valor_destreza" fontColor="white" fontSize="25" fontFamily="Chiller"/>
+	</layout>
+
+	<layout left="874.97015" top="822.43811" height="28.067169" width="51.017101">
+		<edit align="client" horzTextAlign="center" field="valor_outros" fontColor="white" fontSize="25" fontFamily="Chiller" transparent="true"/>
+	</layout>
+
+	<layout left="639.21924" top="718.74384" height="95.187698" width="69.611977">
+		<label align="client" horzTextAlign="center" field="valor_total" fontSize="50" fontFamily="Chiller" fontStyle="bold" fontColor="white"/>
+	</layout>
+	<dataLink fields="{'valor_natural', 'valor_armadura', 'valor_escudo', 'valor_destreza', 'valor_outros'}">
+		<event name="onChange"><![CDATA[
+			local valornatural = tonumber(sheet.valor_natural) or 0
+			local valorarmadura = tonumber(sheet.valor_armadura) or 0
+			local valorescudo = tonumber(sheet.valor_escudo) or 0
+			local valordestreza = tonumber(sheet.valor_destreza) or 0
+			local valoroutros = tonumber(sheet.valor_outros) or 0
+			
+			sheet.valor_total = valornatural + valorarmadura + valorescudo + valordestreza + valoroutros
+		]]></event>
+	</dataLink>
+	<!-- #endregion -->
+
+	<!-- #region Teste de Morte -->
+	<layout left="1031.1007" top="720.25525" height="50" width="50">
+		<edit align="client" horzTextAlign="center" field="sucesso_1"/>
+	</layout>
+
+	<layout left="1101.1029" top="720.25525" height="50" width="50">
+		<edit align="client" horzTextAlign="center" field="sucesso_2"/>
+	</layout>
+
+	<layout left="1171.105" top="720.25476" height="50" width="50">
+		<edit align="client" horzTextAlign="center" field="sucesso_3"/>
+	</layout>
+
+	<layout left="1031.3054" top="790.42194" height="50" width="50">
+		<edit align="client" horzTextAlign="center" field="fracasso_1"  />
+	</layout>
+
+	<layout left="1101.3076" top="790.42194" height="50" width="50">
+		<edit align="client" horzTextAlign="center" field="fracasso_2"  />
+	</layout>
+
+	<layout left="1171.3097" top="790.42145" height="50" width="50">
+		<edit align="client" horzTextAlign="center" field="fracasso_3"  />
+	</layout>
+
+	<!-- Teste de Morte Botão -->
+
+	<layout left="1007.771" top="679.09332" height="23.995781" width="152.1774" opacity="0" cursor="handPoint">
+			<button align="client" horzTextAlign="center" name="teste_morte"/>
+	</layout>
+		
+	<!-- #endregion -->
+
+</group>

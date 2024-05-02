@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<group>
+
+    <!-- Nome/Especializacao/Origem/Tecnica/Grau -->
+
+	<layout left="78.143356" top="18.187336" height="27.007963" width="433.97623">
+		<edit align="client" horzTextAlign="leading" field="nome" fontSize="27" transparent="true" fontFamily="Chiller"/>
+	</layout>
+	
+	<layout left="894.48541" top="40.738289" height="27.007999" width="72.466797">
+		<edit align="client" horzTextAlign="leading" field="origem" fontSize="20" transparent="true" fontFamily="Chiller"/>
+	</layout>
+	
+	<layout left="950.32916" top="16.966837" height="27.007999" width="72.466797">
+		<edit align="client" horzTextAlign="leading" field="especializacao" fontSize="20" transparent="true" fontFamily="Chiller"/>
+	</layout>
+	
+	<layout left="1103.6305" top="18.457336" height="27.007999" width="90.469208">
+		<edit align="client" horzTextAlign="leading" field="tecnica" fontSize="20" transparent="true" fontFamily="Chiller"/>
+	</layout>
+	
+	<layout left="1078.1932" top="44.097084" height="27.007999" width="90.469208">
+		<edit align="client" horzTextAlign="leading" field="grau" fontSize="20" transparent="true" fontFamily="Chiller"/>
+	</layout>
+
+		<!-- Nivel/Maestria/Experiencia -->
+
+	<layout left="676.05194" top="26.523771" height="18.25411" width="54.185398">
+		<edit align="client" horzTextAlign="center" field="valor_nivel" fontSize="18" transparent="true" fontFamily="Chiller"/>
+	</layout>
+
+	<layout left="704.43713" top="52.647507" height="18.25411" width="54.185398">
+		<label align="client" horzTextAlign="center" field="maestria_nivel" fontSize="18" fontColor="white" fontFamily="Chiller"/>
+	</layout>
+	<dataLink field="valor_nivel">
+		<event name="onChange"><![CDATA[
+			local valornivel = tonumber(sheet.valor_nivel)
+			sheet.maestria_nivel = 1 + math.ceil(valornivel/4);
+		]]></event>
+	</dataLink>	
+
+	<layout left="726.01697" top="77.222595" height="18.25411" width="54.185398">
+		<edit align="client" horzTextAlign="center" field="experiencia" fontSize="15" transparent="true" fontFamily="Chiller"/>
+	</layout>
+
+
+</group>

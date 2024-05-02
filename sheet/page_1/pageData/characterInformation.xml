@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<group>
+
+    <!-- #region Imagem do personagem -->
+
+    <layout left="1285.112366" top="22.32918" height="412.54636" width="586.62079">
+        <edit align="client" horzTextAlign="center" field="imagem_personagem" />
+    </layout>
+
+    <!-- #endregion -->
+    
+    <!-- #region Informacoes do personagem -->
+
+    <layout left="1672.37225" top="757.81415" height="32.055729" width="180.47415">
+        <edit align="client" horzTextAlign="leading" field="texto_marcas" fontSize="30" transparent="true" fontFamily="Chiller"/>
+    </layout>
+    
+    <layout left="1688.53021" top="711.60999" height="32.054893" width="181.32101">
+        <edit align="client" horzTextAlign="leading" field="texto_tamanho" fontSize="30" transparent="true" fontFamily="Chiller"/>
+    </layout>
+    
+    <layout left="1672.42551" top="664.71887" height="32.056118" width="180.07564">
+        <edit align="client" horzTextAlign="leading" field="texto_roupas" fontSize="30" transparent="true" fontFamily="Chiller"/>
+    </layout>
+    
+    <layout left="1650.28757" top="618.17871" height="32.055523" width="180.68446">
+        <edit align="client" horzTextAlign="leading" field="texto_aura" fontSize="30" transparent="true" fontFamily="Chiller"/>
+    </layout>
+    
+    <layout left="1645.01303" top="571.8089" height="32.056099" width="180.09346">
+        <edit align="client" horzTextAlign="leading" field="texto_pele" fontSize="30" transparent="true" fontFamily="Chiller"/>
+    </layout>
+    
+    <layout left="1656.80536" top="523.66443" height="32.056141" width="180.05447">
+        <edit align="client" horzTextAlign="leading" field="texto_olhos" fontSize="30" transparent="true" fontFamily="Chiller"/>
+    </layout>
+    
+    <layout left="1377.60015" top="757.81409" height="32.055927" width="180.2702">
+        <edit align="client" horzTextAlign="leading" field="texto_cabelo" fontSize="30" transparent="true" fontFamily="Chiller"/>
+    </layout>
+    
+    <layout left="1377.01691" top="711.4447" height="32.055767" width="180.43228">
+        <edit align="client" horzTextAlign="leading" field="texto_genero" fontSize="30" transparent="true" fontFamily="Chiller"/>
+    </layout>
+    
+    <layout left="1354.807777" top="664.72235" height="32.056293" width="179.89951">
+        <edit align="client" horzTextAlign="leading" field="texto_peso" fontSize="30" transparent="true" fontFamily="Chiller"/>
+    </layout>
+    
+    <layout left="1372.12065" top="618.17859" height="32.055786" width="180.416">
+        <edit align="client" horzTextAlign="leading" field="texto_altura" fontSize="30" transparent="true" fontFamily="Chiller"/>
+    </layout>
+    
+    <layout left="1366.0916" top="571.6275" height="32.05542" width="180.78888">
+        <edit align="client" horzTextAlign="leading" field="texto_idade" fontSize="30" transparent="true" fontFamily="Chiller"/>
+    </layout>
+    
+    <layout left="1363.43822" top="523.66443" height="32.056141" width="180.05447">
+        <edit align="client" horzTextAlign="leading" field="texto_nome" fontSize="30" transparent="true" fontFamily="Chiller"/>
+    </layout>
+
+    <!-- #endregion -->
+
+</group>

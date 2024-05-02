@@ -1,0 +1,1828 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<group>
+
+    <!-- #region Pericias Testes -->
+
+	<layout left="937.27948" top="589.0498" height="21.477722" width="74.072662" opacity="0" cursor="handPoint">
+		<button align="client" horzTextAlign="center" name="teste_vontade">
+            <event name="onClick">
+                local rolagem = Firecast.interpretarRolagem(sheet.pontosDerivados_iniciativa); 
+                if not rolagem.possuiAlgumDado then
+                    rolagem = Firecast.interpretarRolagem("1d20"):concatenar(rolagem);
+                end; 
+                local mesaDoPersonagem = Firecast.getMesaDe(sheet);
+                if mesaDoPersonagem ~= nil then
+                    mesaDoPersonagem.chat:rolarDados(rolagem, "Teste de Iniciativa");
+                end;
+            </event>
+		</button>
+	</layout>
+
+	<layout left="937.21869" top="556.84821" height="22.473789" width="111.58218" opacity="0" cursor="handPoint">
+		<button align="client" horzTextAlign="center" name="teste_performance">
+                <event name="onClick">
+                    local rolagem = Firecast.interpretarRolagem(sheet.total_performance); 
+                    if not rolagem.possuiAlgumDado then
+                        rolagem = Firecast.interpretarRolagem("1d20"):concatenar(rolagem);
+                    end; 
+                    local mesaDoPersonagem = Firecast.getMesaDe(sheet);
+                    if mesaDoPersonagem ~= nil then
+                        mesaDoPersonagem.chat:rolarDados(rolagem, "Teste de Performance");
+                    end;
+                </event>
+		</button>
+	</layout>
+
+	<layout left="937.21869" top="526.27283" height="22.473789" width="104.37417" opacity="0" cursor="handPoint">
+		<button align="client" horzTextAlign="center" name="teste_intimidacao">
+                <event name="onClick">
+                    local rolagem = Firecast.interpretarRolagem(sheet.total_intimidacao); 
+                    if not rolagem.possuiAlgumDado then
+                        rolagem = Firecast.interpretarRolagem("1d20"):concatenar(rolagem);
+                    end; 
+                    local mesaDoPersonagem = Firecast.getMesaDe(sheet);
+                    if mesaDoPersonagem ~= nil then
+                        mesaDoPersonagem.chat:rolarDados(rolagem, "Teste de Intimidação");
+                    end;
+                </event>
+		</button>
+	</layout>
+
+	<layout left="937.21869" top="495.12607" height="22.473789" width="95.950157" opacity="0" cursor="handPoint">
+		<button align="client" horzTextAlign="center" name="teste_enganacao">
+                <event name="onClick">
+                    local rolagem = Firecast.interpretarRolagem(sheet.total_enganacao); 
+                    if not rolagem.possuiAlgumDado then
+                        rolagem = Firecast.interpretarRolagem("1d20"):concatenar(rolagem);
+                    end; 
+                    local mesaDoPersonagem = Firecast.getMesaDe(sheet);
+                    if mesaDoPersonagem ~= nil then
+                        mesaDoPersonagem.chat:rolarDados(rolagem, "Teste de Enganação");
+                    end;
+                </event>
+		</button>
+	</layout>
+
+	<layout left="621.55884" top="460.32156" height="22.473789" width="105.70298" opacity="0" cursor="handPoint">
+		<button align="client" horzTextAlign="center" name="teste_integridade">
+                <event name="onClick">
+                    local rolagem = Firecast.interpretarRolagem(sheet.total_integridade); 
+                    if not rolagem.possuiAlgumDado then
+                        rolagem = Firecast.interpretarRolagem("1d20"):concatenar(rolagem);
+                    end; 
+                    local mesaDoPersonagem = Firecast.getMesaDe(sheet);
+                    if mesaDoPersonagem ~= nil then
+                        mesaDoPersonagem.chat:rolarDados(rolagem, "Teste de Integridade");
+                    end;
+                </event>
+		</button>
+	</layout>
+
+	<layout left="937.21869" top="430.34927" height="22.473789" width="73.857285" opacity="0" cursor="handPoint">
+		<button align="client" horzTextAlign="center" name="teste_religiao">
+                <event name="onClick">
+                    local rolagem = Firecast.interpretarRolagem(sheet.total_religiao); 
+                    if not rolagem.possuiAlgumDado then
+                        rolagem = Firecast.interpretarRolagem("1d20"):concatenar(rolagem);
+                    end; 
+                    local mesaDoPersonagem = Firecast.getMesaDe(sheet);
+                    if mesaDoPersonagem ~= nil then
+                        mesaDoPersonagem.chat:rolarDados(rolagem, "Teste de Religião");
+                    end;
+                </event>
+		</button>
+	</layout>
+
+	<layout left="937.21869" top="398.51395" height="22.473789" width="56.925476" opacity="0" cursor="handPoint">
+		<button align="client" horzTextAlign="center" name="testeOficio_3">
+                <event name="onClick">
+                    local rolagem = Firecast.interpretarRolagem(sheet.totalOficio_3); 
+                    if not rolagem.possuiAlgumDado then
+                        rolagem = Firecast.interpretarRolagem("1d20"):concatenar(rolagem);
+                    end; 
+                    local mesaDoPersonagem = Firecast.getMesaDe(sheet);
+                    if mesaDoPersonagem ~= nil then
+                        mesaDoPersonagem.chat:rolarDados(rolagem, "Teste3");
+                    end;
+                </event>
+		</button>
+	</layout>
+
+	<layout left="937.21869" top="366.59003" height="22.473789" width="56.925476" opacity="0" cursor="handPoint">
+		<button align="client" horzTextAlign="center" name="testeOficio_2">
+                <event name="onClick">
+                    local rolagem = Firecast.interpretarRolagem(sheet.totalOficio_2); 
+                    if not rolagem.possuiAlgumDado then
+                        rolagem = Firecast.interpretarRolagem("1d20"):concatenar(rolagem);
+                    end; 
+                    local mesaDoPersonagem = Firecast.getMesaDe(sheet);
+                    if mesaDoPersonagem ~= nil then
+                        mesaDoPersonagem.chat:rolarDados(rolagem, "Teste2");
+                    end;
+                </event>
+		</button>
+	</layout>
+
+	<layout left="937.21869" top="334.66611" height="22.473789" width="56.925476" opacity="0" cursor="handPoint">
+		<button align="client" horzTextAlign="center" name="testeOficio_1">
+                <event name="onClick">
+                    local rolagem = Firecast.interpretarRolagem(sheet.totalOficio_1); 
+                    if not rolagem.possuiAlgumDado then
+                        rolagem = Firecast.interpretarRolagem("1d20"):concatenar(rolagem);
+                    end; 
+                    local mesaDoPersonagem = Firecast.getMesaDe(sheet);
+                    if mesaDoPersonagem ~= nil then
+                        mesaDoPersonagem.chat:rolarDados(rolagem, "Teste1");
+                    end;
+                </event>
+		</button>
+	</layout>
+
+	<layout left="937.21869" top="301.38037" height="22.473789" width="69.926559" opacity="0" cursor="handPoint">
+		<button align="client" horzTextAlign="center" name="teste_historia">
+                <event name="onClick">
+                    local rolagem = Firecast.interpretarRolagem(sheet.total_historia); 
+                    if not rolagem.possuiAlgumDado then
+                        rolagem = Firecast.interpretarRolagem("1d20"):concatenar(rolagem);
+                    end; 
+                    local mesaDoPersonagem = Firecast.getMesaDe(sheet);
+                    if mesaDoPersonagem ~= nil then
+                        mesaDoPersonagem.chat:rolarDados(rolagem, "Teste de História");
+                    end;
+                </event>
+		</button>
+	</layout>
+
+	<layout left="937.21869" top="271.09067" height="22.473789" width="111.31405" opacity="0" cursor="handPoint">
+		<button align="client" horzTextAlign="center" name="teste_investigacao">
+                <event name="onClick">
+                    local rolagem = Firecast.interpretarRolagem(sheet.total_investigacao); 
+                    if not rolagem.possuiAlgumDado then
+                        rolagem = Firecast.interpretarRolagem("1d20"):concatenar(rolagem);
+                    end; 
+                    local mesaDoPersonagem = Firecast.getMesaDe(sheet);
+                    if mesaDoPersonagem ~= nil then
+                        mesaDoPersonagem.chat:rolarDados(rolagem, "Teste de Investigação");
+                    end;
+                </event>
+		</button>
+	</layout>
+
+	<layout left="937.21869" top="238.55211" height="22.473789" width="83.976341" opacity="0" cursor="handPoint">
+		<button align="client" horzTextAlign="center" name="teste_feiticaria">
+                <event name="onClick">
+                    local rolagem = Firecast.interpretarRolagem(sheet.total_feiticaria); 
+                    if not rolagem.possuiAlgumDado then
+                        rolagem = Firecast.interpretarRolagem("1d20"):concatenar(rolagem);
+                    end; 
+                    local mesaDoPersonagem = Firecast.getMesaDe(sheet);
+                    if mesaDoPersonagem ~= nil then
+                        mesaDoPersonagem.chat:rolarDados(rolagem, "Teste de Feitiçaria");
+                    end;
+                </event>
+		</button>
+	</layout>
+
+	<layout left="937.21869" top="205.0808" height="22.473789" width="70.043762" opacity="0" cursor="handPoint">
+		<button align="client" horzTextAlign="center" name="teste_astucia">
+                <event name="onClick">
+                    local rolagem = Firecast.interpretarRolagem(sheet.total_astucia); 
+                    if not rolagem.possuiAlgumDado then
+                        rolagem = Firecast.interpretarRolagem("1d20"):concatenar(rolagem);
+                    end; 
+                    local mesaDoPersonagem = Firecast.getMesaDe(sheet);
+                    if mesaDoPersonagem ~= nil then
+                        mesaDoPersonagem.chat:rolarDados(rolagem, "Teste de Astúcia");
+                    end;
+                </event>
+		</button>
+	</layout>
+
+	<layout left="621.46869" top="587.35052" height="22.473789" width="88.403053" opacity="0" cursor="handPoint">
+		<button align="client" horzTextAlign="center" name="teste_ocultismo">
+                <event name="onClick">
+                    local rolagem = Firecast.interpretarRolagem(sheet.total_ocultismo); 
+                    if not rolagem.possuiAlgumDado then
+                        rolagem = Firecast.interpretarRolagem("1d20"):concatenar(rolagem);
+                    end; 
+                    local mesaDoPersonagem = Firecast.getMesaDe(sheet);
+                    if mesaDoPersonagem ~= nil then
+                        mesaDoPersonagem.chat:rolarDados(rolagem, "Teste de Ocultismo");
+                    end;
+                </event>
+		</button>
+	</layout>
+
+	<layout left="621.55884" top="556.27441" height="22.473789" width="92.180618" opacity="0" cursor="handPoint">
+		<button align="client" horzTextAlign="center" name="teste_percepcao">
+                <event name="onClick">
+                    local rolagem = Firecast.interpretarRolagem(sheet.total_percepcao); 
+                    if not rolagem.possuiAlgumDado then
+                        rolagem = Firecast.interpretarRolagem("1d20"):concatenar(rolagem);
+                    end; 
+                    local mesaDoPersonagem = Firecast.getMesaDe(sheet);
+                    if mesaDoPersonagem ~= nil then
+                        mesaDoPersonagem.chat:rolarDados(rolagem, "Teste de Percepção");
+                    end;
+                </event>
+		</button>
+	</layout>
+
+	<layout left="621.55884" top="523.75476" height="22.473789" width="81.588348" opacity="0" cursor="handPoint">
+		<button align="client" horzTextAlign="center" name="teste_medicina">
+                <event name="onClick">
+                    local rolagem = Firecast.interpretarRolagem(sheet.total_medicina); 
+                    if not rolagem.possuiAlgumDado then
+                        rolagem = Firecast.interpretarRolagem("1d20"):concatenar(rolagem);
+                    end; 
+                    local mesaDoPersonagem = Firecast.getMesaDe(sheet);
+                    if mesaDoPersonagem ~= nil then
+                        mesaDoPersonagem.chat:rolarDados(rolagem, "Teste de Medicina");
+                    end;
+                </event>
+		</button>
+	</layout>
+
+	<layout left="621.55884" top="491.28946" height="22.473789" width="77.119957" opacity="0" cursor="handPoint">
+		<button align="client" horzTextAlign="center" name="teste_intuicao">
+                <event name="onClick">
+                    local rolagem = Firecast.interpretarRolagem(sheet.total_intuicao); 
+                    if not rolagem.possuiAlgumDado then
+                        rolagem = Firecast.interpretarRolagem("1d20"):concatenar(rolagem);
+                    end; 
+                    local mesaDoPersonagem = Firecast.getMesaDe(sheet);
+                    if mesaDoPersonagem ~= nil then
+                        mesaDoPersonagem.chat:rolarDados(rolagem, "Teste de Intuição");
+                    end;
+                </event>
+		</button>
+	</layout>
+
+	<layout left="937.21869" top="459.72336" height="22.473789" width="88.915756" opacity="0" cursor="handPoint">
+		<button align="client" horzTextAlign="center" name="teste_persuasao">
+                <event name="onClick">
+                    local rolagem = Firecast.interpretarRolagem(sheet.total_persuasao); 
+                    if not rolagem.possuiAlgumDado then
+                        rolagem = Firecast.interpretarRolagem("1d20"):concatenar(rolagem);
+                    end; 
+                    local mesaDoPersonagem = Firecast.getMesaDe(sheet);
+                    if mesaDoPersonagem ~= nil then
+                        mesaDoPersonagem.chat:rolarDados(rolagem, "Teste de Persuasão");
+                    end;
+                </event>
+		</button>
+	</layout>
+
+	<layout left="621.55884" top="427.78299" height="22.473789" width="84.606339" opacity="0" cursor="handPoint">
+		<button align="client" horzTextAlign="center" name="teste_fortitude">
+                <event name="onClick">
+                    local rolagem = Firecast.interpretarRolagem(sheet.total_fortitude); 
+                    if not rolagem.possuiAlgumDado then
+                        rolagem = Firecast.interpretarRolagem("1d20"):concatenar(rolagem);
+                    end; 
+                    local mesaDoPersonagem = Firecast.getMesaDe(sheet);
+                    if mesaDoPersonagem ~= nil then
+                        mesaDoPersonagem.chat:rolarDados(rolagem, "Teste de Fortitude");
+                    end;
+                </event>
+		</button>
+	</layout>
+
+	<layout left="621.55884" top="396.74216" height="22.473789" width="68.995758" opacity="0" cursor="handPoint">
+		<button align="client" horzTextAlign="center" name="teste_reflexo">
+                <event name="onClick">
+                    local rolagem = Firecast.interpretarRolagem(sheet.total_reflexo); 
+                    if not rolagem.possuiAlgumDado then
+                        rolagem = Firecast.interpretarRolagem("1d20"):concatenar(rolagem);
+                    end; 
+                    local mesaDoPersonagem = Firecast.getMesaDe(sheet);
+                    if mesaDoPersonagem ~= nil then
+                        mesaDoPersonagem.chat:rolarDados(rolagem, "Teste de Reflexo");
+                    end;
+                </event>
+		</button>
+	</layout>
+
+	<layout left="621.55884" top="364.49188" height="22.473789" width="130.3102" opacity="0" cursor="handPoint">
+		<button align="client" horzTextAlign="center" name="teste_prestidigitacao">
+                <event name="onClick">
+                    local rolagem = Firecast.interpretarRolagem(sheet.total_prestidigitacao); 
+                    if not rolagem.possuiAlgumDado then
+                        rolagem = Firecast.interpretarRolagem("1d20"):concatenar(rolagem);
+                    end; 
+                    local mesaDoPersonagem = Firecast.getMesaDe(sheet);
+                    if mesaDoPersonagem ~= nil then
+                        mesaDoPersonagem.chat:rolarDados(rolagem, "Teste de Prestidigitação");
+                    end;
+                </event>
+		</button>
+	</layout>
+
+	<layout left="621.4834" top="332.24161" height="22.473789" width="75.189728" opacity="0" cursor="handPoint">
+		<button align="client" horzTextAlign="center" name="teste_pontaria">
+                <event name="onClick">
+                    local rolagem = Firecast.interpretarRolagem(sheet.total_pontaria); 
+                    if not rolagem.possuiAlgumDado then
+                        rolagem = Firecast.interpretarRolagem("1d20"):concatenar(rolagem);
+                    end; 
+                    local mesaDoPersonagem = Firecast.getMesaDe(sheet);
+                    if mesaDoPersonagem ~= nil then
+                        mesaDoPersonagem.chat:rolarDados(rolagem, "Teste de Pontaria");
+                    end;
+                </event>
+		</button>
+	</layout>
+
+	<layout left="621.4834" top="299.99133" height="22.473789" width="99.146835" opacity="0" cursor="handPoint">
+		<button align="client" horzTextAlign="center" name="teste_furtividade">
+                <event name="onClick">
+                    local rolagem = Firecast.interpretarRolagem(sheet.total_furtividade); 
+                    if not rolagem.possuiAlgumDado then
+                        rolagem = Firecast.interpretarRolagem("1d20"):concatenar(rolagem);
+                    end; 
+                    local mesaDoPersonagem = Firecast.getMesaDe(sheet);
+                    if mesaDoPersonagem ~= nil then
+                        mesaDoPersonagem.chat:rolarDados(rolagem, "Teste de Furtividade");
+                    end;
+                </event>
+		</button>
+	</layout>
+
+	<layout left="621.28772" top="268.05295" height="22.473789" width="88.904068" opacity="0" cursor="handPoint">
+		<button align="client" horzTextAlign="center" name="teste_acrobacia">
+                <event name="onClick">
+                    local rolagem = Firecast.interpretarRolagem(sheet.total_acrobacia); 
+                    if not rolagem.possuiAlgumDado then
+                        rolagem = Firecast.interpretarRolagem("1d20"):concatenar(rolagem);
+                    end; 
+                    local mesaDoPersonagem = Firecast.getMesaDe(sheet);
+                    if mesaDoPersonagem ~= nil then
+                        mesaDoPersonagem.chat:rolarDados(rolagem, "Teste de Acrobacia");
+                    end;
+                </event>
+		</button>
+	</layout>
+
+	<layout left="621.46869" top="236.11456" height="22.473789" width="45.225933" opacity="0" cursor="handPoint">
+		<button align="client" horzTextAlign="center" name="teste_luta">
+                <event name="onClick">
+                    local rolagem = Firecast.interpretarRolagem(sheet.total_luta); 
+                    if not rolagem.possuiAlgumDado then
+                        rolagem = Firecast.interpretarRolagem("1d20"):concatenar(rolagem);
+                    end; 
+                    local mesaDoPersonagem = Firecast.getMesaDe(sheet);
+                    if mesaDoPersonagem ~= nil then
+                        mesaDoPersonagem.chat:rolarDados(rolagem, "Teste de Luta");
+                    end;
+                </event>
+		</button>
+	</layout>
+
+	<layout left="621.46869" top="205.0808" height="22.473789" width="88.664497" opacity="0" cursor="handPoint">
+		<button align="client" horzTextAlign="center" name="teste_atletismo">
+                <event name="onClick">
+                    local rolagem = Firecast.interpretarRolagem(sheet.total_atletismo); 
+                    if not rolagem.possuiAlgumDado then
+                        rolagem = Firecast.interpretarRolagem("1d20"):concatenar(rolagem);
+                    end; 
+                    local mesaDoPersonagem = Firecast.getMesaDe(sheet);
+                    if mesaDoPersonagem ~= nil then
+                        mesaDoPersonagem.chat:rolarDados(rolagem, "Teste de Atletismo");
+                    end;
+                </event>
+		</button>
+	</layout>
+
+	<!-- #endregion -->
+	<!-- #region Pericias Atributos Escolha -->
+
+	<layout left="764.18207" top="241.08159" height="15.53607" width="36.461948">
+		<comboBox align="client" horzTextAlign="center" field="atributo_luta" name="atributo_luta" fontSize="18" fontFamily="Chiller" transparent="true"
+			items="{'For', 'Dex'}" values="{'F', 'D'}"/>
+	</layout>
+
+	<layout left="764.18207" top="336.7634" height="15.53607" width="36.461948">
+		<comboBox align="client" horzTextAlign="center" field="atributo_pontaria" name="atributo_pontaria" fontSize="18" fontFamily="Chiller" transparent="true"
+			items="{'For', 'Dex'}" values="{'F', 'D'}"/>
+	</layout>
+
+	<!-- #endregion -->
+	<!-- #region Pericias outros -->
+
+	<layout left="810.51935" top="204.15363" height="20.575001" width="36.461948">
+		<edit align="client" horzTextAlign="center" field="outros_atletismo" fontSize="18" fontFamily="Chiller" transparent="true"/>
+	</layout>
+		
+	<layout left="810.51935" top="236.04744" height="20.575001" width="36.461948">
+		<edit align="client" horzTextAlign="center" field="outros_luta" fontSize="18" fontFamily="Chiller" transparent="true"/>
+	</layout>
+		
+	<layout left="810.58197" top="267.94138" height="20.575001" width="36.461948">
+		<edit align="client" horzTextAlign="center" field="outros_acrobacia" fontSize="18" fontFamily="Chiller" transparent="true"/>
+	</layout>
+		
+	<layout left="810.51935" top="299.83533" height="20.575001" width="36.461948">
+		<edit align="client" horzTextAlign="center" field="outros_furtividade" fontSize="18" fontFamily="Chiller" transparent="true"/>
+	</layout>
+		
+	<layout left="810.51935" top="331.72928" height="20.575001" width="36.461948">
+		<edit align="client" horzTextAlign="center" field="outros_pontaria" fontSize="18" fontFamily="Chiller" transparent="true"/>
+	</layout>
+		
+	<layout left="810.51929" top="363.62323" height="20.575001" width="36.461948">
+		<edit align="client" horzTextAlign="center" field="outros_prestidigitacao" fontSize="18" fontFamily="Chiller" transparent="true"/>
+	</layout>
+		
+	<layout left="810.51935" top="395.51709" height="20.575001" width="36.461948">
+		<edit align="client" horzTextAlign="center" field="outros_reflexo" fontSize="18" fontFamily="Chiller" transparent="true"/>
+	</layout>
+		
+	<layout left="810.51935" top="427.41104" height="20.575001" width="36.461948">
+		<edit align="client" horzTextAlign="center" field="outros_fortitude" fontSize="18" fontFamily="Chiller" transparent="true"/>
+	</layout>
+		
+	<layout left="810.51935" top="459.30496" height="20.575001" width="36.461948">
+		<edit align="client" horzTextAlign="center" field="outros_integridade" fontSize="18" fontFamily="Chiller" transparent="true"/>
+	</layout>
+		
+	<layout left="810.51935" top="491.19888" height="20.575001" width="36.461948">
+		<edit align="client" horzTextAlign="center" field="outros_intuicao" fontSize="18" fontFamily="Chiller" transparent="true"/>
+	</layout>
+		
+	<layout left="810.51935" top="523.09283" height="20.575001" width="36.461948">
+		<edit align="client" horzTextAlign="center" field="outros_medicina" fontSize="18" fontFamily="Chiller" transparent="true"/>
+	</layout>
+	
+	<layout left="810.51935" top="554.98682" height="20.575001" width="36.461948">
+		<edit align="client" horzTextAlign="center" field="outros_percepcao" fontSize="18" fontFamily="Chiller" transparent="true"/>
+	</layout>
+		
+	<layout left="810.51935" top="586.88074" height="20.575001" width="36.461948">
+		<edit align="client" horzTextAlign="center" field="outros_ocultismo" fontSize="18" fontFamily="Chiller" transparent="true"/>
+	</layout>
+		
+	<layout left="1126.2676" top="204.14873" height="20.575001" width="36.461948">
+		<edit align="client" horzTextAlign="center" field="outros_astucia" fontSize="18" fontFamily="Chiller" transparent="true"/>
+	</layout>
+		
+	<layout left="1126.2676" top="236.04266" height="20.575001" width="36.461948">
+		<edit align="client" horzTextAlign="center" field="outros_feiticaria" fontSize="18" fontFamily="Chiller" transparent="true"/>
+	</layout>
+		
+	<layout left="1126.332" top="267.93658" height="20.575001" width="36.461948">
+		<edit align="client" horzTextAlign="center" field="outros_investigacao" fontSize="18" fontFamily="Chiller" transparent="true"/>
+	</layout>
+	
+	<layout left="1126.2676" top="299.83096" height="20.575001" width="36.461948">
+		<edit align="client" horzTextAlign="center" field="outros_historia" fontSize="18" fontFamily="Chiller" transparent="true"/>
+	</layout>
+	
+	<layout left="1126.2676" top="331.72449" height="20.575001" width="36.461948">
+		<edit align="client" horzTextAlign="center" field="outrosOficio_1" fontSize="18" fontFamily="Chiller" transparent="true"/>
+	</layout>
+	
+	<layout left="1126.2676" top="363.61841" height="20.575001" width="36.461948">
+		<edit align="client" horzTextAlign="center" field="outrosOficio_2" fontSize="18" fontFamily="Chiller" transparent="true"/>
+	</layout>
+	
+	<layout left="1126.2676" top="395.51236" height="20.575001" width="36.461948">
+		<edit align="client" horzTextAlign="center" field="outrosOficio_3" fontSize="18" fontFamily="Chiller" transparent="true"/>
+	</layout>
+	
+	<layout left="1126.2676" top="427.40628" height="20.575001" width="36.461948">
+		<edit align="client" horzTextAlign="center" field="outros_religiao" fontSize="18" fontFamily="Chiller" transparent="true"/>
+	</layout>
+	
+	<layout left="1126.2676" top="459.30023" height="20.575001" width="36.461948">
+		<edit align="client" horzTextAlign="center" field="outros_persuasao" fontSize="18" fontFamily="Chiller" transparent="true"/>
+	</layout>
+	
+	<layout left="1126.2676" top="491.19415" height="20.575001" width="36.461948">
+		<edit align="client" horzTextAlign="center" field="outros_enganacao" fontSize="18" fontFamily="Chiller" transparent="true"/>
+	</layout>
+	
+	<layout left="1126.2676" top="523.08807" height="20.575001" width="36.461948">
+		<edit align="client" horzTextAlign="center" field="outros_intimidacao" fontSize="18" fontFamily="Chiller" transparent="true"/>
+	</layout>
+	
+	<layout left="1126.2676" top="554.98206" height="20.575001" width="36.461948">
+		<edit align="client" horzTextAlign="center" field="outros_performance" fontSize="18" fontFamily="Chiller" transparent="true"/>
+	</layout>
+		
+	<layout left="1126.2676" top="586.87598" height="20.575001" width="36.461948">
+		<edit align="client" horzTextAlign="center" field="outros_vontade" fontSize="18" fontFamily="Chiller" transparent="true"/>
+	</layout>
+
+	<!-- #endregion -->
+	<!-- #region Pericias maestria -->
+
+	<layout left="852.46118" top="209.18765" height="17.9142" width="16.694559">
+		<rectangle align="client" color="#00000000" xradius="7" yradius="7" cornerType="bevel" name="maestria_atletismo"/>
+		<checkBox align="client" horzTextAlign="center" field="maestria_atletismo" opacity="0" />
+	</layout>
+	<dataLink field="maestria_atletismo">
+		<event name="onChange"><![CDATA[
+			if sheet.maestria_atletismo == true then
+				self.maestria_atletismo.color="#00FF00"
+			else
+				self.maestria_atletismo.color="#00000000"
+			end
+		]]></event>
+	</dataLink>
+
+	<layout left="852.46118" top="241.08159" height="17.9142" width="16.694559">
+		<rectangle align="client" color="#00000000" xradius="7" yradius="7" cornerType="bevel" name="maestria_luta"/>
+		<checkBox align="client" horzTextAlign="center" field="maestria_luta" opacity="0" />
+	</layout>
+	<dataLink field="maestria_luta">
+		<event name="onChange"><![CDATA[
+			if sheet.maestria_luta == true then
+				self.maestria_luta.color = "#00FF00"
+			else
+				self.maestria_luta.color = "#00000000"
+			end
+		]]></event>
+	</dataLink>
+
+	<layout left="852.3985" top="272.97552" height="17.9142" width="16.694559">
+		<rectangle align="client" color="#00000000" xradius="7" yradius="7" cornerType="bevel" name="maestria_acrobacia"/>
+		<checkBox align="client" horzTextAlign="center" field="maestria_acrobacia" opacity="0" />
+	</layout>
+	<dataLink field="maestria_acrobacia">
+		<event name="onChange"><![CDATA[
+			if sheet.maestria_acrobacia == true then
+				self.maestria_acrobacia.color = "#00FF00"
+			else
+				self.maestria_acrobacia.color = "#00000000"
+			end
+		]]></event>
+	</dataLink>
+
+	<layout left="852.3985" top="304.86948" height="17.9142" width="16.694559">
+		<rectangle align="client" color="#00000000" xradius="7" yradius="7" cornerType="bevel" name="maestria_furtividade"/>
+		<checkBox align="client" horzTextAlign="center" field="maestria_furtividade" opacity="0" />
+	</layout>
+	<dataLink field="maestria_furtividade">
+		<event name="onChange"><![CDATA[
+			if sheet.maestria_furtividade == true then
+				self.maestria_furtividade.color = "#00FF00"
+			else
+				self.maestria_furtividade.color = "#00000000"
+			end
+		]]></event>
+	</dataLink>
+
+	<layout left="852.46118" top="336.7634" height="17.9142" width="16.694559">
+		<rectangle align="client" color="#00000000" xradius="7" yradius="7" cornerType="bevel" name="maestria_pontaria"/>
+		<checkBox align="client" horzTextAlign="center" field="maestria_pontaria" opacity="0" />
+	</layout>
+	<dataLink field="maestria_pontaria">
+		<event name="onChange"><![CDATA[
+			if sheet.maestria_pontaria == true then
+				self.maestria_pontaria.color = "#00FF00"
+			else
+				self.maestria_pontaria.color = "#00000000"
+			end
+		]]></event>
+	</dataLink>
+
+	<layout left="852.46118" top="368.65735" height="17.9142" width="16.694559">
+		<rectangle align="client" color="#00000000" xradius="7" yradius="7" cornerType="bevel" name="maestria_prestidigitacao"/>
+		<checkBox align="client" horzTextAlign="center" field="maestria_prestidigitacao" opacity="0" />
+	</layout>
+	<dataLink field="maestria_prestidigitacao">
+		<event name="onChange"><![CDATA[
+			if sheet.maestria_prestidigitacao == true then
+				self.maestria_prestidigitacao.color = "#00FF00"
+			else
+				self.maestria_prestidigitacao.color = "#00000000"
+			end
+		]]></event>
+	</dataLink>
+
+	<layout left="852.3985" top="400.55127" height="17.9142" width="16.694559">
+		<rectangle align="client" color="#00000000" xradius="7" yradius="7" cornerType="bevel" name="maestria_reflexo"/>
+		<checkBox align="client" horzTextAlign="center" field="maestria_reflexo" opacity="0" />
+	</layout>
+	<dataLink field="maestria_reflexo">
+		<event name="onChange"><![CDATA[
+			if sheet.maestria_reflexo == true then
+				self.maestria_reflexo.color = "#00FF00"
+			else
+				self.maestria_reflexo.color = "#00000000"
+			end
+		]]></event>
+	</dataLink>
+
+	<layout left="852.3985" top="432.44522" height="17.9142" width="16.694559">
+		<rectangle align="client" color="#00000000" xradius="7" yradius="7" cornerType="bevel" name="maestria_fortitude"/>
+		<checkBox align="client" horzTextAlign="center" field="maestria_fortitude" opacity="0" />
+	</layout>
+	<dataLink field="maestria_fortitude">
+		<event name="onChange"><![CDATA[
+			if sheet.maestria_fortitude == true then
+				self.maestria_fortitude.color = "#00FF00"
+			else
+				self.maestria_fortitude.color = "#00000000"
+			end
+		]]></event>
+	</dataLink>
+    
+   	<layout left="852.3985" top="464.33911" height="17.9142" width="16.694559">
+		<rectangle align="client" color="#00000000" xradius="7" yradius="7" cornerType="bevel" name="maestria_integridade"/>
+		<checkBox align="client" horzTextAlign="center" field="maestria_integridade" opacity="0" />
+	</layout>
+	<dataLink field="maestria_integridade">
+		<event name="onChange"><![CDATA[
+			if sheet.maestria_integridade == true then
+				self.maestria_integridade.color = "#00FF00"
+			else
+				self.maestria_integridade.color = "#00000000"
+			end
+		]]></event>
+	</dataLink>
+
+	<layout left="852.3985" top="496.23306" height="17.9142" width="16.694559">
+		<rectangle align="client" color="#00000000" xradius="7" yradius="7" cornerType="bevel" name="maestria_intuicao"/>
+		<checkBox align="client" horzTextAlign="center" field="maestria_intuicao" opacity="0" />
+	</layout>
+	<dataLink field="maestria_intuicao">
+		<event name="onChange"><![CDATA[
+			if sheet.maestria_intuicao == true then
+				self.maestria_intuicao.color = "#00FF00"
+			else
+				self.maestria_intuicao.color = "#00000000"
+			end
+		]]></event>
+	</dataLink>
+
+	<layout left="852.33582" top="528.12695" height="17.9142" width="16.694559">
+		<rectangle align="client" color="#00000000" xradius="7" yradius="7" cornerType="bevel" name="maestria_medicina"/>
+		<checkBox align="client" horzTextAlign="center" field="maestria_medicina" opacity="0" />
+	</layout>
+	<dataLink field="maestria_medicina">
+		<event name="onChange"><![CDATA[
+			if sheet.maestria_medicina == true then
+				self.maestria_medicina.color = "#00FF00"
+			else
+				self.maestria_medicina.color = "#00000000"
+			end
+		]]></event>
+	</dataLink>
+
+	<layout left="852.33582" top="560.02094" height="17.9142" width="16.694559">
+		<rectangle align="client" color="#00000000" xradius="7" yradius="7" cornerType="bevel" name="maestria_percepcao"/>
+		<checkBox align="client" horzTextAlign="center" field="maestria_percepcao" opacity="0" />
+	</layout>
+	<dataLink field="maestria_percepcao">
+		<event name="onChange"><![CDATA[
+			if sheet.maestria_percepcao == true then
+				self.maestria_percepcao.color = "#00FF00"
+			else
+				self.maestria_percepcao.color = "#00000000"
+			end
+		]]></event>
+	</dataLink>
+
+	<layout left="852.3985" top="591.91486" height="17.9142" width="16.694559">
+		<rectangle align="client" color="#00000000" xradius="7" yradius="7" cornerType="bevel" name="maestria_ocultismo"/>
+		<checkBox align="client" horzTextAlign="center" field="maestria_ocultismo" opacity="0" />
+	</layout>
+	<dataLink field="maestria_ocultismo">
+		<event name="onChange"><![CDATA[
+			if sheet.maestria_ocultismo == true then
+				self.maestria_ocultismo.color = "#00FF00"
+			else
+				self.maestria_ocultismo.color = "#00000000"
+			end
+		]]></event>
+	</dataLink>
+
+	<layout left="1168.1486" top="209.18767" height="17.9142" width="16.694559">
+		<rectangle align="client" color="#00000000" xradius="7" yradius="7" cornerType="bevel" name="maestria_astucia"/>
+		<checkBox align="client" horzTextAlign="center" field="maestria_astucia" opacity="0" />
+	</layout>
+	<dataLink field="maestria_astucia">
+		<event name="onChange"><![CDATA[
+			if sheet.maestria_astucia == true then
+				self.maestria_astucia.color = "#00FF00"
+			else
+				self.maestria_astucia.color = "#00000000"
+			end
+		]]></event>
+	</dataLink>
+
+	<layout left="1168.1486" top="241.0816" height="17.9142" width="16.694559">
+		<rectangle align="client" color="#00000000" xradius="7" yradius="7" cornerType="bevel" name="maestria_feiticaria"/>
+		<checkBox align="client" horzTextAlign="center" field="maestria_feiticaria" opacity="0" />
+	</layout>
+	<dataLink field="maestria_feiticaria">
+		<event name="onChange"><![CDATA[
+			if sheet.maestria_feiticaria == true then
+				self.maestria_feiticaria.color = "#00FF00"
+			else
+				self.maestria_feiticaria.color = "#00000000"
+			end
+		]]></event>
+	</dataLink>
+
+	<layout left="1168.0858" top="272.97552" height="17.9142" width="16.694559">
+		<rectangle align="client" color="#00000000" xradius="7" yradius="7" cornerType="bevel" name="maestria_investigacao"/>
+		<checkBox align="client" horzTextAlign="center" field="maestria_investigacao" opacity="0" />
+	</layout>
+	<dataLink field="maestria_investigacao">
+		<event name="onChange"><![CDATA[
+			if sheet.maestria_investigacao == true then
+				self.maestria_investigacao.color = "#00FF00"
+			else
+				self.maestria_investigacao.color = "#00000000"
+			end
+	    ]]></event>
+	</dataLink>
+
+	<layout left="1168.0858" top="304.86948" height="17.9142" width="16.694559">
+		<rectangle align="client" color="#00000000" xradius="7" yradius="7" cornerType="bevel" name="maestria_historia"/>
+		<checkBox align="client" horzTextAlign="center" field="maestria_historia" opacity="0" />
+	</layout>
+	<dataLink field="maestria_historia">
+			<event name="onChange"><![CDATA[
+			if sheet.maestria_historia == true then
+				self.maestria_historia.color = "#00FF00"
+			else
+				self.maestria_historia.color = "#00000000"
+			end
+		]]></event>
+	</dataLink>
+
+	<layout left="1168.1486" top="336.7634" height="17.9142" width="16.694559">
+		<rectangle align="client" color="#00000000" xradius="7" yradius="7" cornerType="bevel" name="maestriaOficio_1"/>
+		<checkBox align="client" horzTextAlign="center" field="maestriaOficio_1" opacity="0" />
+	</layout>
+	<dataLink field="maestriaOficio_1">
+			<event name="onChange"><![CDATA[
+			if sheet.maestriaOficio_1 == true then
+				self.maestriaOficio_1.color = "#00FF00"
+			else
+				self.maestriaOficio_1.color = "#00000000"
+			end
+		]]></event>
+	</dataLink>
+
+	<layout left="1168.1486" top="368.65735" height="17.9142" width="16.694559">
+		<rectangle align="client" color="#00000000" xradius="7" yradius="7" cornerType="bevel" name="maestriaOficio_2"/>
+		<checkBox align="client" horzTextAlign="center" field="maestriaOficio_2" opacity="0" />
+	</layout>
+	<dataLink field="maestriaOficio_2">
+			<event name="onChange"><![CDATA[
+			if sheet.maestriaOficio_2 == true then
+				self.maestriaOficio_2.color = "#00FF00"
+			else
+				self.maestriaOficio_2.color = "#00000000"
+			end
+		]]></event>
+	</dataLink>
+
+	<layout left="1168.0858" top="400.55127" height="17.9142" width="16.694559">
+		<rectangle align="client" color="#00000000" xradius="7" yradius="7" cornerType="bevel" name="maestriaOficio_3"/>
+		<checkBox align="client" horzTextAlign="center" field="maestriaOficio_3" opacity="0" />
+	</layout>
+	<dataLink field="maestriaOficio_3">
+			<event name="onChange"><![CDATA[
+			if sheet.maestriaOficio_3 == true then
+				self.maestriaOficio_3.color = "#00FF00"
+			else
+				self.maestriaOficio_3.color = "#00000000"
+			end
+		]]></event>
+	</dataLink>
+
+	<layout left="1168.0858" top="432.44522" height="17.9142" width="16.694559">
+		<rectangle align="client" color="#00000000" xradius="7" yradius="7" cornerType="bevel" name="maestria_religiao"/>
+		<checkBox align="client" horzTextAlign="center" field="maestria_religiao" opacity="0" />
+	</layout>
+	<dataLink field="maestria_religiao">
+			<event name="onChange"><![CDATA[
+			if sheet.maestria_religiao == true then
+				self.maestria_religiao.color = "#00FF00"
+			else
+				self.maestria_religiao.color = "#00000000"
+			end
+		]]></event>
+	</dataLink>
+
+	<layout left="1168.0858" top="464.33911" height="17.9142" width="16.694559">
+		<rectangle align="client" color="#00000000" xradius="7" yradius="7" cornerType="bevel" name="maestria_persuasao"/>
+		<checkBox align="client" horzTextAlign="center" field="maestria_persuasao" opacity="0" />
+	</layout>
+	<dataLink field="maestria_persuasao">
+			<event name="onChange"><![CDATA[
+			if sheet.maestria_persuasao == true then
+				self.maestria_persuasao.color = "#00FF00"
+			else
+				self.maestria_persuasao.color = "#00000000"
+			end
+		]]></event>
+	</dataLink>
+
+	<layout left="1168.0858" top="496.23306" height="17.9142" width="16.694559">
+		<rectangle align="client" color="#00000000" xradius="7" yradius="7" cornerType="bevel" name="maestria_enganacao"/>
+		<checkBox align="client" horzTextAlign="center" field="maestria_enganacao" opacity="0" />
+	</layout>
+	<dataLink field="mmaestria_enganacao">
+			<event name="onChange"><![CDATA[
+			if sheet.maestria_enganacao == true then
+				self.maestria_enganacao.color = "#00FF00"
+			else
+				self.maestria_enganacao.color = "#00000000"
+			end
+		]]></event>
+	</dataLink>
+
+	<layout left="1168.0232" top="528.12695" height="17.9142" width="16.694559">
+		<rectangle align="client" color="#00000000" xradius="7" yradius="7" cornerType="bevel" name="maestria_invimidacao"/>
+		<checkBox align="client" horzTextAlign="center" field="maestria_invimidacao" opacity="0" />
+	</layout>
+	<dataLink field="maestria_invimidacao">
+			<event name="onChange"><![CDATA[
+			if sheet.maestria_invimidacao == true then
+				self.maestria_invimidacao.color = "#00FF00"
+			else
+				self.maestria_invimidacao.color = "#00000000"
+			end
+		]]></event>
+	</dataLink>
+
+	<layout left="1168.0232" top="560.02094" height="17.9142" width="16.694559">
+		<rectangle align="client" color="#00000000" xradius="7" yradius="7" cornerType="bevel" name="maestria_performance"/>
+		<checkBox align="client" horzTextAlign="center" field="maestria_performance" opacity="0" />
+	</layout>
+	<dataLink field="maestria_performance">
+			<event name="onChange"><![CDATA[
+			if sheet.maestria_performance == true then
+				self.maestria_performance.color = "#00FF00"
+			else
+				self.maestria_performance.color = "#00000000"
+			end
+		]]></event>
+	</dataLink>
+
+	<layout left="1168.0858" top="591.91486" height="17.9142" width="16.694559">
+		<rectangle align="client" color="#00000000" xradius="7" yradius="7" cornerType="bevel" name="maestria_vontade"/>
+		<checkBox align="client" horzTextAlign="center" field="maestria_vontade" opacity="0" />
+	</layout>
+	<dataLink field="maestria_vontade">
+			<event name="onChange"><![CDATA[
+			if sheet.maestria_vontade == true then
+				self.maestria_vontade.color = "#00FF00"
+			else
+				self.maestria_vontade.color = "#00000000"
+			end
+		]]></event>
+	</dataLink>
+
+		<!-- #endregion -->
+		<!-- #region Pericias Especializacao -->
+
+		<layout left="874.63568" top="209.18765" height="17.9142" width="16.694559">
+			<rectangle align="client" color="#00000000" xradius="7" yradius="7" cornerType="bevel" name="especializacao_atletismo"/>
+			<checkBox align="client" horzTextAlign="center" field="especializacao_atletismo" opacity="0" />
+		</layout>
+		<dataLink field="especializacao_atletismo">
+				<event name="onChange"><![CDATA[
+				if sheet.especializacao_atletismo == true then
+					self.especializacao_atletismo.color = "#00FF00"
+				else
+					self.especializacao_atletismo.color = "#00000000"
+				end
+			]]></event>
+		</dataLink>
+
+		<layout left="874.573" top="272.97552" height="17.9142" width="16.694559">
+			<rectangle align="client" color="#00000000" xradius="7" yradius="7" cornerType="bevel" name="especializacao_acrobacia"/>
+			<checkBox align="client" horzTextAlign="center" field="especializacao_acrobacia" opacity="0" />
+		</layout>
+		<dataLink field="especializacao_acrobacia">
+				<event name="onChange"><![CDATA[
+				if sheet.especializacao_acrobacia == true then
+					self.especializacao_acrobacia.color = "#00FF00"
+				else
+					self.especializacao_acrobacia.color = "#00000000"
+				end
+			]]></event>
+		</dataLink>
+
+		<layout left="874.573" top="304.86948" height="17.9142" width="16.694559">
+			<rectangle align="client" color="#00000000" xradius="7" yradius="7" cornerType="bevel" name="especializacao_furtividade"/>
+			<checkBox align="client" horzTextAlign="center" field="especializacao_furtividade" opacity="0" />
+		</layout>
+		<dataLink field="especializacao_furtividade">
+				<event name="onChange"><![CDATA[
+				if sheet.especializacao_furtividade == true then
+					self.especializacao_furtividade.color = "#00FF00"
+				else
+					self.especializacao_furtividade.color = "#00000000"
+				end
+			]]></event>
+		</dataLink>
+
+		<layout left="874.63568" top="368.65735" height="17.9142" width="16.694559">
+			<rectangle align="client" color="#00000000" xradius="7" yradius="7" cornerType="bevel" name="especializacao_prestidigitacao"/>
+			<checkBox align="client" horzTextAlign="center" field="especializacao_prestidigitacao" opacity="0" />
+		</layout>
+		<dataLink field="especializacao_prestidigitacao">
+				<event name="onChange"><![CDATA[
+				if sheet.especializacao_prestidigitacao == true then
+					self.especializacao_prestidigitacao.color = "#00FF00"
+				else
+					self.especializacao_prestidigitacao.color = "#00000000"
+				end
+			]]></event>
+		</dataLink>
+
+		<layout left="874.573" top="400.55127" height="17.9142" width="16.694559">
+			<rectangle align="client" color="#00000000" xradius="7" yradius="7" cornerType="bevel" name="especializacao_reflexo"/>
+			<checkBox align="client" horzTextAlign="center" field="especializacao_reflexo" opacity="0" />
+		</layout>
+		<dataLink field="especializacao_reflexo">
+				<event name="onChange"><![CDATA[
+				if sheet.especializacao_reflexo == true then
+					self.especializacao_reflexo.color = "#00FF00"
+				else
+					self.especializacao_reflexo.color = "#00000000"
+				end
+			]]></event>
+		</dataLink>
+
+		<layout left="874.573" top="432.44522" height="17.9142" width="16.694559">
+			<rectangle align="client" color="#00000000" xradius="7" yradius="7" cornerType="bevel" name="especializacao_fortitude"/>
+			<checkBox align="client" horzTextAlign="center" field="especializacao_fortitude" opacity="0" />
+		</layout>
+		<dataLink field="especializacao_fortitude">
+				<event name="onChange"><![CDATA[
+				if sheet.especializacao_fortitude == true then
+					self.especializacao_fortitude.color = "#00FF00"
+				else
+					self.especializacao_fortitude.color = "#00000000"
+				end
+			]]></event>
+		</dataLink>
+
+		<layout left="874.573" top="464.33911" height="17.9142" width="16.694559">
+			<rectangle align="client" color="#00000000" xradius="7" yradius="7" cornerType="bevel" name="especializacao_integridade"/>
+			<checkBox align="client" horzTextAlign="center" field="especializacao_integridade" opacity="0" />
+		</layout>
+		<dataLink field="especializacao_integridade">
+				<event name="onChange"><![CDATA[
+				if sheet.especializacao_integridade == true then
+					self.especializacao_integridade.color = "#00FF00"
+				else
+					self.especializacao_integridade.color = "#00000000"
+				end
+			]]></event>
+		</dataLink>
+
+		<layout left="874.573" top="496.23306" height="17.9142" width="16.694559">
+			<rectangle align="client" color="#00000000" xradius="7" yradius="7" cornerType="bevel" name="especializacao_intuicao"/>
+			<checkBox align="client" horzTextAlign="center" field="especializacao_intuicao" opacity="0" />
+		</layout>
+		<dataLink field="especializacao_intuicao">
+				<event name="onChange"><![CDATA[
+				if sheet.especializacao_intuicao == true then
+					self.especializacao_intuicao.color = "#00FF00"
+				else
+					self.especializacao_intuicao.color = "#00000000"
+				end
+			]]></event>
+		</dataLink>
+
+		<layout left="874.51031" top="528.12695" height="17.9142" width="16.694559">
+			<rectangle align="client" color="#00000000" xradius="7" yradius="7" cornerType="bevel" name="especializacao_medicina"/>
+			<checkBox align="client" horzTextAlign="center" field="especializacao_medicina" opacity="0" />
+		</layout>
+		<dataLink field="especializacao_medicina">
+				<event name="onChange"><![CDATA[
+				if sheet.especializacao_medicina == true then
+					self.especializacao_medicina.color = "#00FF00"
+				else
+					self.especializacao_medicina.color = "#00000000"
+				end
+			]]></event>
+		</dataLink>
+
+		<layout left="874.51031" top="560.02094" height="17.9142" width="16.694559">
+			<rectangle align="client" color="#00000000" xradius="7" yradius="7" cornerType="bevel" name="especializacao_percepcao"/>
+			<checkBox align="client" horzTextAlign="center" field="especializacao_percepcao" opacity="0" />
+		</layout>
+		<dataLink field="especializacao_percepcao">
+				<event name="onChange"><![CDATA[
+				if sheet.especializacao_percepcao == true then
+					self.especializacao_percepcao.color = "#00FF00"
+				else
+					self.especializacao_percepcao.color = "#00000000"
+				end
+			]]></event>
+		</dataLink>
+
+		<layout left="874.573" top="591.91486" height="17.9142" width="16.694559">
+			<rectangle align="client" color="#00000000" xradius="7" yradius="7" cornerType="bevel" name="especializacao_ocultismo"/>
+			<checkBox align="client" horzTextAlign="center" field="especializacao_ocultismo" opacity="0" />
+		</layout>
+		<dataLink field="especializacao_ocultismo">
+				<event name="onChange"><![CDATA[
+				if sheet.especializacao_ocultismo == true then
+					self.especializacao_ocultismo.color = "#00FF00"
+				else
+					self.especializacao_ocultismo.color = "#00000000"
+				end
+			]]></event>
+		</dataLink>
+
+		<layout left="1190.2604" top="209.18765" height="17.9142" width="16.694559">
+			<rectangle align="client" color="#00000000" xradius="7" yradius="7" cornerType="bevel" name="especializacao_astucia"/>
+			<checkBox align="client" horzTextAlign="center" field="especializacao_astucia" opacity="0" />
+		</layout>
+		<dataLink field="especializacao_astucia">
+				<event name="onChange"><![CDATA[
+				if sheet.especializacao_astucia == true then
+					self.especializacao_astucia.color = "#00FF00"
+				else
+					self.especializacao_astucia.color = "#00000000"
+				end
+			]]></event>
+		</dataLink>
+
+		<layout left="1190.2604" top="241.08159" height="17.9142" width="16.694559">
+			<rectangle align="client" color="#00000000" xradius="7" yradius="7" cornerType="bevel" name="especializacao_feiticaria"/>
+			<checkBox align="client" horzTextAlign="center" field="especializacao_feiticaria" opacity="0" />
+		</layout>
+		<dataLink field="especializacao_feiticaria">
+				<event name="onChange"><![CDATA[
+				if sheet.especializacao_feiticaria == true then
+					self.especializacao_feiticaria.color = "#00FF00"
+				else
+					self.especializacao_feiticaria.color = "#00000000"
+				end
+			]]></event>
+		</dataLink>
+
+		<layout left="1190.1976" top="272.97552" height="17.9142" width="16.694559">
+			<rectangle align="client" color="#00000000" xradius="7" yradius="7" cornerType="bevel" name="especializacao_investigacao"/>
+			<checkBox align="client" horzTextAlign="center" field="especializacao_investigacao" opacity="0" />
+		</layout>
+		<dataLink field="especializacao_investigacao">
+				<event name="onChange"><![CDATA[
+				if sheet.especializacao_investigacao == true then
+					self.especializacao_investigacao.color = "#00FF00"
+				else
+					self.especializacao_investigacao.color = "#00000000"
+				end
+			]]></event>
+		</dataLink>
+
+		<layout left="1190.1976" top="304.86948" height="17.9142" width="16.694559">
+			<rectangle align="client" color="#00000000" xradius="7" yradius="7" cornerType="bevel" name="especializacao_historia"/>
+			<checkBox align="client" horzTextAlign="center" field="especializacao_historia" opacity="0" />
+		</layout>
+		<dataLink field="especializacao_historia">
+				<event name="onChange"><![CDATA[
+				if sheet.especializacao_historia == true then
+					self.especializacao_historia.color = "#00FF00"
+				else
+					self.especializacao_historia.color = "#00000000"
+				end
+			]]></event>
+		</dataLink>
+
+		<layout left="1190.2604" top="336.7634" height="17.9142" width="16.694559">
+			<rectangle align="client" color="#00000000" xradius="7" yradius="7" cornerType="bevel" name="especializacaoOficio_1"/>
+			<checkBox align="client" horzTextAlign="center" field="especializacaoOficio_1" opacity="0" />
+		</layout>
+		<dataLink field="especializacaoOficio_1">
+				<event name="onChange"><![CDATA[
+				if sheet.especializacaoOficio_1 == true then
+					self.especializacaoOficio_1.color = "#00FF00"
+				else
+					self.especializacaoOficio_1.color = "#00000000"
+				end
+			]]></event>
+		</dataLink>
+
+		<layout left="1190.2604" top="368.65735" height="17.9142" width="16.694559">
+			<rectangle align="client" color="#00000000" xradius="7" yradius="7" cornerType="bevel" name="especializacaoOficio_2"/>
+			<checkBox align="client" horzTextAlign="center" field="especializacaoOficio_2" opacity="0" />
+		</layout>
+		<dataLink field="especializacaoOficio_2">
+				<event name="onChange"><![CDATA[
+				if sheet.especializacaoOficio_2 == true then
+					self.especializacaoOficio_2.color = "#00FF00"
+				else
+					self.especializacaoOficio_2.color = "#00000000"
+				end
+			]]></event>
+		</dataLink>
+
+		<layout left="1190.1976" top="400.55127" height="17.9142" width="16.694559">
+			<rectangle align="client" color="#00000000" xradius="7" yradius="7" cornerType="bevel" name="especializacaoOficio_3"/>
+			<checkBox align="client" horzTextAlign="center" field="especializacaoOficio_3" opacity="0" />
+		</layout>
+		<dataLink field="especializacaoOficio_3">
+				<event name="onChange"><![CDATA[
+				if sheet.especializacaoOficio_3 == true then
+					self.especializacaoOficio_3.color = "#00FF00"
+				else
+					self.especializacaoOficio_3.color = "#00000000"
+				end
+			]]></event>
+		</dataLink>
+
+		<layout left="1190.1976" top="432.44522" height="17.9142" width="16.694559">
+			<rectangle align="client" color="#00000000" xradius="7" yradius="7" cornerType="bevel" name="especializacao_religiao"/>
+			<checkBox align="client" horzTextAlign="center" field="especializacao_religiao" opacity="0" />
+		</layout>
+		<dataLink field="especializacao_religiao">
+				<event name="onChange"><![CDATA[
+				if sheet.especializacao_religiao == true then
+					self.especializacao_religiao.color = "#00FF00"
+				else
+					self.especializacao_religiao.color = "#00000000"
+				end
+			]]></event>
+		</dataLink>
+
+		<layout left="1190.1976" top="464.33911" height="17.9142" width="16.694559">
+			<rectangle align="client" color="#00000000" xradius="7" yradius="7" cornerType="bevel" name="especializacao_persuasao"/>
+			<checkBox align="client" horzTextAlign="center" field="especializacao_persuasao" opacity="0" />
+		</layout>
+		<dataLink field="especializacao_persuasao">
+				<event name="onChange"><![CDATA[
+				if sheet.especializacao_persuasao == true then
+					self.especializacao_persuasao.color = "#00FF00"
+				else
+					self.especializacao_persuasao.color = "#00000000"
+				end
+			]]></event>
+		</dataLink>
+
+		<layout left="1190.1976" top="496.23306" height="17.9142" width="16.694559">
+			<rectangle align="client" color="#00000000" xradius="7" yradius="7" cornerType="bevel" name="especializacao_enganacao"/>
+			<checkBox align="client" horzTextAlign="center" field="especializacao_enganacao" opacity="0" />
+		</layout>
+		<dataLink field="especializacao_enganacao">
+				<event name="onChange"><![CDATA[
+				if sheet.especializacao_enganacao == true then
+					self.especializacao_enganacao.color = "#00FF00"
+				else
+					self.especializacao_enganacao.color = "#00000000"
+				end
+			]]></event>
+		</dataLink>
+
+		<layout left="1190.135" top="528.12695" height="17.9142" width="16.694559">
+			<rectangle align="client" color="#00000000" xradius="7" yradius="7" cornerType="bevel" name="especializacao_intimidacao"/>
+			<checkBox align="client" horzTextAlign="center" field="especializacao_intimidacao" opacity="0" />
+		</layout>
+		<dataLink field="especializacao_intimidacao">
+				<event name="onChange"><![CDATA[
+				if sheet.especializacao_intimidacao == true then
+					self.especializacao_intimidacao.color = "#00FF00"
+				else
+					self.especializacao_intimidacao.color = "#00000000"
+				end
+			]]></event>
+		</dataLink>
+
+		<layout left="1190.135" top="560.02094" height="17.9142" width="16.694559">
+			<rectangle align="client" color="#00000000" xradius="7" yradius="7" cornerType="bevel" name="especializacao_performance"/>
+			<checkBox align="client" horzTextAlign="center" field="especializacao_performance" opacity="0" />
+		</layout>
+		<dataLink field="especializacao_performance">
+				<event name="onChange"><![CDATA[
+				if sheet.especializacao_performance == true then
+					self.especializacao_performance.color = "#00FF00"
+				else
+					self.especializacao_performance.color = "#00000000"
+				end
+			]]></event>
+		</dataLink>
+
+		<layout left="1190.1976" top="591.91486" height="17.9142" width="16.694559">
+			<rectangle align="client" color="#00000000" xradius="7" yradius="7" cornerType="bevel" name="especializacao_vontade"/>
+			<checkBox align="client" horzTextAlign="center" field="especializacao_vontade" opacity="0" />
+		</layout>
+		<dataLink field="especializacao_vontade">
+				<event name="onChange"><![CDATA[
+				if sheet.especializacao_vontade == true then
+					self.especializacao_vontade.color = "#00FF00"
+				else
+					self.especializacao_vontade.color = "#00000000"
+				end
+			]]></event>
+		</dataLink>
+
+		<!-- #endregion -->
+		<!-- #region Pericias Valores Totais -->
+
+		<layout left="1207.4429" top="586.88074" height="20.575001" width="36.557999">
+			<label align="client" horzTextAlign="center" field="total_vontade" name="total_vontade" fontColor="white" fontSize="18" fontFamily="Chiller"/>
+		</layout>
+		<dataLink fields="{'outros_vontade', 'maestria_vontade', 'especializacao_vontade', 'sheet.valor_nivel', 'maestria_nivel', 'modificadorBase_carisma'}">
+			<event name="onPersistedChange"><![CDATA[
+
+				local valoroutros = tonumber(sheet.outros_vontade) or 0
+				local valornivel = tonumber(sheet.valor_nivel) or 0
+				local valormaestria = tonumber(sheet.maestria_nivel) or 0 
+				local valormodificador = tonumber(sheet.modificadorBase_carisma) or 0
+
+				if sheet.especializacao_vontade == true then
+					sheet.total_vontade = math.floor(valornivel/2) + math.ceil(valormaestria+(valormodificador*1.5)) + valoroutros;
+				elseif sheet.maestria_vontade == true then
+					sheet.total_vontade = math.floor(valornivel/2) + valormaestria + valormodificador + valoroutros;
+				else
+					sheet.total_vontade = math.floor(valornivel/2) + valormodificador + valoroutros;
+				end
+
+			]]></event>
+		</dataLink>
+
+		<layout left="1207.4429" top="554.98682" height="20.575001" width="36.557999">
+			<label align="client" horzTextAlign="center" field="total_performance" name="total_performance" fontColor="white" fontSize="18" fontFamily="Chiller"/>
+		</layout>
+		<dataLink fields="{'outros_performance', 'maestria_performance', 'especializacao_performance', 'sheet.valor_nivel', 'maestria_nivel', 'modificadorBase_carisma'}">
+			<event name="onPersistedChange"><![CDATA[
+
+				local valoroutros = tonumber(sheet.outros_performance) or 0
+				local valornivel = tonumber(sheet.valor_nivel) or 0
+				local valormaestria = tonumber(sheet.maestria_nivel) or 0 
+				local valormodificador = tonumber(sheet.modificadorBase_carisma) or 0
+
+				if sheet.especializacao_performance == true then
+					sheet.total_performance = math.floor(valornivel/2) + math.floor(valormaestria+(valormodificador*1.5)) + valoroutros;
+				elseif sheet.maestria_performance == true then
+					sheet.total_performance = math.floor(valornivel/2) + valormaestria + valormodificador + valoroutros;
+				else
+					sheet.total_performance = math.floor(valornivel/2) + valormodificador + valoroutros;
+				end
+
+			]]></event>
+		</dataLink>
+		
+		<layout left="1207.4429" top="523.09283" height="20.575001" width="36.557999">
+			<label align="client" horzTextAlign="center" field="total_intimidacao" name="total_intimidacao" fontColor="white" fontSize="18" fontFamily="Chiller"/>
+		</layout>
+		<dataLink fields="{'outros_intimidacao', 'maestria_intimidacao', 'especializacao_intimidacao', 'sheet.valor_nivel', 'maestria_nivel', 'modificadorBase_carisma'}">
+			<event name="onPersistedChange"><![CDATA[
+
+				local valoroutros = tonumber(sheet.outros_intimidacao) or 0
+				local valornivel = tonumber(sheet.valor_nivel) or 0
+				local valormaestria = tonumber(sheet.maestria_nivel) or 0 
+				local valormodificador = tonumber(sheet.modificadorBase_carisma) or 0
+
+				if sheet.especializacao_intimidacao == true then
+					sheet.total_intimidacao = math.floor(valornivel/2) + math.floor(valormaestria+(valormodificador*1.5)) + valoroutros;
+				elseif sheet.maestria_intimidacao == true then
+					sheet.total_intimidacao = math.floor(valornivel/2) + valormaestria + valormodificador + valoroutros;
+				else
+					sheet.total_intimidacao = math.floor(valornivel/2) + valormodificador + valoroutros;
+				end
+
+			]]></event>
+		</dataLink>
+		
+		<layout left="1207.4429" top="491.19891" height="20.575001" width="36.557999">
+			<label align="client" horzTextAlign="center" field="total_enganacao" name="total_enganacao" fontColor="white" fontSize="18" fontFamily="Chiller"/>
+		</layout>
+		<dataLink fields="{'outros_enganacao', 'maestria_enganacao', 'especializacao_enganacao', 'sheet.valor_nivel', 'maestria_nivel', 'modificadorBase_carisma'}">
+			<event name="onPersistedChange"><![CDATA[
+
+				local valoroutros = tonumber(sheet.outros_enganacao) or 0
+				local valornivel = tonumber(sheet.valor_nivel) or 0
+				local valormaestria = tonumber(sheet.maestria_nivel) or 0 
+				local valormodificador = tonumber(sheet.modificadorBase_carisma) or 0
+
+				if sheet.especializacao_enganacao == true then
+					sheet.total_enganacao = math.floor(valornivel/2) + math.floor(valormaestria+(valormodificador*1.5)) + valoroutros;
+				elseif sheet.maestria_enganacao == true then
+					sheet.total_enganacao = math.floor(valornivel/2) + valormaestria + valormodificador + valoroutros;
+				else
+					sheet.total_enganacao = math.floor(valornivel/2) + valormodificador + valoroutros;
+				end
+
+			]]></event>
+		</dataLink>
+		
+		<layout left="1207.4429" top="459.30496" height="20.575001" width="36.557999">
+			<label align="client" horzTextAlign="center" field="total_persuasao" name="total_persuasao" fontColor="white" fontSize="18" fontFamily="Chiller"/>
+		</layout>
+		<dataLink fields="{'outros_persuasao', 'maestria_persuasao', 'especializacao_persuasao', 'sheet.valor_nivel', 'maestria_nivel', 'modificadorBase_carisma'}">
+			<event name="onPersistedChange"><![CDATA[
+
+				local valoroutros = tonumber(sheet.outros_persuasao) or 0
+				local valornivel = tonumber(sheet.valor_nivel) or 0
+				local valormaestria = tonumber(sheet.maestria_nivel) or 0 
+				local valormodificador = tonumber(sheet.modificadorBase_carisma) or 0
+
+				if sheet.especializacao_persuasao == true then
+					sheet.total_persuasao = math.floor(valornivel/2) + math.floor(valormaestria+(valormodificador*1.5)) + valoroutros;
+				elseif sheet.maestria_persuasao == true then
+					sheet.total_persuasao = math.floor(valornivel/2) + valormaestria + valormodificador + valoroutros;
+				else
+					sheet.total_persuasao = math.floor(valornivel/2) + valormodificador + valoroutros;
+				end
+
+			]]></event>
+		</dataLink>
+		
+		<layout left="1207.4429" top="427.41101" height="20.575001" width="36.557999">
+			<label align="client" horzTextAlign="center" field="total_religiao" name="total_religiao" fontColor="white" fontSize="18" fontFamily="Chiller"/>
+		</layout>
+		<dataLink fields="{'outros_religiao', 'maestria_religiao', 'especializacao_religiao', 'sheet.valor_nivel', 'maestria_nivel', 'modificadorBase_inteligencia'}">
+			<event name="onPersistedChange"><![CDATA[
+
+				local valoroutros = tonumber(sheet.outros_religiao) or 0
+				local valornivel = tonumber(sheet.valor_nivel) or 0
+				local valormaestria = tonumber(sheet.maestria_nivel) or 0 
+				local valormodificador = tonumber(sheet.modificadorBase_inteligencia) or 0
+
+				if sheet.especializacao_religiao == true then
+					sheet.total_religiao = math.floor(valornivel/2) + math.floor(valormaestria+(valormodificador*1.5)) + valoroutros;
+				elseif sheet.maestria_religiao == true then
+					sheet.total_religiao = math.floor(valornivel/2) + valormaestria + valormodificador + valoroutros;
+				else
+					sheet.total_religiao = math.floor(valornivel/2) + valormodificador + valoroutros;
+				end
+
+			]]></event>
+		</dataLink>
+		
+		<layout left="1207.4429" top="395.51709" height="20.575001" width="36.557999">
+			<label align="client" horzTextAlign="center" field="totalOficio_3" name="totalOficio_3" fontColor="white" fontSize="18" fontFamily="Chiller"/>
+		</layout>
+		<dataLink fields="{'outrosOficio_3', 'maestriaOficio_3', 'especializacaoOficio_3', 'sheet.valor_nivel', 'maestria_nivel', 'modificadorBase_inteligencia'}">
+			<event name="onPersistedChange"><![CDATA[
+
+				local valoroutros = tonumber(sheet.outrosOficio_3) or 0
+				local valornivel = tonumber(sheet.valor_nivel) or 0
+				local valormaestria = tonumber(sheet.maestria_nivel) or 0 
+				local valormodificador = tonumber(sheet.modificadorBase_inteligencia) or 0
+
+				if sheet.especializacaoOficio_3 == true then
+					sheet.totalOficio_3 = math.floor(valornivel/2) + math.floor(valormaestria+(valormodificador*1.5)) + valoroutros;
+				elseif sheet.maestriaOficio_3 == true then
+					sheet.totalOficio_3 = math.floor(valornivel/2) + valormaestria + valormodificador + valoroutros;
+				else
+					sheet.totalOficio_3 = math.floor(valornivel/2) + valormodificador + valoroutros;
+				end
+
+			]]></event>
+		</dataLink>
+		
+		<layout left="1207.4429" top="363.62314" height="20.575001" width="36.557999">
+			<label align="client" horzTextAlign="center" field="totalOficio_2" name="totalOficio_2" fontColor="white" fontSize="18" fontFamily="Chiller"/>
+		</layout>
+		<dataLink fields="{'outrosOficio_2', 'maestriaOficio_2', 'especializacaoOficio_2', 'sheet.valor_nivel', 'maestria_nivel', 'modificadorBase_inteligencia'}">
+			<event name="onPersistedChange"><![CDATA[
+
+				local valoroutros = tonumber(sheet.outrosOficio_2) or 0
+				local valornivel = tonumber(sheet.valor_nivel) or 0
+				local valormaestria = tonumber(sheet.maestria_nivel) or 0 
+				local valormodificador = tonumber(sheet.modificadorBase_inteligencia) or 0
+
+				if sheet.especializacaoOficio_2 == true then
+					sheet.totalOficio_2 = math.floor(valornivel/2) + math.floor(valormaestria+(valormodificador*1.5)) + valoroutros;
+				elseif sheet.maestriaOficio_2 == true then
+					sheet.totalOficio_2 = math.floor(valornivel/2) + valormaestria + valormodificador + valoroutros;
+				else
+					sheet.totalOficio_2 = math.floor(valornivel/2) + valormodificador + valoroutros;
+				end
+
+			]]></event>
+		</dataLink>
+		
+		<layout left="1207.4429" top="331.72922" height="20.575001" width="36.557999">
+			<label align="client" horzTextAlign="center" field="totalOficio_1" name="totalOficio_1" fontColor="white" fontSize="18" fontFamily="Chiller"/>
+		</layout>
+		<dataLink fields="{'outrosOficio_1', 'maestriaOficio_1', 'especializacaoOficio_1', 'sheet.valor_nivel', 'maestria_nivel', 'modificadorBase_inteligencia'}">
+			<event name="onPersistedChange"><![CDATA[
+
+				local valoroutros = tonumber(sheet.outrosOficio_1) or 0
+				local valornivel = tonumber(sheet.valor_nivel) or 0
+				local valormaestria = tonumber(sheet.maestria_nivel) or 0 
+				local valormodificador = tonumber(sheet.modificadorBase_inteligencia) or 0
+
+				if sheet.especializacaoOficio_1 == true then
+					sheet.totalOficio_1 = math.floor(valornivel/2) + math.floor(valormaestria+(valormodificador*1.5)) + valoroutros;
+				elseif sheet.maestriaOficio_1 == true then
+					sheet.totalOficio_1 = math.floor(valornivel/2) + valormaestria + valormodificador + valoroutros;
+				else
+					sheet.totalOficio_1 = math.floor(valornivel/2) + valormodificador + valoroutros;
+				end
+
+			]]></event>
+		</dataLink>
+		
+		<layout left="1207.4429" top="299.54178" height="20.575001" width="36.557999">
+			<label align="client" horzTextAlign="center" field="total_historia" name="total_historia" fontColor="white" fontSize="18" fontFamily="Chiller"/>
+		</layout>
+		<dataLink fields="{'outros_historia', 'maestria_historia', 'especializacao_historia', 'sheet.valor_nivel', 'maestria_nivel', 'modificadorBase_inteligencia'}">
+			<event name="onPersistedChange"><![CDATA[
+
+				local valoroutros = tonumber(sheet.outros_historia) or 0
+				local valornivel = tonumber(sheet.valor_nivel) or 0
+				local valormaestria = tonumber(sheet.maestria_nivel) or 0 
+				local valormodificador = tonumber(sheet.modificadorBase_inteligencia) or 0
+
+				if sheet.especializacao_historia == true then
+					sheet.total_historia = math.floor(valornivel/2) + math.floor(valormaestria+(valormodificador*1.5)) + valoroutros;
+				elseif sheet.maestria_historia == true then
+					sheet.total_historia = math.floor(valornivel/2) + valormaestria + valormodificador + valoroutros;
+				else
+					sheet.total_historia = math.floor(valornivel/2) + valormodificador + valoroutros;
+				end
+
+			]]></event>
+		</dataLink>
+		
+		<layout left="1207.4429" top="267.78433" height="20.575001" width="36.557999">
+			<label align="client" horzTextAlign="center" field="total_investigacao"  name="total_investigacao" fontColor="white" fontSize="18" fontFamily="Chiller"/>
+		</layout>
+		<dataLink fields="{'outros_investigacao', 'maestria_investigacao', 'especializacao_investigacao', 'sheet.valor_nivel', 'maestria_nivel', 'modificadorBase_inteligencia'}">
+			<event name="onPersistedChange"><![CDATA[
+
+				local valoroutros = tonumber(sheet.outros_investigacao) or 0
+				local valornivel = tonumber(sheet.valor_nivel) or 0
+				local valormaestria = tonumber(sheet.maestria_nivel) or 0 
+				local valormodificador = tonumber(sheet.modificadorBase_inteligencia) or 0
+
+				if sheet.especializacao_investigacao == true then
+					sheet.total_investigacao = math.floor(valornivel/2) + math.floor(valormaestria+(valormodificador*1.5)) + valoroutros;
+				elseif sheet.maestria_investigacao == true then
+					sheet.total_investigacao = math.floor(valornivel/2) + valormaestria + valormodificador + valoroutros;
+				else
+					sheet.total_investigacao = math.floor(valornivel/2) + valormodificador + valoroutros;
+				end
+
+			]]></event>
+		</dataLink>
+		
+		<layout left="1207.4429" top="236.04742" height="20.575001" width="36.557999">
+			<label align="client" horzTextAlign="center" field="total_feiticaria" name="total_feiticaria" fontColor="white" fontSize="18" fontFamily="Chiller"/>
+		</layout>
+		<dataLink fields="{'outros_feiticaria', 'maestria_feiticaria', 'especializacao_feiticaria', 'sheet.valor_nivel', 'maestria_nivel', 'modificadorBase_inteligencia'}">
+			<event name="onPersistedChange"><![CDATA[
+
+				local valoroutros = tonumber(sheet.outros_feiticaria) or 0
+				local valornivel = tonumber(sheet.valor_nivel) or 0
+				local valormaestria = tonumber(sheet.maestria_nivel) or 0 
+				local valormodificador = tonumber(sheet.modificadorBase_inteligencia) or 0
+
+				if sheet.especializacao_feiticaria == true then
+					sheet.total_feiticaria = math.floor(valornivel/2) + math.floor(valormaestria+(valormodificador*1.5)) + valoroutros;
+				elseif sheet.maestria_feiticaria == true then
+					sheet.total_feiticaria = math.floor(valornivel/2) + valormaestria + valormodificador + valoroutros;
+				else
+					sheet.total_feiticaria = math.floor(valornivel/2) + valormodificador + valoroutros;
+				end
+
+			]]></event>
+		</dataLink>
+		
+		<layout left="1207.4429" top="204.15352" height="20.575001" width="36.557999">
+			<label align="client" horzTextAlign="center" field="total_astucia" name="total_astucia" fontColor="white" fontSize="18" fontFamily="Chiller"/>
+		</layout>
+		<dataLink fields="{'outros_astucia', 'maestria_astucia', 'especializacao_astucia', 'sheet.valor_nivel', 'maestria_nivel', 'modificadorBase_inteligencia'}">
+			<event name="onPersistedChange"><![CDATA[
+
+				local valoroutros = tonumber(sheet.outros_astucia) or 0
+				local valornivel = tonumber(sheet.valor_nivel) or 0
+				local valormaestria = tonumber(sheet.maestria_nivel) or 0 
+				local valormodificador = tonumber(sheet.modificadorBase_inteligencia) or 0
+
+				if sheet.especializacao_astucia == true then
+					sheet.total_astucia = math.floor(valornivel/2) + math.floor(valormaestria+(valormodificador*1.5)) + valoroutros;
+				elseif sheet.maestria_astucia == true then
+					sheet.total_astucia = math.floor(valornivel/2) + valormaestria + valormodificador + valoroutros;
+				else
+					sheet.total_astucia = math.floor(valornivel/2) + valormodificador + valoroutros;
+				end
+
+			]]></event>
+		</dataLink>
+		
+		<layout left="891.69287" top="586.88074" height="20.575001" width="36.557999">
+			<label align="client" horzTextAlign="center" field="total_ocultismo" name="total_ocultismo" fontColor="white" fontSize="18" fontFamily="Chiller"/>
+		</layout>
+		<dataLink fields="{'outros_ocultismo', 'maestria_ocultismo', 'especializacao_ocultismo', 'sheet.valor_nivel', 'maestria_nivel', 'modificadorBase_sabedoria'}">
+			<event name="onPersistedChange"><![CDATA[
+
+				local valoroutros = tonumber(sheet.outros_ocultismo) or 0
+				local valornivel = tonumber(sheet.valor_nivel) or 0
+				local valormaestria = tonumber(sheet.maestria_nivel) or 0 
+				local valormodificador = tonumber(sheet.modificadorBase_sabedoria) or 0
+
+				if sheet.especializacao_ocultismo == true then
+					sheet.total_ocultismo = math.floor(valornivel/2) + math.floor(valormaestria+(valormodificador*1.5)) + valoroutros;
+				elseif sheet.maestria_ocultismo == true then
+					sheet.total_ocultismo = math.floor(valornivel/2) + valormaestria + valormodificador + valoroutros;
+				else
+					sheet.total_ocultismo = math.floor(valornivel/2) + valormodificador + valoroutros;
+				end
+
+			]]></event>
+		</dataLink>
+		
+		<layout left="891.69287" top="554.98682" height="20.575001" width="36.557999">
+			<label align="client" horzTextAlign="center" field="total_percepcao" name="total_percepcao" fontColor="white" fontSize="18" fontFamily="Chiller"/>
+		</layout>
+		<dataLink fields="{'outros_percepcao', 'maestria_percepcao', 'especializacao_percepcao', 'sheet.valor_nivel', 'maestria_nivel', 'modificadorBase_sabedoria'}">
+			<event name="onPersistedChange"><![CDATA[
+
+				local valoroutros = tonumber(sheet.outros_percepcao ) or 0
+				local valornivel = tonumber(sheet.valor_nivel) or 0
+				local valormaestria = tonumber(sheet.maestria_nivel) or 0 
+				local valormodificador = tonumber(sheet.modificadorBase_sabedoria) or 0
+
+				if sheet.especializacao_percepcao == true then
+					sheet.total_percepcao  = math.floor(valornivel/2) + math.floor(valormaestria+(valormodificador*1.5)) + valoroutros;
+				elseif sheet.maestria_percepcao  == true then
+					sheet.total_percepcao  = math.floor(valornivel/2) + (valormaestria + valormodificador + valoroutros);
+				else
+					sheet.total_percepcao  = math.floor(valornivel/2) + valormodificador + valoroutros;
+				end
+
+			]]></event>
+		</dataLink>
+		
+		<layout left="891.69287" top="523.09283" height="20.575001" width="36.557999">
+			<label align="client" horzTextAlign="center" field="total_medicina" name="total_medicina" fontColor="white" fontSize="18" fontFamily="Chiller"/>
+		</layout>
+		<dataLink fields="{'outros_medicina', 'maestria_medicina', 'especializacao_medicina', 'sheet.valor_nivel', 'maestria_nivel', 'modificadorBase_sabedoria'}">
+			<event name="onPersistedChange"><![CDATA[
+
+				local valoroutros = tonumber(sheet.outros_medicina) or 0
+				local valornivel = tonumber(sheet.valor_nivel) or 0
+				local valormaestria = tonumber(sheet.maestria_nivel) or 0 
+				local valormodificador = tonumber(sheet.modificadorBase_sabedoria) or 0
+
+				if sheet.especializacao_medicina == true then
+					sheet.total_medicina = math.floor(valornivel/2) + math.floor(valormaestria+(valormodificador*1.5)) + valoroutros;
+				elseif sheet.maestria_medicina == true then
+					sheet.total_medicina = math.floor(valornivel/2) + valormaestria + valormodificador + valoroutros;
+				else
+					sheet.total_medicina = math.floor(valornivel/2) + valormodificador + valoroutros;
+				end
+
+			]]></event>
+		</dataLink>
+		
+		<layout left="891.69287" top="491.19888" height="20.575001" width="36.557999">
+			<label align="client" horzTextAlign="center" field="total_intuicao" name="total_intuicao" fontColor="white" fontSize="18" fontFamily="Chiller"/>
+		</layout>
+		<dataLink fields="{'outros_intuicao', 'maestria_intuicao', 'especializacao_intuicao', 'sheet.valor_nivel', 'maestria_nivel', 'modificadorBase_sabedoria'}">
+			<event name="onPersistedChange"><![CDATA[
+
+				local valoroutros = tonumber(sheet.outros_intuicao) or 0
+				local valornivel = tonumber(sheet.valor_nivel) or 0
+				local valormaestria = tonumber(sheet.maestria_nivel) or 0 
+				local valormodificador = tonumber(sheet.modificadorBase_sabedoria) or 0
+
+				if sheet.especializacao_intuicao == true then
+					sheet.total_intuicao = math.floor(valornivel/2) + math.floor(valormaestria+(valormodificador*1.5)) + valoroutros;
+				elseif sheet.maestria_intuicao == true then
+					sheet.total_intuicao = math.floor(valornivel/2) + valormaestria + valormodificador + valoroutros;
+				else
+					sheet.total_intuicao = math.floor(valornivel/2) + valormodificador + valoroutros;
+				end
+
+			]]></event>
+		</dataLink>
+		
+		<layout left="891.69287" top="459.30496" height="20.575001" width="36.557999">
+			<label align="client" horzTextAlign="center" field="total_integridade" name="total_integridade" fontColor="white" fontSize="18" fontFamily="Chiller"/>
+		</layout>
+		<dataLink fields="{'outros_integridade', 'maestria_integridade', 'especializacao_integridade', 'sheet.valor_nivel', 'maestria_nivel', 'modificadorBase_constituicao'}">
+			<event name="onPersistedChange"><![CDATA[
+
+				local valoroutros = tonumber(sheet.outros_integridade) or 0
+				local valornivel = tonumber(sheet.valor_nivel) or 0
+				local valormaestria = tonumber(sheet.maestria_nivel) or 0 
+				local valormodificador = tonumber(sheet.modificadorBase_constituicao) or 0
+
+				if sheet.especializacao_integridade == true then
+					sheet.total_integridade = math.floor(valornivel/2) + math.floor(valormaestria+(valormodificador*1.5)) + valoroutros;
+				elseif sheet.maestria_integridade == true then
+					sheet.total_integridade = math.floor(valornivel/2) + valormaestria + valormodificador + valoroutros;
+				else
+					sheet.total_integridade = math.floor(valornivel/2) + valormodificador + valoroutros;
+				end
+
+			]]></event>
+		</dataLink>
+		
+		<layout left="891.69287" top="427.41101" height="20.575001" width="36.557999">
+			<label align="client" horzTextAlign="center" field="total_fortitude" name="total_fortitude" fontColor="white" fontSize="18" fontFamily="Chiller"/>
+		</layout>
+		<dataLink fields="{'outros_fortitude', 'maestria_fortitude', 'especializacao_fortitude', 'sheet.valor_nivel', 'maestria_nivel', 'modificadorBase_constituicao'}">
+			<event name="onPersistedChange"><![CDATA[
+
+				local valoroutros = tonumber(sheet.outros_fortitude) or 0
+				local valornivel = tonumber(sheet.valor_nivel) or 0
+				local valormaestria = tonumber(sheet.maestria_nivel) or 0 
+				local valormodificador = tonumber(sheet.modificadorBase_constituicao) or 0
+
+				if sheet.especializacao_fortitude == true then
+					sheet.total_fortitude = math.floor(valornivel/2) + math.floor(valormaestria+(valormodificador*1.5)) + valoroutros;
+				elseif sheet.maestria_fortitude == true then
+					sheet.total_fortitude = math.floor(valornivel/2) + valormaestria + valormodificador + valoroutros;
+				else
+					sheet.total_fortitude = math.floor(valornivel/2) + valormodificador + valoroutros;
+				end
+
+			]]></event>
+		</dataLink>
+		
+		<layout left="891.69287" top="395.51709" height="20.575001" width="36.557999">
+			<label align="client" horzTextAlign="center" field="total_reflexo" name="total_reflexo" fontColor="white" fontSize="18" fontFamily="Chiller"/>
+		</layout>
+		<dataLink fields="{'outros_reflexo', 'maestria_reflexo', 'especializacao_reflexo', 'sheet.valor_nivel', 'maestria_nivel', 'modificadorBase_destreza'}">
+			<event name="onPersistedChange"><![CDATA[
+
+				local valoroutros = tonumber(sheet.outros_reflexo) or 0
+				local valornivel = tonumber(sheet.valor_nivel) or 0
+				local valormaestria = tonumber(sheet.maestria_nivel) or 0 
+				local valormodificador = tonumber(sheet.modificadorBase_destreza) or 0
+
+				if sheet.especializacao_reflexo == true then
+					sheet.total_reflexo = math.floor(valornivel/2) + math.floor(valormaestria+(valormodificador*1.5)) + valoroutros;
+				elseif sheet.maestria_reflexo == true then
+					sheet.total_reflexo = math.floor(valornivel/2) + valormaestria + valormodificador + valoroutros;
+				else
+					sheet.total_reflexo = math.floor(valornivel/2) + valormodificador + valoroutros;
+				end
+
+			]]></event>
+		</dataLink>
+		
+		<layout left="891.69287" top="363.59836" height="20.575001" width="36.557999">
+			<label align="client" horzTextAlign="center" field="total_prestidigitacao" name="total_prestidigitacao" fontColor="white" fontSize="18" fontFamily="Chiller"/>
+		</layout>
+		<dataLink fields="{'outros_prestidigitacao', 'maestria_prestidigitacao', 'sheet.valor_nivel', 'maestria_nivel', 'modificadorBase_destreza'}">
+			<event name="onPersistedChange"><![CDATA[
+
+				local valoroutros = tonumber(sheet.outros_prestidigitacao) or 0
+				local valornivel = tonumber(sheet.valor_nivel) or 0
+				local valormaestria = tonumber(sheet.maestria_nivel) or 0 
+				local valormodificador = tonumber(sheet.modificadorBase_destreza) or 0
+
+				if sheet.maestria_prestidigitacao == true then
+					sheet.total_prestidigitacao = math.floor(valornivel/2) + valormaestria + valormodificador + valoroutros;
+				else
+					sheet.total_prestidigitacao = math.floor(valornivel/2) + valormodificador + valoroutros;
+				end
+
+			]]></event>
+		</dataLink>
+		
+		<layout left="891.69287" top="331.66983" height="20.575001" width="36.557999">
+			<label align="client" horzTextAlign="center" field="total_pontaria" name="total_pontaria" fontColor="white" fontSize="18" fontFamily="Chiller"/>
+		</layout>
+		<dataLink fields="{'outros_pontaria', 'maestria_pontaria', 'especializacao_pontaria', 'sheet.valor_nivel', 'maestria_nivel', 'modificadorBase_destreza', 'modificadorBase_forca', 'atributo_pontaria'}">
+			<event name="onPersistedChange"><![CDATA[
+
+				local valoroutros = tonumber(sheet.outros_pontaria) or 0
+				local valornivel = tonumber(sheet.valor_nivel) or 0
+				local valormaestria = tonumber(sheet.maestria_nivel) or 0
+				local valormodificador = 0
+
+				if sheet.atributo_pontaria == 'F' then
+					valormodificador = tonumber(sheet.modificadorBase_forca) or 0
+				elseif sheet.atributo_pontaria == 'D' then
+					valormodificador = tonumber(sheet.modificadorBase_destreza) or 0
+				end
+
+				if sheet.especializacao_pontaria == true then
+					sheet.total_pontaria = math.floor(valornivel/2) + math.floor(valormaestria+(valormodificador*1.5)) + valoroutros;
+				elseif sheet.maestria_pontaria == true then
+					sheet.total_pontaria = math.floor(valornivel/2) + valormaestria + valormodificador + valoroutros;
+				else
+					sheet.total_pontaria = math.floor(valornivel/2) + valormodificador + valoroutros;
+				end
+
+			]]></event>
+		</dataLink>
+		
+		
+		<layout left="891.69287" top="299.54178" height="20.575001" width="36.557999">
+			<label align="client" horzTextAlign="center" field="total_furtividade" name="total_furtividade" fontColor="white" fontSize="18" fontFamily="Chiller"/>
+		</layout>
+		<dataLink fields="{'outros_furtividade', 'maestria_furtividade', 'especializacao_furtividade', 'sheet.valor_nivel', 'maestria_nivel', 'modificadorBase_destreza'}">
+			<event name="onPersistedChange"><![CDATA[
+
+				local valoroutros = tonumber(sheet.outros_furtividade) or 0
+				local valornivel = tonumber(sheet.valor_nivel) or 0
+				local valormaestria = tonumber(sheet.maestria_nivel) or 0 
+				local valormodificador = tonumber(sheet.modificadorBase_destreza) or 0
+
+				if sheet.especializacao_furtividade == true then
+					sheet.total_furtividade = math.floor(valornivel/2) + math.floor(valormaestria+(valormodificador*1.5)) + valoroutros;
+				elseif sheet.maestria_furtividade == true then
+					sheet.total_furtividade = math.floor(valornivel/2) + valormaestria + valormodificador + valoroutros;
+				else
+					sheet.total_furtividade = math.floor(valornivel/2) + valormodificador + valoroutros;
+				end
+
+			]]></event>
+		</dataLink>
+		
+		<layout left="891.69287" top="267.78433" height="20.575001" width="36.557999">
+			<label align="client" horzTextAlign="center" field="total_acrobacia" name="total_acrobacia" fontColor="white" fontSize="18" fontFamily="Chiller"/>
+		</layout>
+		<dataLink fields="{'outros_acrobacia', 'maestria_acrobacia', 'especializacao_acrobacia', 'sheet.valor_nivel', 'maestria_nivel', 'modificadorBase_destreza'}">
+			<event name="onPersistedChange"><![CDATA[
+
+				local valoroutros = tonumber(sheet.outros_acrobacia) or 0
+				local valornivel = tonumber(sheet.valor_nivel) or 0
+				local valormaestria = tonumber(sheet.maestria_nivel) or 0 
+				local valormodificador = tonumber(sheet.modificadorBase_destreza) or 0
+
+				if sheet.especializacao_acrobacia == true then
+					sheet.total_acrobacia = math.floor(valornivel/2) + math.floor(valormaestria+(valormodificador*1.5)) + valoroutros;
+				elseif sheet.maestria_acrobacia == true then
+					sheet.total_acrobacia = math.floor(valornivel/2) + valormaestria + valormodificador + valoroutros;
+				else
+					sheet.total_acrobacia = math.floor(valornivel/2) + valormodificador + valoroutros;
+				end
+
+			]]></event>
+		</dataLink>
+		
+		<layout left="891.69281" top="236.04744" height="20.575001" width="36.558167">
+			<label align="client" horzTextAlign="center" field="total_luta" name="total_luta" fontColor="white" fontSize="18" fontFamily="Chiller"/>
+		</layout>
+		<dataLink fields="{'outros_luta', 'maestria_luta', 'especializacao_luta', 'sheet.valor_nivel', 'maestria_nivel', 'modificadorBase_destreza', 'modificadorBase_forca', 'atributo_luta'}">
+			<event name="onPersistedChange"><![CDATA[
+
+				local valoroutros = tonumber(sheet.outros_luta) or 0
+				local valornivel = tonumber(sheet.valor_nivel) or 0
+				local valormaestria = tonumber(sheet.maestria_nivel) or 0
+				local valormodificador = 0
+
+				if sheet.atributo_luta == 'F' then
+					valormodificador = tonumber(sheet.modificadorBase_forca) or 0
+				elseif sheet.atributo_luta == 'D' then
+					valormodificador = tonumber(sheet.modificadorBase_destreza) or 0
+				end
+
+				if sheet.especializacao_luta == true then
+					sheet.total_luta = math.floor(valornivel/2) + math.floor(valormaestria+(valormodificador*1.5)) + valoroutros;
+				elseif sheet.maestria_luta == true then
+					sheet.total_luta = math.floor(valornivel/2) + valormaestria + valormodificador + valoroutros;
+				else
+					sheet.total_luta = math.floor(valornivel/2) + valormodificador + valoroutros;
+				end
+
+			]]></event>
+		</dataLink>
+		
+		<layout left="891.69281" top="204.15373" height="20.574789" width="36.558167">
+			<label align="client" horzTextAlign="center" field="total_atletismo" name="total_atletismo" fontColor="white" fontSize="18" fontFamily="Chiller"/>
+		</layout>
+		<dataLink fields="{'outros_atletismo', 'maestria_atletismo', 'especializacao_atletismo', 'sheet.valor_nivel', 'maestria_nivel', 'modificadorBase_forca'}">
+			<event name="onChange"><![CDATA[
+
+				local valoroutros = tonumber(sheet.outros_atletismo) or 0
+				local valornivel = tonumber(sheet.valor_nivel) or 0
+				local valormaestria = tonumber(sheet.maestria_nivel) or 0 
+				local valormodificador = tonumber(sheet.modificadorBase_forca) or 0
+
+				if sheet.especializacao_atletismo == true then
+					sheet.total_atletismo = math.floor(valornivel/2) + math.floor(valormaestria+(valormodificador*1.5)) + valoroutros;
+				elseif sheet.maestria_atletismo == true then
+					sheet.total_atletismo = math.floor(valornivel/2) + valormaestria + valormodificador + valoroutros;
+				else
+					sheet.total_atletismo = math.floor(valornivel/2) + valormodificador + valoroutros;
+				end
+
+			]]></event>
+		</dataLink>
+
+		<!-- #endregion -->
+		<!-- #region Pericias Texto Oficio -->
+
+		<layout left="994.10962" top="328.48383" height="28.403999" width="60.513538">
+			<edit align="client" horzTextAlign="leading" field="oficio_3" fontSize="25" fontFamily="Chiller" transparent="true" />
+		</layout>
+
+		<layout left="994.10962" top="360.43777" height="28.403999" width="60.513538">
+			<edit align="client" horzTextAlign="leading" field="oficio_2" fontSize="25" fontFamily="Chiller" transparent="true" />
+		</layout>
+
+		<layout left="994.14417" top="392.39172" height="28.403999" width="60.513538">
+			<edit align="client" horzTextAlign="leading" field="oficio_1" fontSize="25" fontFamily="Chiller" transparent="true" />
+		</layout>
+
+		<!-- #endregion -->
+
+		<!-- #endregion -->
+
+</group>

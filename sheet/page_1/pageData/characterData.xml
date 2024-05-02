@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<group>
+
+    <layout left="363.62717" top="399.09378" width="21.823225" height="16.55201" opacity="0" cursor="handPoint">
+		<button align="client" horzTextAlign="center" name="teste_carisma">
+            <event name="onClick">
+                local rolagem = Firecast.interpretarRolagem(sheet.modificadorBase_carisma); 
+                if not rolagem.possuiAlgumDado then
+                    rolagem = Firecast.interpretarRolagem("1d20"):concatenar(rolagem);
+                end; 
+                local mesaDoPersonagem = Firecast.getMesaDe(sheet);
+                if mesaDoPersonagem ~= nil then
+                    mesaDoPersonagem.chat:rolarDados(rolagem, "Teste de Carisma");
+                end;
+            </event>
+		</button>
+	</layout>
+		
+	<layout left="364.83841" top="275.05676" width="19.392714" height="16.55201" opacity="0" cursor="handPoint">
+		<button align="client" horzTextAlign="center" name="teste_sabedoria">
+            <event name="onClick">
+                    local rolagem = Firecast.interpretarRolagem(sheet.modificadorBase_sabedoria); 
+                    if not rolagem.possuiAlgumDado then
+                        rolagem = Firecast.interpretarRolagem("1d20"):concatenar(rolagem);
+                    end; 
+                    local mesaDoPersonagem = Firecast.getMesaDe(sheet);
+                    if mesaDoPersonagem ~= nil then
+                        mesaDoPersonagem.chat:rolarDados(rolagem, "Teste de Sabedoria");
+                    end;
+            </event>
+		</button>
+	</layout>
+		
+	<layout left="364.07803" top="151.72485" width="20.920752" height="16.55201" opacity="0" cursor="handPoint">
+		<button align="client" horzTextAlign="center" name="teste_inteligencia">
+            <event name="onClick">
+                    local rolagem = Firecast.interpretarRolagem(sheet.modificadorBase_inteligencia); 
+                    if not rolagem.possuiAlgumDado then
+                        rolagem = Firecast.interpretarRolagem("1d20"):concatenar(rolagem);
+                    end; 
+                    local mesaDoPersonagem = Firecast.getMesaDe(sheet);
+                    if mesaDoPersonagem ~= nil then
+                        mesaDoPersonagem.chat:rolarDados(rolagem, "Teste de Inteligência");
+                    end;
+            </event>
+		</button>
+	</layout>
+		
+	<layout left="57.837879" top="399.09378" width="23.156403" height="16.55201" opacity="0" cursor="handPoint">
+		<button align="client" horzTextAlign="center" name="teste_constituicao">
+                <event name="onClick">
+                    local rolagem = Firecast.interpretarRolagem(sheet.modificadorBase_constituicao); 
+                    if not rolagem.possuiAlgumDado then
+                        rolagem = Firecast.interpretarRolagem("1d20"):concatenar(rolagem);
+                    end; 
+                    local mesaDoPersonagem = Firecast.getMesaDe(sheet);
+                    if mesaDoPersonagem ~= nil then
+                        mesaDoPersonagem.chat:rolarDados(rolagem, "Teste de Constituição");
+                    end;
+                </event>
+		</button>
+	</layout>
+		
+	<layout left="58.760223" top="275.75778" width="21.310453" height="16.55201" opacity="0" cursor="handPoint">
+		<button align="client" horzTextAlign="center" name="teste_destreza">
+                <event name="onClick">
+                    local rolagem = Firecast.interpretarRolagem(sheet.modificadorBase_destreza); 
+                    if not rolagem.possuiAlgumDado then
+                        rolagem = Firecast.interpretarRolagem("1d20"):concatenar(rolagem);
+                    end; 
+                    local mesaDoPersonagem = Firecast.getMesaDe(sheet);
+                    if mesaDoPersonagem ~= nil then
+                        mesaDoPersonagem.chat:rolarDados(rolagem, "Teste de Destreza");
+                    end;
+                </event>
+		</button>
+	</layout>
+		
+	<layout left="60.390549" top="151.72426" width="18.049278" height="16.55201" opacity="0" cursor="handPoint">
+		<button align="client" horzTextAlign="center" name="teste_forca">
+                <event name="onClick">
+                    local rolagem = Firecast.interpretarRolagem(sheet.modificadorBase_forca); 
+                    if not rolagem.possuiAlgumDado then
+                        rolagem = Firecast.interpretarRolagem("1d20"):concatenar(rolagem);
+                    end; 
+                    local mesaDoPersonagem = Firecast.getMesaDe(sheet);
+                    if mesaDoPersonagem ~= nil then
+                        mesaDoPersonagem.chat:rolarDados(rolagem, "Teste de Força");
+                    end;
+                </event>
+		</button>
+	</layout>
+	<!-- #endregion -->
+	<!-- #region VALORES BASE -->
+
+	<layout left="337.49808" top="427.88306" height="60.473999" width="74.075996">
+		<edit align="client" horzTextAlign="center" field="base_carisma" fontSize="40" transparent="true" fontFamily="Chiller"/>
+	</layout>
+
+	<layout left="337.49805" top="304.54706" height="60.473999" width="74.075996">
+		<edit align="client" horzTextAlign="center" field="base_sabedoria" fontSize="40" transparent="true" fontFamily="Chiller"/>
+	</layout>
+
+	<layout left="337.49805" top="181.21194" height="60.473999" width="74.075996">
+		<edit align="client" horzTextAlign="center" field="base_inteligencia" fontSize="40" transparent="true" fontFamily="Chiller"/>
+	</layout>
+
+	<layout left="32.379368" top="427.88306" height="60.473999" width="74.075996">
+		<edit align="client" horzTextAlign="center" field="base_constituicao" fontSize="40" transparent="true" fontFamily="Chiller"/>
+	</layout>
+
+	<layout left="32.379368" top="304.54706" height="60.473999" width="74.075996">
+		<edit align="client" horzTextAlign="center" field="base_destreza" fontSize="40" transparent="true" fontFamily="Chiller"/>
+	</layout>
+
+	<layout left="32.379353" top="181.21152" height="60.473999" width="74.076027">
+		<edit align="client" horzTextAlign="center" field="base_forca" fontSize="40" transparent="true" fontFamily="Chiller"/>
+	</layout>
+
+	<!-- #endregion -->
+	<!-- #region MODIFICADORES DE VALORES BASE -->
+
+	<layout left="481.86078" top="426.90628" height="60.47377" width="90.469223">
+		<label align="client" horzTextAlign="center" field="modificadorBase_carisma" name="modificadorBase_carisma" fontColor="#FF0000" fontSize="45" fontStyle="bold" fontFamily="Chiller"/>
+	</layout>
+	<dataLink field="base_carisma">
+		<event name="onChange"><![CDATA[
+			local valorcarisma = tonumber(sheet.base_carisma) or 0
+			local modcarisma = math.floor(((valorcarisma)-10) / 2);
+			if modcarisma >= 0 then
+				sheet.modificadorBase_carisma = "+".. modcarisma
+				self.modificadorBase_carisma.fontColor="#00FF00"
+			else
+				sheet.modificadorBase_carisma = modcarisma
+				self.modificadorBase_carisma.fontColor="#FF0000"
+			end;
+		]]></event>
+	</dataLink>
+
+	<layout left="481.86078" top="303.57074" height="60.47377" width="90.469223">
+		<label align="client" horzTextAlign="center" field="modificadorBase_sabedoria" name="modificadorBase_sabedoria" fontColor="#FF0000" fontSize="45" fontStyle="bold" fontFamily="Chiller"/>
+	</layout>
+	<dataLink field="base_sabedoria">
+		<event name="onChange"><![CDATA[
+			local valorsabedoria = tonumber(sheet.base_sabedoria) or 0
+			local modsabedoria = math.floor(((valorsabedoria)-10) / 2);
+			if modsabedoria >= 0 then
+				sheet.modificadorBase_sabedoria = "+".. modsabedoria
+				self.modificadorBase_sabedoria.fontColor="#00FF00"
+			else
+				sheet.modificadorBase_sabedoria = modsabedoria
+				self.modificadorBase_sabedoria.fontColor="#FF0000"
+			end;
+		]]></event>
+	</dataLink>
+
+	<layout left="481.86078" top="180.23517" height="60.47377" width="90.469223">
+		<label align="client" horzTextAlign="center" field="modificadorBase_inteligencia" name="modificadorBase_inteligencia" fontColor="#FF0000" fontSize="45" fontStyle="bold" fontFamily="Chiller"/>
+	</layout>
+	<dataLink field="base_inteligencia">
+		<event name="onChange"><![CDATA[
+			local valorinteligencia = tonumber(sheet.base_inteligencia) or 0
+			local modinteligencia = math.floor(((valorinteligencia)-10) / 2);
+			if modinteligencia >= 0 then
+				sheet.modificadorBase_inteligencia = "+".. modinteligencia
+				self.modificadorBase_inteligencia.fontColor="#00FF00"
+			else
+				sheet.modificadorBase_inteligencia = modinteligencia
+				self.modificadorBase_inteligencia.fontColor="#FF0000"
+			end;
+		]]></event>
+	</dataLink>
+		<layout left="176.74213" top="426.90628" height="60.47377" width="90.469223">
+		    <label align="client" horzTextAlign="center" field="modificadorBase_constituicao" name="modificadorBase_constituicao" fontColor="#FF0000" fontSize="45" fontStyle="bold" fontFamily="Chiller"/>
+	    </layout>
+	<dataLink field="base_constituicao">
+		<event name="onChange"><![CDATA[
+			local valorconstituicao = tonumber(sheet.base_constituicao) or 0
+			self.modificadorBase_constituicao.fontColor="#FF0000"
+			local modconstituicao = math.floor(((valorconstituicao)-10) / 2);
+			if modconstituicao >= 0 then
+				sheet.modificadorBase_constituicao = "+".. modconstituicao
+				self.modificadorBase_constituicao.fontColor="#00FF00"
+			else
+				sheet.modificadorBase_constituicao = modconstituicao
+				self.modificadorBase_constituicao.fontColor="#FF0000"
+			end;
+		]]></event>
+	</dataLink>
+		
+	<layout left="176.74213" top="303.57074" height="60.47377" width="90.469223">
+		<label align="client" horzTextAlign="center" field="modificadorBase_destreza" name="modificadorBase_destreza" fontColor="#FF0000" fontSize="45" fontStyle="bold" fontFamily="Chiller"/>
+	</layout>
+	<dataLink field="base_destreza">
+		<event name="onChange"><![CDATA[
+			local valordestreza = tonumber(sheet.base_destreza) or 0
+			local moddestreza = math.floor(((valordestreza)-10) / 2);
+			if moddestreza >= 0 then
+				sheet.modificadorBase_destreza = "+".. moddestreza
+				self.modificadorBase_destreza.fontColor="#00FF00"
+			else
+				sheet.modificadorBase_destreza = moddestreza
+				self.modificadorBase_destreza.fontColor="#FF0000"
+			end;
+			 sheet.valor_destreza = moddestreza
+		]]></event>
+	</dataLink>
+		
+	<layout left="176.74213" top="180.23518" height="60.47377" width="90.469223">
+		<label align="client" horzTextAlign="center" field="modificadorBase_forca" name="modificadorBase_forca" fontColor="#FF0000" fontSize="45" fontStyle="bold" fontFamily="Chiller"/>
+	</layout>
+	<dataLink field="base_forca">
+		<event name="onChange"><![CDATA[
+			local valorforca = tonumber(sheet.base_forca) or 0
+			local modforca = math.floor(((valorforca)-10) / 2);
+			if modforca >= 0 then
+				sheet.modificadorBase_forca = "+".. modforca
+				self.modificadorBase_forca.fontColor="#00FF00"
+			else
+				sheet.modificadorBase_forca = modforca
+				self.modificadorBase_forca.fontColor="#FF0000"
+			end;
+		]]></event>
+	</dataLink>
+
+</group>
