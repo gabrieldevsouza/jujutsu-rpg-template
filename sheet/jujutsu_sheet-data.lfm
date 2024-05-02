@@ -834,11 +834,13 @@
 		<!-- Pericias Atributos Escolha -->
 
 		<layout left="764.18207" top="241.08159" height="15.53607" width="36.461948">
-			<edit align="client" horzTextAlign="center" field="atributo_luta" />
+			<comboBox align="client" horzTextAlign="center" field="atributo_luta" name="atributo_luta" fontSize="18" fontFamily="Chiller" transparent="true"
+				items="{'For', 'Dex'}" values="{'F', 'D'}"/>
 		</layout>
 
 		<layout left="764.18207" top="336.7634" height="15.53607" width="36.461948">
-			<edit align="client" horzTextAlign="center" field="atributo_furtividade" />
+			<comboBox align="client" horzTextAlign="center" field="atributo_pontaria" name="atributo_pontaria" fontSize="18" fontFamily="Chiller" transparent="true"
+				items="{'For', 'Dex'}" values="{'F', 'D'}"/>
 		</layout>
 
 		<!-- Pericias outros -->
@@ -2097,7 +2099,7 @@
 		<layout left="891.69287" top="363.59836" height="20.575001" width="36.557999">
 			<label align="client" horzTextAlign="center" field="total_prestidigitacao" name="total_prestidigitacao" fontColor="white" fontSize="18" fontFamily="Chiller"/>
 		</layout>
-		<dataLink fields="{'outros_prestidigitacao', 'maestria_prestidigitacao', 'especializacao_prestidigitacao', 'sheet.valor_nivel', 'maestria_nivel', 'modificadorBase_destreza'}">
+		<dataLink fields="{'outros_prestidigitacao', 'maestria_prestidigitacao', 'sheet.valor_nivel', 'maestria_nivel', 'modificadorBase_destreza'}">
 			<event name="onPersistedChange"><![CDATA[
 
 				local valoroutros = tonumber(sheet.outros_prestidigitacao) or 0
@@ -2105,9 +2107,7 @@
 				local valormaestria = tonumber(sheet.maestria_nivel) or 0 
 				local valormodificador = tonumber(sheet.modificadorBase_destreza) or 0
 
-				if sheet.especializacao_prestidigitacao == true then
-					sheet.total_prestidigitacao = math.floor(valornivel/2) + math.floor((valormaestria+valormodificador)*1.5) + valoroutros;
-				elseif sheet.maestria_prestidigitacao == true then
+				if sheet.maestria_prestidigitacao == true then
 					sheet.total_prestidigitacao = math.floor(valornivel/2) + valormaestria + valormodificador + valoroutros;
 				else
 					sheet.total_prestidigitacao = math.floor(valornivel/2) + valormodificador + valoroutros;
@@ -2119,6 +2119,30 @@
 		<layout left="891.69287" top="331.66983" height="20.575001" width="36.557999">
 			<label align="client" horzTextAlign="center" field="total_pontaria" name="total_pontaria" fontColor="white" fontSize="18" fontFamily="Chiller"/>
 		</layout>
+		<dataLink fields="{'outros_pontaria', 'maestria_pontaria', 'especializacao_pontaria', 'sheet.valor_nivel', 'maestria_nivel', 'modificadorBase_destreza', 'modificadorBase_forca', 'atributo_pontaria'}">
+			<event name="onPersistedChange"><![CDATA[
+
+				local valoroutros = tonumber(sheet.outros_pontaria) or 0
+				local valornivel = tonumber(sheet.valor_nivel) or 0
+				local valormaestria = tonumber(sheet.maestria_nivel) or 0
+				local valormodificador = 0
+
+				if sheet.atributo_pontaria == 'F' then
+					valormodificador = tonumber(sheet.modificadorBase_forca) or 0
+				elseif sheet.atributo_pontaria == 'D' then
+					valormodificador = tonumber(sheet.modificadorBase_destreza) or 0
+				end
+
+				if sheet.especializacao_pontaria == true then
+					sheet.total_pontaria = math.floor(valornivel/2) + math.floor((valormaestria+valormodificador)*1.5) + valoroutros;
+				elseif sheet.maestria_pontaria == true then
+					sheet.total_pontaria = math.floor(valornivel/2) + valormaestria + valormodificador + valoroutros;
+				else
+					sheet.total_pontaria = math.floor(valornivel/2) + valormodificador + valoroutros;
+				end
+
+			]]></event>
+		</dataLink>
 		
 		
 		<layout left="891.69287" top="299.54178" height="20.575001" width="36.557999">
@@ -2168,6 +2192,30 @@
 		<layout left="891.69281" top="236.04744" height="20.575001" width="36.558167">
 			<label align="client" horzTextAlign="center" field="total_luta" name="total_luta" fontColor="white" fontSize="18" fontFamily="Chiller"/>
 		</layout>
+		<dataLink fields="{'outros_luta', 'maestria_luta', 'especializacao_luta', 'sheet.valor_nivel', 'maestria_nivel', 'modificadorBase_destreza', 'modificadorBase_forca', 'atributo_luta'}">
+			<event name="onPersistedChange"><![CDATA[
+
+				local valoroutros = tonumber(sheet.outros_luta) or 0
+				local valornivel = tonumber(sheet.valor_nivel) or 0
+				local valormaestria = tonumber(sheet.maestria_nivel) or 0
+				local valormodificador = 0
+
+				if sheet.atributo_luta == 'F' then
+					valormodificador = tonumber(sheet.modificadorBase_forca) or 0
+				elseif sheet.atributo_luta == 'D' then
+					valormodificador = tonumber(sheet.modificadorBase_destreza) or 0
+				end
+
+				if sheet.especializacao_luta == true then
+					sheet.total_luta = math.floor(valornivel/2) + math.floor((valormaestria+valormodificador)*1.5) + valoroutros;
+				elseif sheet.maestria_luta == true then
+					sheet.total_luta = math.floor(valornivel/2) + valormaestria + valormodificador + valoroutros;
+				else
+					sheet.total_luta = math.floor(valornivel/2) + valormodificador + valoroutros;
+				end
+
+			]]></event>
+		</dataLink>
 		
 		<layout left="891.69281" top="204.15373" height="20.574789" width="36.558167">
 			<label align="client" horzTextAlign="center" field="total_atletismo" name="total_atletismo" fontColor="white" fontSize="18" fontFamily="Chiller"/>
