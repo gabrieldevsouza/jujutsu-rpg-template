@@ -12,14 +12,33 @@
 	require("firecast.lua");
 	Firecast.FUNCAO_DA_BIBLIOTECA(Parametro1, Parametro2, ...);
 
-		<!--====================================================================================================================-->
-		<!--====================================================================================================================-->
 		
 		<!-- #region DADOS TOPO -->
 
-		<!-- name -->
+		<!-- Nome/Especializacao/Origem/Tecnica/Grau -->
 
-		<!-- #region Nivel/Maestria/Experiencia -->
+		<layout left="78.143356" top="18.187336" height="27.007963" width="433.97623">
+			<edit align="client" horzTextAlign="leading" field="nome" fontSize="27" transparent="true" fontFamily="Chiller"/>
+		</layout>
+		
+		<layout left="894.48541" top="40.738289" height="27.007999" width="72.466797">
+			<edit align="client" horzTextAlign="leading" field="origem" fontSize="20" transparent="true" fontFamily="Chiller"/>
+		</layout>
+		
+		<layout left="950.32916" top="16.966837" height="27.007999" width="72.466797">
+			<edit align="client" horzTextAlign="leading" field="especializacao" fontSize="20" transparent="true" fontFamily="Chiller"/>
+		</layout>
+		
+		<layout left="1103.6305" top="18.457336" height="27.007999" width="90.469208">
+			<edit align="client" horzTextAlign="leading" field="tecnica" fontSize="20" transparent="true" fontFamily="Chiller"/>
+		</layout>
+		
+		<layout left="1078.1932" top="44.097084" height="27.007999" width="90.469208">
+			<edit align="client" horzTextAlign="leading" field="grau" fontSize="20" transparent="true" fontFamily="Chiller"/>
+		</layout>
+
+
+		<!-- Nivel/Maestria/Experiencia -->
 
 		<layout left="676.05194" top="26.523771" height="18.25411" width="54.185398">
 			<edit align="client" horzTextAlign="center" field="valor_nivel" fontSize="15" transparent="true" fontFamily="Chiller"/>
@@ -38,7 +57,6 @@
 		<layout left="726.01697" top="77.222595" height="18.25411" width="54.185398">
 			<edit align="client" horzTextAlign="center" field="experiencia" fontSize="15" transparent="true" fontFamily="Chiller"/>
 		</layout>
-		<!-- #endregion -->
 
 		<!-- Especializacao/Origem -->
 
@@ -1119,15 +1137,15 @@
 		</dataLink>
 
 		<layout left="852.33582" top="560.02094" height="17.9142" width="16.694559">
-			<rectangle align="client" color="#00000000" xradius="7" yradius="7" cornerType="bevel" name="maestria_persepcao"/>
-			<checkBox align="client" horzTextAlign="center" field="maestria_persepcao" opacity="0" />
+			<rectangle align="client" color="#00000000" xradius="7" yradius="7" cornerType="bevel" name="maestria_percepcao"/>
+			<checkBox align="client" horzTextAlign="center" field="maestria_percepcao" opacity="0" />
 		</layout>
-		<dataLink field="maestria_persepcao">
+		<dataLink field="maestria_percepcao">
 			<event name="onChange"><![CDATA[
-				if sheet.maestria_persepcao == true then
-					self.maestria_persepcao.color = "#00FF00"
+				if sheet.maestria_percepcao == true then
+					self.maestria_percepcao.color = "#00FF00"
 				else
-					self.maestria_persepcao.color = "#00000000"
+					self.maestria_percepcao.color = "#00000000"
 				end
 			]]></event>
 		</dataLink>
@@ -1682,7 +1700,7 @@
 				local valormodificador = tonumber(sheet.modificadorBase_carisma) or 0
 
 				if sheet.especializacao_vontade == true then
-					sheet.total_vontade = math.floor(valornivel/2) + math.floor((valormaestria+valormodificador)*1.5) + valoroutros;
+					sheet.total_vontade = math.floor(valornivel/2) + math.ceil(valormaestria+(valormodificador*1.5)) + valoroutros;
 				elseif sheet.maestria_vontade == true then
 					sheet.total_vontade = math.floor(valornivel/2) + valormaestria + valormodificador + valoroutros;
 				else
@@ -1704,7 +1722,7 @@
 				local valormodificador = tonumber(sheet.modificadorBase_carisma) or 0
 
 				if sheet.especializacao_performance == true then
-					sheet.total_performance = math.floor(valornivel/2) + math.floor((valormaestria+valormodificador)*1.5) + valoroutros;
+					sheet.total_performance = math.floor(valornivel/2) + math.floor(valormaestria+(valormodificador*1.5)) + valoroutros;
 				elseif sheet.maestria_performance == true then
 					sheet.total_performance = math.floor(valornivel/2) + valormaestria + valormodificador + valoroutros;
 				else
@@ -1726,7 +1744,7 @@
 				local valormodificador = tonumber(sheet.modificadorBase_carisma) or 0
 
 				if sheet.especializacao_intimidacao == true then
-					sheet.total_intimidacao = math.floor(valornivel/2) + math.floor((valormaestria+valormodificador)*1.5) + valoroutros;
+					sheet.total_intimidacao = math.floor(valornivel/2) + math.floor(valormaestria+(valormodificador*1.5)) + valoroutros;
 				elseif sheet.maestria_intimidacao == true then
 					sheet.total_intimidacao = math.floor(valornivel/2) + valormaestria + valormodificador + valoroutros;
 				else
@@ -1748,7 +1766,7 @@
 				local valormodificador = tonumber(sheet.modificadorBase_carisma) or 0
 
 				if sheet.especializacao_enganacao == true then
-					sheet.total_enganacao = math.floor(valornivel/2) + math.floor((valormaestria+valormodificador)*1.5) + valoroutros;
+					sheet.total_enganacao = math.floor(valornivel/2) + math.floor(valormaestria+(valormodificador*1.5)) + valoroutros;
 				elseif sheet.maestria_enganacao == true then
 					sheet.total_enganacao = math.floor(valornivel/2) + valormaestria + valormodificador + valoroutros;
 				else
@@ -1770,7 +1788,7 @@
 				local valormodificador = tonumber(sheet.modificadorBase_carisma) or 0
 
 				if sheet.especializacao_persuasao == true then
-					sheet.total_persuasao = math.floor(valornivel/2) + math.floor((valormaestria+valormodificador)*1.5) + valoroutros;
+					sheet.total_persuasao = math.floor(valornivel/2) + math.floor(valormaestria+(valormodificador*1.5)) + valoroutros;
 				elseif sheet.maestria_persuasao == true then
 					sheet.total_persuasao = math.floor(valornivel/2) + valormaestria + valormodificador + valoroutros;
 				else
@@ -1792,7 +1810,7 @@
 				local valormodificador = tonumber(sheet.modificadorBase_inteligencia) or 0
 
 				if sheet.especializacao_religiao == true then
-					sheet.total_religiao = math.floor(valornivel/2) + math.floor((valormaestria+valormodificador)*1.5) + valoroutros;
+					sheet.total_religiao = math.floor(valornivel/2) + math.floor(valormaestria+(valormodificador*1.5)) + valoroutros;
 				elseif sheet.maestria_religiao == true then
 					sheet.total_religiao = math.floor(valornivel/2) + valormaestria + valormodificador + valoroutros;
 				else
@@ -1814,7 +1832,7 @@
 				local valormodificador = tonumber(sheet.modificadorBase_inteligencia) or 0
 
 				if sheet.especializacaoOficio_3 == true then
-					sheet.totalOficio_3 = math.floor(valornivel/2) + math.floor((valormaestria+valormodificador)*1.5) + valoroutros;
+					sheet.totalOficio_3 = math.floor(valornivel/2) + math.floor(valormaestria+(valormodificador*1.5)) + valoroutros;
 				elseif sheet.maestriaOficio_3 == true then
 					sheet.totalOficio_3 = math.floor(valornivel/2) + valormaestria + valormodificador + valoroutros;
 				else
@@ -1836,7 +1854,7 @@
 				local valormodificador = tonumber(sheet.modificadorBase_inteligencia) or 0
 
 				if sheet.especializacaoOficio_2 == true then
-					sheet.totalOficio_2 = math.floor(valornivel/2) + math.floor((valormaestria+valormodificador)*1.5) + valoroutros;
+					sheet.totalOficio_2 = math.floor(valornivel/2) + math.floor(valormaestria+(valormodificador*1.5)) + valoroutros;
 				elseif sheet.maestriaOficio_2 == true then
 					sheet.totalOficio_2 = math.floor(valornivel/2) + valormaestria + valormodificador + valoroutros;
 				else
@@ -1858,7 +1876,7 @@
 				local valormodificador = tonumber(sheet.modificadorBase_inteligencia) or 0
 
 				if sheet.especializacaoOficio_1 == true then
-					sheet.totalOficio_1 = math.floor(valornivel/2) + math.floor((valormaestria+valormodificador)*1.5) + valoroutros;
+					sheet.totalOficio_1 = math.floor(valornivel/2) + math.floor(valormaestria+(valormodificador*1.5)) + valoroutros;
 				elseif sheet.maestriaOficio_1 == true then
 					sheet.totalOficio_1 = math.floor(valornivel/2) + valormaestria + valormodificador + valoroutros;
 				else
@@ -1880,7 +1898,7 @@
 				local valormodificador = tonumber(sheet.modificadorBase_inteligencia) or 0
 
 				if sheet.especializacao_historia == true then
-					sheet.total_historia = math.floor(valornivel/2) + math.floor((valormaestria+valormodificador)*1.5) + valoroutros;
+					sheet.total_historia = math.floor(valornivel/2) + math.floor(valormaestria+(valormodificador*1.5)) + valoroutros;
 				elseif sheet.maestria_historia == true then
 					sheet.total_historia = math.floor(valornivel/2) + valormaestria + valormodificador + valoroutros;
 				else
@@ -1902,7 +1920,7 @@
 				local valormodificador = tonumber(sheet.modificadorBase_inteligencia) or 0
 
 				if sheet.especializacao_investigacao == true then
-					sheet.total_investigacao = math.floor(valornivel/2) + math.floor((valormaestria+valormodificador)*1.5) + valoroutros;
+					sheet.total_investigacao = math.floor(valornivel/2) + math.floor(valormaestria+(valormodificador*1.5)) + valoroutros;
 				elseif sheet.maestria_investigacao == true then
 					sheet.total_investigacao = math.floor(valornivel/2) + valormaestria + valormodificador + valoroutros;
 				else
@@ -1924,7 +1942,7 @@
 				local valormodificador = tonumber(sheet.modificadorBase_inteligencia) or 0
 
 				if sheet.especializacao_feiticaria == true then
-					sheet.total_feiticaria = math.floor(valornivel/2) + math.floor((valormaestria+valormodificador)*1.5) + valoroutros;
+					sheet.total_feiticaria = math.floor(valornivel/2) + math.floor(valormaestria+(valormodificador*1.5)) + valoroutros;
 				elseif sheet.maestria_feiticaria == true then
 					sheet.total_feiticaria = math.floor(valornivel/2) + valormaestria + valormodificador + valoroutros;
 				else
@@ -1946,7 +1964,7 @@
 				local valormodificador = tonumber(sheet.modificadorBase_inteligencia) or 0
 
 				if sheet.especializacao_astucia == true then
-					sheet.total_astucia = math.floor(valornivel/2) + math.floor((valormaestria+valormodificador)*1.5) + valoroutros;
+					sheet.total_astucia = math.floor(valornivel/2) + math.floor(valormaestria+(valormodificador*1.5)) + valoroutros;
 				elseif sheet.maestria_astucia == true then
 					sheet.total_astucia = math.floor(valornivel/2) + valormaestria + valormodificador + valoroutros;
 				else
@@ -1968,7 +1986,7 @@
 				local valormodificador = tonumber(sheet.modificadorBase_sabedoria) or 0
 
 				if sheet.especializacao_ocultismo == true then
-					sheet.total_ocultismo = math.floor(valornivel/2) + math.floor((valormaestria+valormodificador)*1.5) + valoroutros;
+					sheet.total_ocultismo = math.floor(valornivel/2) + math.floor(valormaestria+(valormodificador*1.5)) + valoroutros;
 				elseif sheet.maestria_ocultismo == true then
 					sheet.total_ocultismo = math.floor(valornivel/2) + valormaestria + valormodificador + valoroutros;
 				else
@@ -1984,17 +2002,17 @@
 		<dataLink fields="{'outros_percepcao', 'maestria_percepcao', 'especializacao_percepcao', 'sheet.valor_nivel', 'maestria_nivel', 'modificadorBase_sabedoria'}">
 			<event name="onPersistedChange"><![CDATA[
 
-				local valoroutros = tonumber(sheet.outros_percepcao) or 0
+				local valoroutros = tonumber(sheet.outros_percepcao ) or 0
 				local valornivel = tonumber(sheet.valor_nivel) or 0
 				local valormaestria = tonumber(sheet.maestria_nivel) or 0 
 				local valormodificador = tonumber(sheet.modificadorBase_sabedoria) or 0
 
 				if sheet.especializacao_percepcao == true then
-					sheet.total_percepcao = math.floor(valornivel/2) + math.floor((valormaestria+valormodificador)*1.5) + valoroutros;
-				elseif sheet.maestria_percepcao == true then
-					sheet.total_percepcao = math.floor(valornivel/2) + valormaestria + valormodificador + valoroutros;
+					sheet.total_percepcao  = math.floor(valornivel/2) + math.floor(valormaestria+(valormodificador*1.5)) + valoroutros;
+				elseif sheet.maestria_percepcao  == true then
+					sheet.total_percepcao  = math.floor(valornivel/2) + (valormaestria + valormodificador + valoroutros);
 				else
-					sheet.total_percepcao = math.floor(valornivel/2) + valormodificador + valoroutros;
+					sheet.total_percepcao  = math.floor(valornivel/2) + valormodificador + valoroutros;
 				end
 
 			]]></event>
@@ -2012,7 +2030,7 @@
 				local valormodificador = tonumber(sheet.modificadorBase_sabedoria) or 0
 
 				if sheet.especializacao_medicina == true then
-					sheet.total_medicina = math.floor(valornivel/2) + math.floor((valormaestria+valormodificador)*1.5) + valoroutros;
+					sheet.total_medicina = math.floor(valornivel/2) + math.floor(valormaestria+(valormodificador*1.5)) + valoroutros;
 				elseif sheet.maestria_medicina == true then
 					sheet.total_medicina = math.floor(valornivel/2) + valormaestria + valormodificador + valoroutros;
 				else
@@ -2034,7 +2052,7 @@
 				local valormodificador = tonumber(sheet.modificadorBase_sabedoria) or 0
 
 				if sheet.especializacao_intuicao == true then
-					sheet.total_intuicao = math.floor(valornivel/2) + math.floor((valormaestria+valormodificador)*1.5) + valoroutros;
+					sheet.total_intuicao = math.floor(valornivel/2) + math.floor(valormaestria+(valormodificador*1.5)) + valoroutros;
 				elseif sheet.maestria_intuicao == true then
 					sheet.total_intuicao = math.floor(valornivel/2) + valormaestria + valormodificador + valoroutros;
 				else
@@ -2056,7 +2074,7 @@
 				local valormodificador = tonumber(sheet.modificadorBase_constituicao) or 0
 
 				if sheet.especializacao_integridade == true then
-					sheet.total_integridade = math.floor(valornivel/2) + math.floor((valormaestria+valormodificador)*1.5) + valoroutros;
+					sheet.total_integridade = math.floor(valornivel/2) + math.floor(valormaestria+(valormodificador*1.5)) + valoroutros;
 				elseif sheet.maestria_integridade == true then
 					sheet.total_integridade = math.floor(valornivel/2) + valormaestria + valormodificador + valoroutros;
 				else
@@ -2078,7 +2096,7 @@
 				local valormodificador = tonumber(sheet.modificadorBase_constituicao) or 0
 
 				if sheet.especializacao_fortitude == true then
-					sheet.total_fortitude = math.floor(valornivel/2) + math.floor((valormaestria+valormodificador)*1.5) + valoroutros;
+					sheet.total_fortitude = math.floor(valornivel/2) + math.floor(valormaestria+(valormodificador*1.5)) + valoroutros;
 				elseif sheet.maestria_fortitude == true then
 					sheet.total_fortitude = math.floor(valornivel/2) + valormaestria + valormodificador + valoroutros;
 				else
@@ -2100,7 +2118,7 @@
 				local valormodificador = tonumber(sheet.modificadorBase_destreza) or 0
 
 				if sheet.especializacao_reflexo == true then
-					sheet.total_reflexo = math.floor(valornivel/2) + math.floor((valormaestria+valormodificador)*1.5) + valoroutros;
+					sheet.total_reflexo = math.floor(valornivel/2) + math.floor(valormaestria+(valormodificador*1.5)) + valoroutros;
 				elseif sheet.maestria_reflexo == true then
 					sheet.total_reflexo = math.floor(valornivel/2) + valormaestria + valormodificador + valoroutros;
 				else
@@ -2148,7 +2166,7 @@
 				end
 
 				if sheet.especializacao_pontaria == true then
-					sheet.total_pontaria = math.floor(valornivel/2) + math.floor((valormaestria+valormodificador)*1.5) + valoroutros;
+					sheet.total_pontaria = math.floor(valornivel/2) + math.floor(valormaestria+(valormodificador*1.5)) + valoroutros;
 				elseif sheet.maestria_pontaria == true then
 					sheet.total_pontaria = math.floor(valornivel/2) + valormaestria + valormodificador + valoroutros;
 				else
@@ -2171,7 +2189,7 @@
 				local valormodificador = tonumber(sheet.modificadorBase_destreza) or 0
 
 				if sheet.especializacao_furtividade == true then
-					sheet.total_furtividade = math.floor(valornivel/2) + math.floor((valormaestria+valormodificador)*1.5) + valoroutros;
+					sheet.total_furtividade = math.floor(valornivel/2) + math.floor(valormaestria+(valormodificador*1.5)) + valoroutros;
 				elseif sheet.maestria_furtividade == true then
 					sheet.total_furtividade = math.floor(valornivel/2) + valormaestria + valormodificador + valoroutros;
 				else
@@ -2193,7 +2211,7 @@
 				local valormodificador = tonumber(sheet.modificadorBase_destreza) or 0
 
 				if sheet.especializacao_acrobacia == true then
-					sheet.total_acrobacia = math.floor(valornivel/2) + math.floor((valormaestria+valormodificador)*1.5) + valoroutros;
+					sheet.total_acrobacia = math.floor(valornivel/2) + math.floor(valormaestria+(valormodificador*1.5)) + valoroutros;
 				elseif sheet.maestria_acrobacia == true then
 					sheet.total_acrobacia = math.floor(valornivel/2) + valormaestria + valormodificador + valoroutros;
 				else
@@ -2221,7 +2239,7 @@
 				end
 
 				if sheet.especializacao_luta == true then
-					sheet.total_luta = math.floor(valornivel/2) + math.floor((valormaestria+valormodificador)*1.5) + valoroutros;
+					sheet.total_luta = math.floor(valornivel/2) + math.floor(valormaestria+(valormodificador*1.5)) + valoroutros;
 				elseif sheet.maestria_luta == true then
 					sheet.total_luta = math.floor(valornivel/2) + valormaestria + valormodificador + valoroutros;
 				else
@@ -2243,7 +2261,7 @@
 				local valormodificador = tonumber(sheet.modificadorBase_forca) or 0
 
 				if sheet.especializacao_atletismo == true then
-					sheet.total_atletismo = math.floor(valornivel/2) + math.floor((valormaestria+valormodificador)*1.5) + valoroutros;
+					sheet.total_atletismo = math.floor(valornivel/2) + math.floor(valormaestria+(valormodificador*1.5)) + valoroutros;
 				elseif sheet.maestria_atletismo == true then
 					sheet.total_atletismo = math.floor(valornivel/2) + valormaestria + valormodificador + valoroutros;
 				else
