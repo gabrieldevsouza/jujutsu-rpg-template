@@ -5,14 +5,14 @@
 		true;}</style>
 	<scrollBox align="client">
 		<rectangle width="631" height="893" color="#00000000" left="1263">&#xD; <image left="0" top="0"
-				width="631" height="893" src="images/characterImage_sheet-bg.png" style="stretch"
+				width="631" height="893" src="page_1/imagesPg_1/characterImage_sheet-bg.png" style="stretch"
 				optimize="true" compilerOrder="0" />&#xD; </rectangle>
-		<rectangle width="1263" height="893" color="white">&#xD; <image left="0" top="0"
-				width="1263" height="893" src="images/character_sheet-bg.png" style="stretch"
+		<rectangle width="1263" height="893" color="#00000000">&#xD; <image left="0" top="0"
+				width="1263" height="893" src="page_1/imagesPg_1/character_sheet-bg.png" style="stretch"
 				optimize="true" compilerOrder="0" />&#xD; </rectangle>
 		
 
-
+	require("scene.lua");
 	require("firecast.lua");
 	Firecast.FUNCAO_DA_BIBLIOTECA(Parametro1, Parametro2, ...);
 

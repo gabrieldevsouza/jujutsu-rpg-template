@@ -5,8 +5,17 @@
     <!-- #region Imagem do personagem -->
 
     <layout left="1285.112366" top="22.32918" height="412.54636" width="586.62079">
-        <edit align="client" horzTextAlign="center" field="imagem_personagem" />
+        <rectangle height="412.54636" width="586.62079" xradius="85" yradius="85" cornerType="round" color="#000000">
+            <image center="true" field="imagemPersonagem" width="586.62079" height="412.54636" editable="true" style="proportional" optimize="true" compilerOrder="0">
+                <dataLink field="imagemPersonagem">
+                    <event name="onChange">
+                        Firecast.getCharacterOf(sheet):asyncUpdate({avatar=sheet.imagemPersonagem})
+                    </event>
+                </dataLink>
+            </image>
+        </rectangle>
     </layout>
+
 
     <!-- #endregion -->
     
