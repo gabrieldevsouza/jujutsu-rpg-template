@@ -1675,6 +1675,8 @@
 				local valormodificador = tonumber(sheet.modificadorBase_destreza) or 0
 
 				if sheet.maestria_prestidigitacao == true then
+					sheet.total_prestidigitacao = math.floor(valornivel/2) + math.floor(valormaestria+(valormodificador*1.5)) + valoroutros;
+				elseif sheet.maestria_prestidigitacao == true then
 					sheet.total_prestidigitacao = math.floor(valornivel/2) + valormaestria + valormodificador + valoroutros;
 				else
 					sheet.total_prestidigitacao = math.floor(valornivel/2) + valormodificador + valoroutros;
