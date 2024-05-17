@@ -1235,7 +1235,7 @@
 				local valormodificador = tonumber(sheet.modificadorBase_carisma) or 0
 
 				if sheet.especializacao_vontade == true then
-					sheet.total_vontade = math.floor(valornivel/2) + math.ceil(valormaestria+(valormodificador*1.5)) + valoroutros;
+					sheet.total_vontade = math.floor(valornivel/2) + math.floor(valormaestria+(valormodificador*1.5)) + valoroutros;
 				elseif sheet.maestria_vontade == true then
 					sheet.total_vontade = math.floor(valornivel/2) + valormaestria + valormodificador + valoroutros;
 				else
